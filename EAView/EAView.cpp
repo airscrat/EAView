@@ -20,6 +20,8 @@
 #include <osg/MatrixTransform>
 #include <osg/PositionAttitudeTransform>
 
+#include <osg/Switch>
+
 
 class GeodeParent
 {
@@ -227,6 +229,31 @@ osg::Transform* createPositionAttitudeTransform(double posX,double rotateZ,osg::
 	return pat.release();
 }
 
+class CessnaCallback:public osg::NodeCallback
+{
+public:
+	static const int _fireStartFrame=120;
+	virtual void operator()(osg::Node* node,osg::NodeVisitor* nv)
+	{
+		//这个地方必须用dynamic_cast，作为与c#里的 as 类似。但要求被转换的node的Node类中有虚函数
+		osg::Switch* cessnaSwitch=dynamic_cast<osg::Switch*>(node);
+		if (cessnaSwitch&&nv)
+		{
+			const osg::FrameStamp* frameStamp=nv->getFrameStamp();
+			if (frameStamp)
+			{
+				if (_fireStartFrame<frameStamp->getFrameNumber())
+				{
+					cessnaSwitch->setValue(0,false);
+					cessnaSwitch->setValue(1,true);
+				}
+			}
+		}
+		traverse(node,nv);
+	}
+protected:
+private:
+};
 //int _tmain(int argc, _TCHAR* argv[])
 int _tmain(int argc, char** argv)
 {
@@ -276,7 +303,7 @@ int _tmain(int argc, char** argv)
 	//return viewer.run();
 
 
-	////-------------------------------------------
+	////--------------空间变换节点--------------------
 	//// Create the viewer and set its scene data to our scene
 	////   graph created above.
 	//osgViewer::Viewer viewer;
@@ -293,18 +320,22 @@ int _tmain(int argc, char** argv)
 	//return viewer.run();
 
 	//--------------------------------
-	osg::ArgumentParser arguments(&argc,argv);
-	osg::Node* model=osgDB::readNodeFiles(arguments);
-	if(!model)
-	{
-		model=osgDB::readNodeFile("D:\\Program Files\\OpenSceneGraph\\data\\axes.osgt");
-	}
-	osg::ref_ptr<osg::Group> root=new osg::Group;
-	root->addChild(createMatrixTransform(-5,osg::PI_4,model));
-	root->addChild(createAutoTransform(0,model));
-	root->addChild(createPositionAttitudeTransform(5,-osg::PI_4,model));
-	osgViewer::Viewer viewer;
-	viewer.setSceneData(root.get());
-	return viewer.run();
+//	osg::ArgumentParser arguments(&argc,argv);
+//	osg::Node* model=osgDB::readNodeFiles(arguments);
+//	if(!model)
+//	{
+//		model=osgDB::readNodeFile("D:\\Program Files\\OpenSceneGraph\\data\\axes.osgt");
+//	}
+//	osg::ref_ptr<osg::Group> root=new osg::Group;
+//	root->addChild(createMatrixTransform(-5,osg::PI_4,model));
+//	root->addChild(createAutoTransform(0,model));
+//	root->addChild(createPositionAttitudeTransform(5,-osg::PI_4,model));
+//	osgViewer::Viewer viewer;
+//	viewer.setSceneData(root.get());
+//	return viewer.run();
+
+	//---------------开关节点------------
+
+
 }
 
