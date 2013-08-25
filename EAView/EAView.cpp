@@ -335,7 +335,13 @@ int _tmain(int argc, char** argv)
 //	return viewer.run();
 
 	//---------------开关节点------------
-
-
+	osg::ref_ptr<osg::Switch> root=new osg::Switch;
+	root->addChild(osgDB::readNodeFile("D:\\Program Files\\OpenSceneGraph\\data\\cessna.osg"),true);
+	root->addChild(osgDB::readNodeFile("D:\\Program Files\\OpenSceneGraph\\data\\cessnafire.osg"),false);
+	root->setUpdateCallback(new CessnaCallback);
+	
+	osgViewer::Viewer viewer;
+	viewer.setSceneData(root.get());
+	return viewer.run();
 }
 
