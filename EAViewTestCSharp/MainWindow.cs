@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+
 namespace EAViewTestCSharp
 {
     public partial class MainWindow : Form
@@ -14,6 +15,7 @@ namespace EAViewTestCSharp
         public MainWindow()
         {
             InitializeComponent();
+            
         }
     }
 }

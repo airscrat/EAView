@@ -55,9 +55,9 @@ namespace EAView {
 			// 
 			// eaViewGlobe1
 			// 
-			this->eaViewGlobe1->Location = System::Drawing::Point(13, 13);
+			this->eaViewGlobe1->Location = System::Drawing::Point(23, 13);
 			this->eaViewGlobe1->Name = L"eaViewGlobe1";
-			this->eaViewGlobe1->Size = System::Drawing::Size(259, 237);
+			this->eaViewGlobe1->Size = System::Drawing::Size(236, 237);
 			this->eaViewGlobe1->TabIndex = 0;
 			// 
 			// MainWindow
