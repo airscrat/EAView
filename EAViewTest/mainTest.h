@@ -34,7 +34,7 @@ namespace EAView {
 				delete components;
 			}
 		}
-	private: EAViewEngine::EAViewEngineControl^  eaViewEngineControl1;
+
 	protected: 
 
 	private:
@@ -50,22 +50,13 @@ namespace EAView {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->eaViewEngineControl1 = (gcnew EAViewEngine::EAViewEngineControl());
 			this->SuspendLayout();
-			// 
-			// eaViewEngineControl1
-			// 
-			this->eaViewEngineControl1->Location = System::Drawing::Point(12, 12);
-			this->eaViewEngineControl1->Name = L"eaViewEngineControl1";
-			this->eaViewEngineControl1->Size = System::Drawing::Size(260, 238);
-			this->eaViewEngineControl1->TabIndex = 0;
 			// 
 			// mainTest
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 12);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(284, 262);
-			this->Controls->Add(this->eaViewEngineControl1);
 			this->Name = L"mainTest";
 			this->Text = L"mainTest";
 			this->ResumeLayout(false);

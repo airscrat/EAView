@@ -11,12 +11,12 @@ using namespace System::Drawing;
 namespace EAViewEngine {
 
 	/// <summary>
-	/// Summary for EAViewEngineControl
+	/// Summary for EAViewGlobe
 	/// </summary>
-	public ref class EAViewEngineControl : public System::Windows::Forms::UserControl
+	public ref class EAViewGlobe : public System::Windows::Forms::UserControl
 	{
 	public:
-		EAViewEngineControl(void)
+		EAViewGlobe(void)
 		{
 			InitializeComponent();
 			//
@@ -28,7 +28,7 @@ namespace EAViewEngine {
 		/// <summary>
 		/// Clean up any resources being used.
 		/// </summary>
-		~EAViewEngineControl()
+		~EAViewGlobe()
 		{
 			if (components)
 			{
@@ -51,11 +51,11 @@ namespace EAViewEngine {
 		{
 			this->SuspendLayout();
 			// 
-			// EAViewEngineControl
+			// EAViewGlobe
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 12);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->Name = L"EAViewEngineControl";
+			this->Name = L"EAViewGlobe";
 			this->Size = System::Drawing::Size(318, 248);
 			this->ResumeLayout(false);
 

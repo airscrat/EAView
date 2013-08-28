@@ -113,11 +113,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EAViewEngine\EAViewEngine.vcxproj">
-      <Project>{af8589c1-30c6-42d5-851f-96e8699120a3}</Project>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -128,6 +123,11 @@
     <EmbeddedResource Include="mainTest.resx">
       <DependentUpon>mainTest.h</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EAViewEngine\EAViewEngine.vcxproj">
+      <Project>{af8589c1-30c6-42d5-851f-96e8699120a3}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
