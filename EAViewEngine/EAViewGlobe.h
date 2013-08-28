@@ -49,7 +49,16 @@ namespace EAViewEngine {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			this->SuspendLayout();
+			// 
+			// EAViewEngineControl
+			// 
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 12);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->Name = L"EAViewEngineControl";
+			this->Size = System::Drawing::Size(318, 248);
+			this->ResumeLayout(false);
+
 		}
 #pragma endregion
 	};
