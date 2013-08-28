@@ -1,7 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EAView", "EAView\EAView.vcxproj", "{48E45180-69EE-41BE-8857-67D9909B4B47}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EAViewEngine", "EAViewEngine\EAViewEngine.vcxproj", "{AF8589C1-30C6-42D5-851F-96E8699120A3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EAViewTest", "EAViewTest\EAView.vcxproj", "{48E45180-69EE-41BE-8857-67D9909B4B47}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,6 +11,10 @@ Global
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF8589C1-30C6-42D5-851F-96E8699120A3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{AF8589C1-30C6-42D5-851F-96E8699120A3}.Debug|Win32.Build.0 = Debug|Win32
+		{AF8589C1-30C6-42D5-851F-96E8699120A3}.Release|Win32.ActiveCfg = Release|Win32
+		{AF8589C1-30C6-42D5-851F-96E8699120A3}.Release|Win32.Build.0 = Release|Win32
 		{48E45180-69EE-41BE-8857-67D9909B4B47}.Debug|Win32.ActiveCfg = Debug|Win32
 		{48E45180-69EE-41BE-8857-67D9909B4B47}.Debug|Win32.Build.0 = Debug|Win32
 		{48E45180-69EE-41BE-8857-67D9909B4B47}.Release|Win32.ActiveCfg = Release|Win32
