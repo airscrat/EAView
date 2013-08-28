@@ -10,12 +10,12 @@ namespace EAView {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Summary for mainTest
+	/// Summary for MainWindow
 	/// </summary>
-	public ref class mainTest : public System::Windows::Forms::Form
+	public ref class MainWindow : public System::Windows::Forms::Form
 	{
 	public:
-		mainTest(void)
+		MainWindow(void)
 		{
 			InitializeComponent();
 			//
@@ -27,14 +27,14 @@ namespace EAView {
 		/// <summary>
 		/// Clean up any resources being used.
 		/// </summary>
-		~mainTest()
+		~MainWindow()
 		{
 			if (components)
 			{
 				delete components;
 			}
 		}
-
+	private: EAViewEngine::EAViewGlobe^  eaViewGlobe1;
 	protected: 
 
 	private:
@@ -50,15 +50,24 @@ namespace EAView {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			this->eaViewGlobe1 = (gcnew EAViewEngine::EAViewGlobe());
 			this->SuspendLayout();
 			// 
-			// mainTest
+			// eaViewGlobe1
+			// 
+			this->eaViewGlobe1->Location = System::Drawing::Point(13, 13);
+			this->eaViewGlobe1->Name = L"eaViewGlobe1";
+			this->eaViewGlobe1->Size = System::Drawing::Size(259, 237);
+			this->eaViewGlobe1->TabIndex = 0;
+			// 
+			// MainWindow
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 12);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(284, 262);
-			this->Name = L"mainTest";
-			this->Text = L"mainTest";
+			this->Controls->Add(this->eaViewGlobe1);
+			this->Name = L"MainWindow";
+			this->Text = L"MainWindow";
 			this->ResumeLayout(false);
 
 		}

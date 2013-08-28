@@ -56,7 +56,7 @@ namespace EAViewEngine {
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 12);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->Name = L"EAViewGlobe";
-			this->Size = System::Drawing::Size(318, 248);
+			this->Size = System::Drawing::Size(200, 160);
 			this->ResumeLayout(false);
 
 		}

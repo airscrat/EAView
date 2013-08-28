@@ -24,7 +24,7 @@
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="mainTest.h">
+    <ClInclude Include="MainWindow.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -35,7 +35,10 @@
     <ClCompile Include="EAView.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="mainTest.cpp">
+    <ClCompile Include="program.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MainWindow.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
