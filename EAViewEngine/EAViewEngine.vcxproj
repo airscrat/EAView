@@ -56,7 +56,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>
       </AdditionalDependencies>
-      <EmbedManagedResourceFile>%(EmbedManagedResourceFile)</EmbedManagedResourceFile>
+      <EmbedManagedResourceFile>EAViewGlobeControl.png;%(EmbedManagedResourceFile)</EmbedManagedResourceFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -80,6 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.ico" />
+    <None Include="EAViewGlobeControl.png" />
     <None Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>

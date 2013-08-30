@@ -19,7 +19,7 @@ namespace EAViewEngine {
 	/// <summary>
 	/// Summary for EAViewGlobeControl
 	/// </summary>
-	//[ToolboxBitmap(EAViewGlobeControl::typeid,"EAViewGlobeControl.bmp")]//the icon
+	[ToolboxBitmap(EAViewEngine::EAViewGlobeControl::typeid)]//,"EAViewGlobeControl.bmp")]//the icon
 	public ref class EAViewGlobeControl : public System::Windows::Forms::UserControl
 	{
 	public:
