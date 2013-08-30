@@ -58,6 +58,14 @@
       </AdditionalDependencies>
       <EmbedManagedResourceFile>EAViewGlobeControl.png;%(EmbedManagedResourceFile)</EmbedManagedResourceFile>
     </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <ResourceCompile>
+      <IgnoreStandardIncludePath>
+      </IgnoreStandardIncludePath>
+    </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
