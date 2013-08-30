@@ -1,3 +1,9 @@
+/********************************************************
+[DateTime]:2013.8.30
+[Author]:Mr.Huang
+[Content]:The main 3d view control,
+/********************************************************/
+
 #pragma once
 
 using namespace System;
