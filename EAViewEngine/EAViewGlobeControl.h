@@ -11,12 +11,12 @@ using namespace System::Drawing;
 namespace EAViewEngine {
 
 	/// <summary>
-	/// Summary for AxEAViewGlobe
+	/// Summary for EAViewGlobeControl
 	/// </summary>
-	public ref class AxEAViewGlobe : public System::Windows::Forms::UserControl
+	public ref class EAViewGlobeControl : public System::Windows::Forms::UserControl
 	{
 	public:
-		AxEAViewGlobe(void)
+		EAViewGlobeControl(void)
 		{
 			InitializeComponent();
 			//
@@ -28,7 +28,7 @@ namespace EAViewEngine {
 		/// <summary>
 		/// Clean up any resources being used.
 		/// </summary>
-		~AxEAViewGlobe()
+		~EAViewGlobeControl()
 		{
 			if (components)
 			{
@@ -66,12 +66,12 @@ namespace EAViewEngine {
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"EAView 1.0";
 			// 
-			// AxEAViewGlobe
+			// EAViewGlobeControl
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 12);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->Controls->Add(this->label1);
-			this->Name = L"AxEAViewGlobe";
+			this->Name = L"EAViewGlobeControl";
 			this->Size = System::Drawing::Size(250, 206);
 			this->ResumeLayout(false);
 			this->PerformLayout();

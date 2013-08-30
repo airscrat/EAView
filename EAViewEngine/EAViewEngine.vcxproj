@@ -83,14 +83,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
-    <ClCompile Include="AxEAViewGlobe.cpp" />
+    <ClCompile Include="EAViewGlobeControl.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AxEAViewGlobe.h">
+    <ClInclude Include="EAViewGlobeControl.h">
       <FileType>CppControl</FileType>
     </ClInclude>
     <ClInclude Include="resource.h" />
@@ -100,8 +100,8 @@
     <ResourceCompile Include="app.rc" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AxEAViewGlobe.resX">
-      <DependentUpon>AxEAViewGlobe.h</DependentUpon>
+    <EmbeddedResource Include="EAViewGlobeControl.resX">
+      <DependentUpon>EAViewGlobeControl.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
