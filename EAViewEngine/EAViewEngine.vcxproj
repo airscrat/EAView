@@ -88,8 +88,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.ico" />
-    <None Include="EAViewGlobeControl.png" />
     <None Include="ReadMe.txt" />
+    <None Include="Resource\EAViewGlobeControl.png" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
