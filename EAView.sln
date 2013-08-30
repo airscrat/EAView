@@ -5,6 +5,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EAViewTest", "EAViewTest\EA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EAViewTestCSharp", "EAViewTestCSharp\EAViewTestCSharp.csproj", "{0C5150F3-F5C1-4409-8130-F4A58DD87C2E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EAViewEngine", "EAViewEngine\EAViewEngine.vcxproj", "{8A488B83-45C6-4282-AED4-09D5B2A2221D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Mixed Platforms = Debug|Mixed Platforms
@@ -35,6 +37,16 @@ Global
 		{0C5150F3-F5C1-4409-8130-F4A58DD87C2E}.Release|Win32.ActiveCfg = Release|x86
 		{0C5150F3-F5C1-4409-8130-F4A58DD87C2E}.Release|x86.ActiveCfg = Release|x86
 		{0C5150F3-F5C1-4409-8130-F4A58DD87C2E}.Release|x86.Build.0 = Release|x86
+		{8A488B83-45C6-4282-AED4-09D5B2A2221D}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{8A488B83-45C6-4282-AED4-09D5B2A2221D}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{8A488B83-45C6-4282-AED4-09D5B2A2221D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8A488B83-45C6-4282-AED4-09D5B2A2221D}.Debug|Win32.Build.0 = Debug|Win32
+		{8A488B83-45C6-4282-AED4-09D5B2A2221D}.Debug|x86.ActiveCfg = Debug|Win32
+		{8A488B83-45C6-4282-AED4-09D5B2A2221D}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{8A488B83-45C6-4282-AED4-09D5B2A2221D}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{8A488B83-45C6-4282-AED4-09D5B2A2221D}.Release|Win32.ActiveCfg = Release|Win32
+		{8A488B83-45C6-4282-AED4-09D5B2A2221D}.Release|Win32.Build.0 = Release|Win32
+		{8A488B83-45C6-4282-AED4-09D5B2A2221D}.Release|x86.ActiveCfg = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
