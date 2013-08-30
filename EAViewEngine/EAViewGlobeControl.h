@@ -19,6 +19,7 @@ namespace EAViewEngine {
 	/// <summary>
 	/// Summary for EAViewGlobeControl
 	/// </summary>
+	//[ToolboxBitmap(EAViewGlobeControl::typeid,"EAViewGlobeControl.bmp")]//the icon
 	public ref class EAViewGlobeControl : public System::Windows::Forms::UserControl
 	{
 	public:
@@ -62,11 +63,9 @@ namespace EAViewEngine {
 			// 
 			// label1
 			// 
-			this->label1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom) 
-				| System::Windows::Forms::AnchorStyles::Left) 
-				| System::Windows::Forms::AnchorStyles::Right));
+			this->label1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(99, 94);
+			this->label1->Location = System::Drawing::Point(182, 179);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(65, 12);
 			this->label1->TabIndex = 0;
@@ -77,8 +76,9 @@ namespace EAViewEngine {
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 12);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->Controls->Add(this->label1);
+			this->ForeColor = System::Drawing::SystemColors::WindowFrame;
 			this->Name = L"EAViewGlobeControl";
-			this->Size = System::Drawing::Size(250, 206);
+			this->Size = System::Drawing::Size(250, 200);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 

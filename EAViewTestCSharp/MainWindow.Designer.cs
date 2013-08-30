@@ -28,25 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.EAViewGlobeControl1 = new EAViewEngine.EAViewGlobeControl();
+            this.eaViewGlobeControl1 = new EAViewEngine.EAViewGlobeControl();
             this.SuspendLayout();
             // 
-            // EAViewGlobeControl1
+            // eaViewGlobeControl1
             // 
-            this.EAViewGlobeControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.EAViewGlobeControl1.Location = new System.Drawing.Point(13, 13);
-            this.EAViewGlobeControl1.Name = "EAViewGlobeControl1";
-            this.EAViewGlobeControl1.Size = new System.Drawing.Size(420, 294);
-            this.EAViewGlobeControl1.TabIndex = 0;
+            this.eaViewGlobeControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.eaViewGlobeControl1.Location = new System.Drawing.Point(0, 0);
+            this.eaViewGlobeControl1.Name = "eaViewGlobeControl1";
+            this.eaViewGlobeControl1.Size = new System.Drawing.Size(282, 232);
+            this.eaViewGlobeControl1.TabIndex = 0;
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(445, 319);
-            this.Controls.Add(this.EAViewGlobeControl1);
+            this.ClientSize = new System.Drawing.Size(282, 232);
+            this.Controls.Add(this.eaViewGlobeControl1);
             this.Name = "MainWindow";
             this.Text = "MainWindow";
             this.ResumeLayout(false);
@@ -55,7 +53,8 @@
 
         #endregion
 
-        private EAViewEngine.EAViewGlobeControl EAViewGlobeControl1;
+        private EAViewEngine.EAViewGlobeControl eaViewGlobeControl1;
+
     }
 }
 
