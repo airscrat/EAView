@@ -56,7 +56,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>
       </AdditionalDependencies>
-      <EmbedManagedResourceFile>EAViewGlobeControl.png;%(EmbedManagedResourceFile)</EmbedManagedResourceFile>
+      <EmbedManagedResourceFile>Resource\EAViewGlobeControl.png;%(EmbedManagedResourceFile)</EmbedManagedResourceFile>
     </Link>
     <ResourceCompile>
       <AdditionalIncludeDirectories>
