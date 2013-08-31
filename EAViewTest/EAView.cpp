@@ -23,6 +23,10 @@
 #include <osg/Switch>
 #include <osg/ProxyNode>
 
+#include <osg/Texture2D>
+#include <osgUtil/SmoothingVisitor>
+#include <osg/Geometry>
+#include <osg/Geode>
 
 class GeodeParent
 {
@@ -255,6 +259,96 @@ public:
 protected:
 private:
 };
+
+osg::Drawable* createHouseWall()
+{
+	//House vertices
+	osg::ref_ptr<osg::Vec3Array> vertices=new osg::Vec3Array;
+	vertices->push_back(osg::Vec3(0,0,4));
+	vertices->push_back(osg::Vec3(0,0,0));
+	vertices->push_back(osg::Vec3(6,0,4));
+	vertices->push_back(osg::Vec3(6,0,0));
+	vertices->push_back(osg::Vec3(6,4,4));
+	vertices->push_back(osg::Vec3(6,4,0));
+	vertices->push_back(osg::Vec3(0,4,4));
+	vertices->push_back(osg::Vec3(0,4,0));
+	vertices->push_back(osg::Vec3(0,0,4));
+	vertices->push_back(osg::Vec3(0,0,0));
+
+	//House normals
+	osg::ref_ptr<osg::Vec3Array> normals=new osg::Vec3Array(10);
+	(*normals)[0].set(-0.707,-0.707,0);
+	(*normals)[1].set(-0.707,-0.707,0);
+	(*normals)[2].set(-0.707,0.707,0);
+	(*normals)[3].set(0.707,-0.707,0);
+	(*normals)[4].set(0.707,0.707,0);
+	(*normals)[5].set(0.707,0.707,0);
+	(*normals)[6].set(-0.707,0.707,0);
+	(*normals)[7].set(-0.707,0.707,0);
+	(*normals)[8].set(-0.707,-0.707,0);
+	(*normals)[9].set(-0.707,-0.707,0);
+
+	//House texture coordinates
+	osg::ref_ptr<osg::Vec2Array> texcoords=new osg::Vec2Array(10);
+	(*texcoords)[0].set(0,1);
+	(*texcoords)[0].set(0,0);
+	(*texcoords)[0].set(0.3,1);
+	(*texcoords)[0].set(0.3,0);
+	(*texcoords)[0].set(0.5,1);
+	(*texcoords)[0].set(0.5,0);
+	(*texcoords)[0].set(0.8,1);
+	(*texcoords)[0].set(0.8,0);
+	(*texcoords)[0].set(1,1);
+	(*texcoords)[0].set(1,0);
+
+	//Create wall geometry
+	osg::ref_ptr<osg::Geometry> houseWall=new osg::Geometry;
+	houseWall->setVertexArray(vertices.get());
+	houseWall->setTexCoordArray(0,texcoords.get());
+	houseWall->setNormalArray(normals.get());
+	houseWall->setNormalBinding(osg::Geometry::BIND_PER_VERTEX);
+	houseWall->addPrimitiveSet(
+		new osg::DrawArrays(osg::DrawArrays::QUAD_STRIP,0,10));
+	houseWall->getOrCreateStateSet()->setTextureAttributeAndModes(
+		0,new osg::Texture2D(osgDB::readImageFile("D:\\Program Files\\OpenSceneGraph\\data\\Images\\road.png")));
+	return houseWall.release();
+}
+osg::Drawable* createHouseRoof()
+{
+	//House vertices
+	osg::ref_ptr<osg::Vec3Array> vertices=new osg::Vec3Array;
+	vertices->push_back(osg::Vec3(-0.2,-0.5,3.5));
+	vertices->push_back(osg::Vec3(6.2,-0.5,3.5));
+	vertices->push_back(osg::Vec3(0.8,2,6));
+	vertices->push_back(osg::Vec3(5.2,2,6));
+	vertices->push_back(osg::Vec3(-0.2,4.5,3.5));
+	vertices->push_back(osg::Vec3(6.2,4.5,3.5));
+
+	//Roof primitives
+	osg::ref_ptr<osg::DrawArrays> roof=
+		new osg::DrawArrays(osg::DrawArrays::QUAD_STRIP,0,6);
+	osg::ref_ptr<osg::DrawElementsUInt> roofSide=
+		new osg::DrawElementsUInt(osg::DrawElementsUInt::TRIANGLES,6);
+	(*roofSide)[0]=0;
+	(*roofSide)[1]=2;
+	(*roofSide)[2]=4;
+	(*roofSide)[3]=5;
+	(*roofSide)[4]=3;
+	(*roofSide)[5]=1;
+	//Color
+	osg::ref_ptr<osg::Vec4Array> colors=new osg::Vec4Array;
+	colors->push_back(osg::Vec4(0.25,0,0,1));
+	//Create roof geometry
+	osg::ref_ptr<osg::Geometry> houseRoof=new osg::Geometry;
+	houseRoof->setVertexArray(vertices.get());
+	houseRoof->setColorArray(colors.get());
+	houseRoof->setColorBinding(osg::Geometry::BIND_OVERALL);
+	houseRoof->addPrimitiveSet(roof.get());
+	houseRoof->addPrimitiveSet(roofSide.get());
+	osgUtil::SmoothingVisitor smv;
+	smv.smooth(*houseRoof);
+	return houseRoof.release();
+}
 //int _tmain(int argc, _TCHAR* argv[])
 int _tmain(int argc, char** argv)
 {
@@ -359,23 +453,32 @@ int _tmain(int argc, char** argv)
 	//viewer.setSceneData(root.get());
 	//return viewer.run();
 
-	//-------------节点代理--------------
-	osg::ArgumentParser arg(&argc,argv);
-	osg::ref_ptr<osg::ProxyNode>root=new osg::ProxyNode;
-	unsigned int childrenNo=0;
-	for (int i=1;i<arg.argc();++i)
-	{
-		if (arg.isString(i))
-		{
-			root->setFileName(childrenNo++,arg[i]);
-		}
-	}
-	if (!root->getNumFileNames())
-	{
-		root->setFileName(0,"D:\\Program Files\\OpenSceneGraph\\data\\cow.osg");
-	}
+	////-------------节点代理--------------
+	//osg::ArgumentParser arg(&argc,argv);
+	//osg::ref_ptr<osg::ProxyNode>root=new osg::ProxyNode;
+	//unsigned int childrenNo=0;
+	//for (int i=1;i<arg.argc();++i)
+	//{
+	//	if (arg.isString(i))
+	//	{
+	//		root->setFileName(childrenNo++,arg[i]);
+	//	}
+	//}
+	//if (!root->getNumFileNames())
+	//{
+	//	root->setFileName(0,"D:\\Program Files\\OpenSceneGraph\\data\\cow.osg");
+	//}
+	//osgViewer::Viewer viewer;
+	//viewer.setSceneData(root.get());
+	//return viewer.run();
+
+	//------------简易房屋---------------
+	osg::ref_ptr<osg::Geode> geode=new osg::Geode;
+	geode->addDrawable(createHouseWall());
+	geode->addDrawable(createHouseRoof());
+
 	osgViewer::Viewer viewer;
-	viewer.setSceneData(root.get());
+	viewer.setSceneData(geode.get());
 	return viewer.run();
 
 }
