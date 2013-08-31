@@ -51,12 +51,15 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader>Use</PrecompiledHeader>
+      <AdditionalUsingDirectories>
+      </AdditionalUsingDirectories>
+      <AdditionalIncludeDirectories>$(OSGDIR)\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>
-      </AdditionalDependencies>
+      <AdditionalDependencies>OpenThreadsd.lib;osgd.lib;osgDBd.lib;osgUtild.lib;osgGAd.lib;osgViewerd.lib;osgTextd.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <EmbedManagedResourceFile>Resource\EAViewGlobeControl.png;%(EmbedManagedResourceFile)</EmbedManagedResourceFile>
+      <AdditionalLibraryDirectories>$(OSGDIR)\lib</AdditionalLibraryDirectories>
     </Link>
     <ResourceCompile>
       <AdditionalIncludeDirectories>
@@ -93,6 +96,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="EAViewGlobe.cpp" />
     <ClCompile Include="EAViewGlobeControl.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -100,6 +104,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="EAViewGlobe.h" />
     <ClInclude Include="EAViewGlobeControl.h">
       <FileType>CppControl</FileType>
     </ClInclude>
