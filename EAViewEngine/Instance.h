@@ -44,7 +44,9 @@ namespace EAViewEngine
 		Instance(void);
 		~Instance(void);
 		static bool EAViewGlobeInit(Control^ eaViewControl);
+		static bool EAViewGlobeTerminate();
+		static int EAViewGlobeRun();
 		static bool ReconfigViewer(Control^ eaViewControl);
-		static osgViewer::Viewer* GetViewer();
+		static osgViewer::Viewer* GetViewer();		
 	};
 }

@@ -4,6 +4,7 @@
 [Content ]:The main 3d view control
 /********************************************************/
 
+#include <stdlib.h>
 #include "Instance.h"
 #include "EAViewGlobe.h"
 #pragma once
@@ -34,6 +35,8 @@ namespace EAViewEngine {
 			//			
 			Object=gcnew EAViewGlobe;
 			Instance::EAViewGlobeInit(_window);
+			
+			_viewer=Instance::GetViewer();			
 		}
 
 	protected:
@@ -45,7 +48,8 @@ namespace EAViewEngine {
 			if (components)
 			{
 				delete components;
-			}			
+			}
+			Instance::EAViewGlobeTerminate();
 		}
 
 	public:
@@ -59,6 +63,7 @@ namespace EAViewEngine {
 		System::ComponentModel::Container^ components;		
 		System::Windows::Forms::Panel^  _window;
 		System::Windows::Forms::Label^  label1;			 
+		osgViewer::Viewer* _viewer;
 
 	#pragma region Windows Form Designer generated code
 		/// <summary>
@@ -100,7 +105,6 @@ namespace EAViewEngine {
 			this->ForeColor = System::Drawing::SystemColors::WindowFrame;
 			this->Name = L"EAViewGlobeControl";
 			this->Size = System::Drawing::Size(250, 200);
-			this->SizeChanged += gcnew System::EventHandler(this, &EAViewGlobeControl::EAViewGlobeControl_SizeChanged);
 			this->_window->ResumeLayout(false);
 			this->_window->PerformLayout();
 			this->ResumeLayout(false);
@@ -108,16 +112,7 @@ namespace EAViewEngine {
 		}
 	#pragma endregion
 
-	private: 
-		System::Void EAViewGlobeControl_SizeChanged(System::Object^  sender, System::EventArgs^  e);
-
-	private: System::Void _window_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {
-				 osgViewer::Viewer* viewer= Instance::GetViewer();
-				 if (viewer->getRunFrameScheme() == osgViewer::ViewerBase::CONTINUOUS ||
-					 viewer->checkNeedToDoFrame() )
-				 {
-					 //viewer->frame();
-				 }
-			 }
+	private:
+		System::Void _window_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e); 
 	};
 }

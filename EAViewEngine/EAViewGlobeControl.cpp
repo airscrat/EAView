@@ -10,8 +10,8 @@
 
 namespace EAViewEngine
 {
-	System::Void EAViewGlobeControl::EAViewGlobeControl_SizeChanged(System::Object^  sender, System::EventArgs^  e)
+	System::Void EAViewGlobeControl::_window_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e)
 	{
-		Instance::ReconfigViewer(_window);
+		//Instance::EAViewGlobeRun();
 	}
 }
