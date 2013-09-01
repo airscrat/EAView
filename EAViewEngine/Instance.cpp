@@ -16,16 +16,32 @@ namespace EAViewEngine
 
 	bool Instance::EAViewGlobeInit(Control^ eaViewControl)
 	{
+		ReconfigViewer(eaViewControl);
+		_viewer->setThreadingModel(osgViewer::Viewer::DrawThreadPerContext);
+		
+		_viewer->addEventHandler(new osgViewer::StatsHandler());
+		_viewer->addEventHandler(new osgGA::StateSetManipulator());
+		_viewer->addEventHandler(new osgViewer::ThreadingHandler());
+		_viewer->setKeyEventSetsDone(0);
+		_viewer->setQuitEventSetsDone(false);
+		
+		//static_cast<osgViewer::ViewerBase*>(_viewer.get())->run();
+		return true;
+	}
+
+	bool Instance::ReconfigViewer(Control^ eaViewControl)
+	{
 		HWND hwnd = (HWND)eaViewControl->Handle.ToPointer();
 
-		osg::ref_ptr<osg::GraphicsContext::Traits> traits = new osg::GraphicsContext::Traits();
+		osg::DisplaySettings* ds = osg::DisplaySettings::instance().get();
+		osg::ref_ptr<osg::GraphicsContext::Traits> traits = new osg::GraphicsContext::Traits(ds);
 		traits->inheritedWindowData = new osgViewer::GraphicsWindowWin32::WindowData( hwnd );
 		traits->setInheritedWindowPixelFormat = true;
 		traits->doubleBuffer = true;
 		traits->windowDecoration = true;
 		traits->sharedContext = NULL;
 		traits->supportsResize = true;
-		
+
 		RECT rect;
 		::GetWindowRect( hwnd, &rect );
 		traits->x = 0;

@@ -5,7 +5,7 @@
 /********************************************************/
 
 #include "Instance.h"
-
+#include "EAViewGlobe.h"
 #pragma once
 
 using namespace System;
@@ -31,9 +31,9 @@ namespace EAViewEngine {
 			InitializeComponent();
 			//
 			//TODO: Add the constructor code here
-			//
-			/*EAViewGlobe eaglobe;
-			Object=eaglobe;*/
+			//			
+			Object=gcnew EAViewGlobe;
+			Instance::EAViewGlobeInit(_window);
 		}
 
 	protected:
@@ -49,7 +49,7 @@ namespace EAViewEngine {
 		}
 
 	public:
-		System::Object Object;
+		System::Object^ Object;
 	protected: 
 
 	private:
@@ -80,6 +80,7 @@ namespace EAViewEngine {
 			this->_window->Name = L"_window";
 			this->_window->Size = System::Drawing::Size(250, 200);
 			this->_window->TabIndex = 1;
+			this->_window->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &EAViewGlobeControl::_window_Paint);
 			// 
 			// label1
 			// 
@@ -110,5 +111,13 @@ namespace EAViewEngine {
 	private: 
 		System::Void EAViewGlobeControl_SizeChanged(System::Object^  sender, System::EventArgs^  e);
 
+	private: System::Void _window_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {
+				 osgViewer::Viewer* viewer= Instance::GetViewer();
+				 if (viewer->getRunFrameScheme() == osgViewer::ViewerBase::CONTINUOUS ||
+					 viewer->checkNeedToDoFrame() )
+				 {
+					 //viewer->frame();
+				 }
+			 }
 	};
 }

@@ -6,10 +6,12 @@
 #include <osgViewer/Viewer>
 #include <osgViewer/View>
 #include <osgViewer/api/Win32/GraphicsWindowWin32>
+#include <osgViewer/ViewerEventHandlers>
 #include <osg/Node>
 #include <osg/io_utils>
 #include <osg/PositionAttitudeTransform>
 #include <osgGA/TrackballManipulator>
+#include <osgGA/StateSetManipulator>
 #include <osg/Camera>
 #include <osg/NodeCallback>
 #include <osg/Group>
@@ -42,6 +44,7 @@ namespace EAViewEngine
 		Instance(void);
 		~Instance(void);
 		static bool EAViewGlobeInit(Control^ eaViewControl);
+		static bool ReconfigViewer(Control^ eaViewControl);
 		static osgViewer::Viewer* GetViewer();
 	};
 }
