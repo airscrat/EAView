@@ -8,4 +8,10 @@
 #include "stdafx.h"
 #include "EAViewGlobeControl.h"
 
-
+namespace EAViewEngine
+{
+	System::Void EAViewGlobeControl::EAViewGlobeControl_SizeChanged(System::Object^  sender, System::EventArgs^  e)
+	{
+		Instance::EAViewGlobeInit(_window);
+	}
+}

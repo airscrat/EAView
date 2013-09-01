@@ -4,7 +4,7 @@
 [Content ]:The main 3d view control
 /********************************************************/
 
-#include "EAViewGlobe.h"
+#include "Instance.h"
 
 #pragma once
 
@@ -32,7 +32,8 @@ namespace EAViewEngine {
 			//
 			//TODO: Add the constructor code here
 			//
-			_eaViewGlobe.EAViewGlobeInit(_window);
+			/*EAViewGlobe eaglobe;
+			Object=eaglobe;*/
 		}
 
 	protected:
@@ -44,9 +45,11 @@ namespace EAViewEngine {
 			if (components)
 			{
 				delete components;
-			}
+			}			
 		}
 
+	public:
+		System::Object Object;
 	protected: 
 
 	private:
@@ -54,11 +57,10 @@ namespace EAViewEngine {
 		/// Required designer variable.
 		/// </summary>
 		System::ComponentModel::Container^ components;		
-	private: System::Windows::Forms::Panel^  _window;
-	private: System::Windows::Forms::Label^  label1;
-			 EAViewGlobe _eaViewGlobe;
+		System::Windows::Forms::Panel^  _window;
+		System::Windows::Forms::Label^  label1;			 
 
-#pragma region Windows Form Designer generated code
+	#pragma region Windows Form Designer generated code
 		/// <summary>
 		/// Required method for Designer support - do not modify
 		/// the contents of this method with the code editor.
@@ -97,13 +99,16 @@ namespace EAViewEngine {
 			this->ForeColor = System::Drawing::SystemColors::WindowFrame;
 			this->Name = L"EAViewGlobeControl";
 			this->Size = System::Drawing::Size(250, 200);
+			this->SizeChanged += gcnew System::EventHandler(this, &EAViewGlobeControl::EAViewGlobeControl_SizeChanged);
 			this->_window->ResumeLayout(false);
 			this->_window->PerformLayout();
 			this->ResumeLayout(false);
 
 		}
-#pragma endregion
+	#pragma endregion
 
+	private: 
+		System::Void EAViewGlobeControl_SizeChanged(System::Object^  sender, System::EventArgs^  e);
 
 	};
 }

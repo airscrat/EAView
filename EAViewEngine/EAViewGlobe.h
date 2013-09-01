@@ -47,17 +47,15 @@
 //
 //#include <string.h>
 //#include <atlconv.h>
-
+#include "Instance.h"
 
 namespace EAViewEngine
 {
 	//struct EAViewGlobeCallback;
-	public ref class EAViewGlobe//:public osg::Referenced, public OpenThreads::Thread 
+	public ref class EAViewGlobe:public System::Object//:public osg::Referenced, public OpenThreads::Thread 
 	{
 	public:
-		EAViewGlobe(void);
-	
-		bool EAViewGlobeInit(System::Windows::Forms::Panel^ eaViewControl);
+		EAViewGlobe(void);		
 
 	private:
 		osgViewer::Viewer* _viewer;
