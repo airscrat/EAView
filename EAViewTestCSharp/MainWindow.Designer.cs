@@ -34,6 +34,7 @@
             // eaViewGlobeControl1
             // 
             this.eaViewGlobeControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.eaViewGlobeControl1.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.eaViewGlobeControl1.Location = new System.Drawing.Point(0, 0);
             this.eaViewGlobeControl1.Name = "eaViewGlobeControl1";
             this.eaViewGlobeControl1.Size = new System.Drawing.Size(282, 232);

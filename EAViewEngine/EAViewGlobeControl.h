@@ -82,17 +82,19 @@ namespace EAViewEngine {
 			// 
 			// _window
 			// 
+			this->_window->BackColor = System::Drawing::Color::Transparent;
 			this->_window->Controls->Add(this->label1);
 			this->_window->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->_window->Location = System::Drawing::Point(0, 0);
 			this->_window->Name = L"_window";
 			this->_window->Size = System::Drawing::Size(250, 200);
-			this->_window->TabIndex = 1;			
+			this->_window->TabIndex = 1;
 			// 
 			// label1
 			// 
 			this->label1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
 			this->label1->AutoSize = true;
+			this->label1->BackColor = System::Drawing::Color::Transparent;
 			this->label1->Location = System::Drawing::Point(182, 176);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(65, 12);
