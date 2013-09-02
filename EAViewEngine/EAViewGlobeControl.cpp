@@ -7,11 +7,18 @@
 
 #include "stdafx.h"
 #include "EAViewGlobeControl.h"
+#include <OpenThreads\Thread>
 
 namespace EAViewEngine
 {
-	System::Void EAViewGlobeControl::_window_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e)
+	
+	System::Void EAViewGlobeControl::EAViewGlobeControl_Load(System::Object^  sender, System::EventArgs^  e)
 	{
-		//Instance::EAViewGlobeRun();
+		
+	}
+
+	void EAViewGlobeControl::RenderThreadProc()
+	{
+		Instance::EAViewGlobeRun();
 	}
 }

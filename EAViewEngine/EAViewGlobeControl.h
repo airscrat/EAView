@@ -84,8 +84,7 @@ namespace EAViewEngine {
 			this->_window->Location = System::Drawing::Point(0, 0);
 			this->_window->Name = L"_window";
 			this->_window->Size = System::Drawing::Size(250, 200);
-			this->_window->TabIndex = 1;
-			this->_window->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &EAViewGlobeControl::_window_Paint);
+			this->_window->TabIndex = 1;			
 			// 
 			// label1
 			// 
@@ -105,6 +104,7 @@ namespace EAViewEngine {
 			this->ForeColor = System::Drawing::SystemColors::WindowFrame;
 			this->Name = L"EAViewGlobeControl";
 			this->Size = System::Drawing::Size(250, 200);
+			this->Load += gcnew System::EventHandler(this, &EAViewGlobeControl::EAViewGlobeControl_Load);
 			this->_window->ResumeLayout(false);
 			this->_window->PerformLayout();
 			this->ResumeLayout(false);
@@ -112,7 +112,8 @@ namespace EAViewEngine {
 		}
 	#pragma endregion
 
-	private:
-		System::Void _window_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e); 
+	private:		
+		void RenderThreadProc();
+		System::Void EAViewGlobeControl_Load(System::Object^  sender, System::EventArgs^  e);
 	};
 }
