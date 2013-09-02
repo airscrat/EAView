@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using EAViewEngine;
 
 
 namespace EAViewTestCSharp
@@ -15,7 +16,7 @@ namespace EAViewTestCSharp
         public MainWindow()
         {
             InitializeComponent();
-            
+            EAViewGlobe ea=this.eaViewGlobeControl1.Object as EAViewGlobe;
         }
     }
 }

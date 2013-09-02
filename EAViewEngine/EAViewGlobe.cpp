@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "EAViewGlobe.h"
-#include <Windows.h>
+
 
 namespace EAViewEngine
 {
