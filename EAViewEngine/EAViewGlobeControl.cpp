@@ -18,6 +18,7 @@ namespace EAViewEngine
 		CloseHandle(hThread1);
 	}
 
+	//渲染的线程，全局函数
 	DWORD WINAPI RenderThreadProc(LPVOID lpParameter)
 	{
 		Instance::EAViewGlobeRun();
