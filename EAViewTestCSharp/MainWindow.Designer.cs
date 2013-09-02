@@ -37,14 +37,14 @@
             this.eaViewGlobeControl1.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.eaViewGlobeControl1.Location = new System.Drawing.Point(0, 0);
             this.eaViewGlobeControl1.Name = "eaViewGlobeControl1";
-            this.eaViewGlobeControl1.Size = new System.Drawing.Size(282, 232);
+            this.eaViewGlobeControl1.Size = new System.Drawing.Size(661, 492);
             this.eaViewGlobeControl1.TabIndex = 0;
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(282, 232);
+            this.ClientSize = new System.Drawing.Size(661, 492);
             this.Controls.Add(this.eaViewGlobeControl1);
             this.Name = "MainWindow";
             this.Text = "MainWindow";
