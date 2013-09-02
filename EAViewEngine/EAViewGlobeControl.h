@@ -7,6 +7,8 @@
 #include <stdlib.h>
 #include "Instance.h"
 #include "EAViewGlobe.h"
+#include <windows.h>
+//#include <iostream.h>
 #pragma once
 
 using namespace System;
@@ -22,7 +24,8 @@ namespace EAViewEngine {
 	/// <summary>
 	/// Summary for EAViewGlobeControl
 	/// </summary>
-	[ToolboxBitmap(EAViewGlobeControl::typeid)]//,"EAViewGlobeControl.bmp")]//the icon
+	//[ToolboxBitmap(EAViewGlobeControl::typeid)]//,"EAViewGlobeControl.bmp")]//the icon
+	DWORD WINAPI RenderThreadProc(LPVOID lpParameter);
 	public ref class EAViewGlobeControl : public System::Windows::Forms::UserControl
 	{
 	public:
@@ -113,7 +116,7 @@ namespace EAViewEngine {
 	#pragma endregion
 
 	private:		
-		void RenderThreadProc();
+		
 		System::Void EAViewGlobeControl_Load(System::Object^  sender, System::EventArgs^  e);
 	};
 }
