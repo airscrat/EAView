@@ -84,6 +84,7 @@ namespace EAViewEngine
 		{					 
 			double minFrameTime = _viewer->getRunMaxFrameRate()>0.0 ? 1.0/_viewer->getRunMaxFrameRate() : 0.0;
 			osg::Timer_t startFrameTick = osg::Timer::instance()->tick();
+			if (minFrameTime==0.0) minFrameTime=0.02;
 			if (_viewer->getRunFrameScheme()==osgViewer::ViewerBase::FrameScheme::ON_DEMAND)
 			{
 				if (_viewer->checkNeedToDoFrame())
@@ -93,9 +94,9 @@ namespace EAViewEngine
 				else
 				{
 					// we don't need to render a frame but we don't want to spin the run loop so make sure the minimum
-					// loop time is 1/100th of second, if not otherwise set, so enabling the frame microSleep below to
+					// loop time is 2/100th of second, if not otherwise set, so enabling the frame microSleep below to
 					// avoid consume excessive CPU resources.
-					if (minFrameTime==0.0) minFrameTime=0.01;
+					if (minFrameTime==0.0) minFrameTime=0.02;
 				}
 			}
 			else
@@ -108,7 +109,8 @@ namespace EAViewEngine
 			// work out if we need to force a sleep to hold back the frame rate
 			osg::Timer_t endFrameTick = osg::Timer::instance()->tick();
 			double frameTime = osg::Timer::instance()->delta_s(startFrameTick, endFrameTick);
-			if (frameTime < minFrameTime) OpenThreads::Thread::microSleep(static_cast<unsigned int>(1000000.0*(minFrameTime-frameTime)));
+			if (frameTime < minFrameTime) 
+				OpenThreads::Thread::microSleep(static_cast<unsigned int>(1000000.0*(minFrameTime-frameTime)));
 		}	
 		return 0;
 	}

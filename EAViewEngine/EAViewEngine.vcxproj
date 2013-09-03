@@ -96,6 +96,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="EAViewFuncLib.cpp" />
     <ClCompile Include="EAViewGlobe.cpp" />
     <ClCompile Include="EAViewGlobeControl.cpp" />
     <ClCompile Include="Instance.cpp" />
@@ -105,6 +106,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="EAViewFuncLib.h" />
     <ClInclude Include="EAViewGlobe.h" />
     <ClInclude Include="EAViewGlobeControl.h">
       <FileType>CppControl</FileType>

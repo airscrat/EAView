@@ -5,6 +5,7 @@
 #include <Windows.h>
 #include "Instance.h"
 #include "IEAViewGlobe.h"
+#include "EAViewFuncLib.h"
 
 namespace EAViewEngine
 {
@@ -13,7 +14,7 @@ namespace EAViewEngine
 	{
 	public:
 		EAViewGlobe(void);		
-
+		void LoadOSGModel(System::String^ file);//string file);
 	private:
 		osgViewer::Viewer* _viewer;
 		

@@ -13,10 +13,22 @@ namespace EAViewTestCSharp
 {
     public partial class MainWindow : Form
     {
+        EAViewGlobe ea;
         public MainWindow()
         {
             InitializeComponent();
-            EAViewGlobe ea=this.eaViewGlobeControl1.Object as EAViewGlobe;
+            ea=this.eaViewGlobeControl1.Object as EAViewGlobe;
+        }
+
+        private void loadModelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog oDlg = new OpenFileDialog();
+            oDlg.Multiselect = false;
+            if (oDlg.ShowDialog()==DialogResult.OK)
+            {
+                ea.LoadOSGModel(oDlg.SafeFileName);
+            }
+            
         }
     }
 }
