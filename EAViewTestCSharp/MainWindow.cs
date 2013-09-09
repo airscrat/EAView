@@ -26,7 +26,7 @@ namespace EAViewTestCSharp
             oDlg.Multiselect = false;
             if (oDlg.ShowDialog()==DialogResult.OK)
             {
-                ea.LoadOSGModel(oDlg.SafeFileName);
+                ea.LoadOSGModel(oDlg.FileName);
             }
             
         }
