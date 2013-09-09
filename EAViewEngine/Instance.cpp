@@ -71,16 +71,12 @@ namespace EAViewEngine
 		}
 		_viewer->setReleaseContextAtEndOfFrameHint(false);
 
-		/*if (!_viewer->isRealized())
-		{
-			_viewer->realize();
-		}*/
 		const char* run_frame_count_str = getenv("OSG_RUN_FRAME_COUNT");
-		const char* run_frame_count_str1 = getenv("OSGDIR");//这个函数取操作系统环境变量的值
+		//const char* run_frame_count_str1 = getenv("OSGDIR");//这个函数取操作系统环境变量的值
 		unsigned int runTillFrameNumber = run_frame_count_str==0 ? osg::UNINITIALIZED_FRAME_NUMBER : atoi(run_frame_count_str);
 		//while(!_viewer->done() )//&& (_viewer->getViewerFrameStamp()->getFrameNumber()<runTillFrameNumber))
 		//while(!_viewer->done() && (run_frame_count_str==0 || _viewer->getViewerFrameStamp()->getFrameNumber()<1))//runTillFrameNumber))
-		while(!_viewer->done())
+		while(_viewer.valid()&&!_viewer->done())
 		{					 
 			double minFrameTime = _viewer->getRunMaxFrameRate()>0.0 ? 1.0/_viewer->getRunMaxFrameRate() : 0.0;
 			osg::Timer_t startFrameTick = osg::Timer::instance()->tick();
