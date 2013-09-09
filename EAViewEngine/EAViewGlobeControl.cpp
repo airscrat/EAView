@@ -14,8 +14,9 @@ namespace EAViewEngine
 	
 	System::Void EAViewGlobeControl::EAViewGlobeControl_Load(System::Object^  sender, System::EventArgs^  e)
 	{
-		HANDLE hThread1=CreateThread(NULL,0,RenderThreadProc,NULL,0,NULL);
-		CloseHandle(hThread1);
+		/*HANDLE hThread1=CreateThread(NULL,0,RenderThreadProc,NULL,0,NULL);
+		CloseHandle(hThread1);*/
+		_beginthread(RenderThreadStart,0,NULL);
 	}
 
 	//渲染的线程，全局函数
@@ -23,6 +24,10 @@ namespace EAViewEngine
 	{
 		Instance::EAViewGlobeRun();
 		return 0;
+	}
+	void RenderThreadStart(void*)
+	{
+		Instance::EAViewGlobeRun();
 	}
 
 
