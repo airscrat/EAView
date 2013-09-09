@@ -48,8 +48,7 @@ namespace EAViewEngine
 		_viewer->addEventHandler(new osgViewer::ThreadingHandler());
 		_viewer->setKeyEventSetsDone(0);
 		_viewer->setQuitEventSetsDone(false);
-		
-		//static_cast<osgViewer::ViewerBase*>(_viewer.get())->run();
+
 		return true;
 	}
 
@@ -57,8 +56,10 @@ namespace EAViewEngine
 	{
 		if ( _viewer.valid() )
 		{
+			_viewer->setDone(true);//尽量早结束线程
+			Sleep(50);//等待渲染线程走完一帧
 			_viewer->stopThreading();
-			_viewer = 0L;
+			_viewer = 0L;//赋值为长整型的0
 		}
 		return true;
 	}
