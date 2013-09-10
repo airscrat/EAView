@@ -1,32 +1,20 @@
-
+/********************************************************
+[DateTime]:2013.8.30
+[Author  ]:Mr.Huang
+[Content ]:this class provide some static functions
+/********************************************************/
 #pragma once
 #include "stdafx.h"
 #include <iostream>
+#include <Windows.h>
 #include <osgDB/ReadFile>
 #include <osgViewer/Viewer>
-#include <osgViewer/View>
 #include <osgViewer/api/Win32/GraphicsWindowWin32>
 #include <osgViewer/ViewerEventHandlers>
-#include <osg/Node>
-#include <osg/io_utils>
-#include <osg/PositionAttitudeTransform>
 #include <osgGA/TrackballManipulator>
 #include <osgGA/StateSetManipulator>
-#include <osg/Camera>
-#include <osg/NodeCallback>
-#include <osg/Group>
-#include <osg/MatrixTransform>
-#include <osg/Notify>
-#include <osg/AutoTransform>
-#include <osg/MatrixTransform>
 #include <osg/PositionAttitudeTransform>
-#include <osg/Switch>
-#include <osg/ProxyNode>
-#include <osg/Texture2D>
-#include <osgUtil/SmoothingVisitor>
-#include <osg/Geometry>
-#include <osg/Geode>
-#include <Windows.h>
+
 
 using namespace System::Windows::Forms;
 
@@ -43,10 +31,25 @@ namespace EAViewEngine
 	public:
 		Instance(void);
 		~Instance(void);
+		/// <summary>
+		/// init viewer on a control in .net
+		/// </summary>
 		static bool EAViewGlobeInit(Control^ eaViewControl);
+		/// <summary>
+		/// terminate viewer's render thread.
+		/// </summary>
 		static bool EAViewGlobeTerminate();
+		/// <summary>
+		/// start viewer's render thread.
+		/// </summary>
 		static int EAViewGlobeRun();
+		/// <summary>
+		/// reconfig viewer's parameters.
+		/// </summary>
 		static bool ReconfigViewer(Control^ eaViewControl);
+		/// <summary>
+		/// get the globe viewer.
+		/// </summary>
 		static osgViewer::Viewer* GetViewer();		
 	};
 }
