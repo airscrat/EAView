@@ -1,3 +1,8 @@
+/********************************************************
+[DateTime]:2013.9.10
+[Author  ]:Mr.Huang
+[Content ]:an interface of class EAViewGlobe
+/********************************************************/
 
 using namespace System;
 

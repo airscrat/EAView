@@ -1,7 +1,10 @@
+/********************************************************
+[DateTime]:2013.9.10
+[Author  ]:Mr.Huang
+[Content ]:this is the basic lib
+/********************************************************/
 #pragma once
 #include "stdafx.h"
-//#include <osgDB/ReadFile>
-//#include <osgViewer/Viewer>
 #include <string>
 
 using namespace System;

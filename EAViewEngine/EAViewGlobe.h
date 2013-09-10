@@ -15,7 +15,7 @@
 
 namespace EAViewEngine
 {
-
+	
 	public ref class EAViewGlobe:public System::Object//,IEAViewGlobe
 	{
 	public:
