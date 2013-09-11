@@ -1,9 +1,9 @@
 /********************************************************
 [DateTime]:2013.8.30
 [Author  ]:Mr.Huang
+[Email   ]:hsq2013(at)foxmail(dot)com
 [Content ]:this is the main class for developers
 /********************************************************/
-
 #pragma once
 #include "stdafx.h"
 #include <osgDB/ReadFile>

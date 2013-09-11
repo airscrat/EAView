@@ -1,12 +1,14 @@
 /********************************************************
-[DateTime]:2013.8.30
+[DateTime]:2013.9.10
 [Author  ]:Mr.Huang
+[Email   ]:hsq2013(at)foxmail(dot)com
 [Content ]:this class provide some static functions
 /********************************************************/
 #pragma once
 #include "stdafx.h"
 #include <iostream>
 #include <Windows.h>
+#include "EAHUDLayer.h"
 #include <osgDB/ReadFile>
 #include <osgViewer/Viewer>
 #include <osgViewer/api/Win32/GraphicsWindowWin32>
@@ -50,6 +52,10 @@ namespace EAViewEngine
 		/// <summary>
 		/// get the globe viewer.
 		/// </summary>
-		static osgViewer::Viewer* GetViewer();		
+		static osgViewer::Viewer* GetEAViewer();
+		/// <summary>
+		/// get the window's position and size
+		/// </summary>
+		static void GetEAWindowRect(int& x,int& y,int& w,int&h);
 	};
 }

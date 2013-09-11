@@ -1,7 +1,8 @@
 /********************************************************
 [DateTime]:2013.9.10
 [Author  ]:Mr.Huang
-[Content ]:this is the basic lib
+[Email   ]:hsq2013(at)foxmail(dot)com
+[Content ]:this is a basic lib
 /********************************************************/
 #pragma once
 #include "stdafx.h"

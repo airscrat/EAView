@@ -1,9 +1,9 @@
 /********************************************************
 [DateTime]:2013.9.10
 [Author  ]:Mr.Huang
+[Email   ]:hsq2013(at)foxmail(dot)com
 [Content ]:an interface of class EAViewGlobe
 /********************************************************/
-
 using namespace System;
 
 namespace EAViewEngine

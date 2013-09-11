@@ -77,6 +77,9 @@ namespace EAViewEngine
 		unsigned int runTillFrameNumber = run_frame_count_str==0 ? osg::UNINITIALIZED_FRAME_NUMBER : atoi(run_frame_count_str);
 		//while(!_viewer->done() )//&& (_viewer->getViewerFrameStamp()->getFrameNumber()<runTillFrameNumber))
 		//while(!_viewer->done() && (run_frame_count_str==0 || _viewer->getViewerFrameStamp()->getFrameNumber()<1))//runTillFrameNumber))
+		
+		
+		
 		while(_viewer.valid()&&!_viewer->done())
 		{					 
 			double minFrameTime = _viewer->getRunMaxFrameRate()>0.0 ? 1.0/_viewer->getRunMaxFrameRate() : 0.0;
@@ -102,13 +105,12 @@ namespace EAViewEngine
 				_viewer->frame();
 				
 			}
-
 			// work out if we need to force a sleep to hold back the frame rate
 			osg::Timer_t endFrameTick = osg::Timer::instance()->tick();
 			double frameTime = osg::Timer::instance()->delta_s(startFrameTick, endFrameTick);
 			if (frameTime < minFrameTime) 
 				OpenThreads::Thread::microSleep(static_cast<unsigned int>(1000000.0*(minFrameTime-frameTime)));
-		}	
+		}		
 		return 0;
 	}
 
@@ -139,8 +141,23 @@ namespace EAViewEngine
 		return true;
 	}
 
-	osgViewer::Viewer* Instance::GetViewer()
+	osgViewer::Viewer* Instance::GetEAViewer()
 	{
 		return _viewer.get();
+	}
+
+	void Instance::GetEAWindowRect(int& x,int& y,int& w,int&h)
+	{		
+		osg::GraphicsContext* gc=_viewer->getCamera()->getGraphicsContext();
+		osgViewer::GraphicsWindowWin32* window=static_cast<osgViewer::GraphicsWindowWin32*>(gc);
+
+		if (window!=NULL&&window->valid())
+		{
+			window->getWindowRectangle(x,y,w,h);			
+		}
+		else
+		{
+			x=0;y=0;w=0;h=0;
+		}
 	}
 }

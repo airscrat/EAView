@@ -96,6 +96,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="EAHUDLayer.cpp" />
     <ClCompile Include="EAViewFuncLib.cpp" />
     <ClCompile Include="EAViewGlobe.cpp" />
     <ClCompile Include="EAViewGlobeControl.cpp" />
@@ -106,6 +107,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="EAHUDLayer.h" />
     <ClInclude Include="EAViewFuncLib.h" />
     <ClInclude Include="EAViewGlobe.h" />
     <ClInclude Include="EAViewGlobeControl.h">

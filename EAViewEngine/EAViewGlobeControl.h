@@ -1,9 +1,9 @@
 /********************************************************
 [DateTime]:2013.8.30
 [Author  ]:Mr.Huang
+[Email   ]:hsq2013(at)foxmail(dot)com
 [Content ]:The main 3d view control
 /********************************************************/
-
 #include <stdlib.h>
 #include "Instance.h"
 #include "EAViewGlobe.h"
@@ -37,11 +37,11 @@ namespace EAViewEngine {
 			InitializeComponent();
 			//
 			//TODO: Add the constructor code here
-			//			
-			Object=gcnew EAViewGlobe;
-			Instance::EAViewGlobeInit(_window);
+			//		
 			
-			_viewer=Instance::GetViewer();			
+			Instance::EAViewGlobeInit(_window);
+			Object=gcnew EAViewGlobe;
+			_viewer=Instance::GetEAViewer();	
 		}
 
 	protected:
@@ -58,6 +58,9 @@ namespace EAViewEngine {
 		}
 
 	public:
+		/// <summary>
+		/// get a class EAViewGlobe instance
+		/// </summary>
 		System::Object^ Object;
 	protected: 
 
@@ -67,7 +70,7 @@ namespace EAViewEngine {
 		/// </summary>
 		System::ComponentModel::Container^ components;		
 		System::Windows::Forms::Panel^  _window;
-		System::Windows::Forms::Label^  label1;			 
+
 		osgViewer::Viewer* _viewer;
 
 	#pragma region Windows Form Designer generated code
@@ -78,30 +81,16 @@ namespace EAViewEngine {
 		void InitializeComponent(void)
 		{
 			this->_window = (gcnew System::Windows::Forms::Panel());
-			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->_window->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// _window
 			// 
 			this->_window->BackColor = System::Drawing::Color::Transparent;
-			this->_window->Controls->Add(this->label1);
 			this->_window->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->_window->Location = System::Drawing::Point(0, 0);
 			this->_window->Name = L"_window";
 			this->_window->Size = System::Drawing::Size(250, 200);
 			this->_window->TabIndex = 1;
-			// 
-			// label1
-			// 
-			this->label1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
-			this->label1->AutoSize = true;
-			this->label1->BackColor = System::Drawing::Color::Transparent;
-			this->label1->Location = System::Drawing::Point(182, 176);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(65, 12);
-			this->label1->TabIndex = 1;
-			this->label1->Text = L"EAView 1.0";
 			// 
 			// EAViewGlobeControl
 			// 
@@ -112,16 +101,17 @@ namespace EAViewEngine {
 			this->Name = L"EAViewGlobeControl";
 			this->Size = System::Drawing::Size(250, 200);
 			this->Load += gcnew System::EventHandler(this, &EAViewGlobeControl::EAViewGlobeControl_Load);
-			this->_window->ResumeLayout(false);
-			this->_window->PerformLayout();
 			this->ResumeLayout(false);
 
 		}
 	#pragma endregion
 
 	private:		
-		
-		System::Void EAViewGlobeControl_Load(System::Object^  sender, System::EventArgs^  e);
-		
+		/// <summary>
+		/// this is a event to triger the osg render thread
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		System::Void EAViewGlobeControl_Load(System::Object^  sender, System::EventArgs^  e);		
 	};
 }
