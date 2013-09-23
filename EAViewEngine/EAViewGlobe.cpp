@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "EAViewGlobe.h"
 #include "EAHUDLayer.h"
+#include "test.h"
 
 namespace EAViewEngine
 {
@@ -13,10 +14,15 @@ namespace EAViewEngine
 		osg::ref_ptr<osg::Group> root=new osg::Group;
 		root->addChild(model);		
 
-		_viewer->setSceneData(root.get());	
-
+		_viewer->setSceneData(root.get());
+		
 		EAHUDLayer hud;
-		hud.SetHUDText("EAView 1.0");
+		hud.SetHUDText("EAView 1.0");	
+
+		//---------------
+		test test;
+
+		
 	}
 
 	void EAViewGlobe::LoadOSGModel(System::String^ file)//string file)
