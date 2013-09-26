@@ -35,8 +35,8 @@ namespace EAViewEngine
 		traits->y = 0;
 		traits->width = rect.right - rect.left;
 		traits->height = rect.bottom - rect.top;
-
-		osg::ref_ptr<osg::GraphicsContext> gc = osg::GraphicsContext::createGraphicsContext( traits.get() );
+		
+		osg::ref_ptr<osg::GraphicsContext> gc = osg::GraphicsContext::createGraphicsContext(traits.get());
 		_viewer->getCamera()->setGraphicsContext( gc.get() );
 		_viewer->getCamera()->setViewport( new osg::Viewport( 0, 0, traits->width, traits->height ) );
 		_viewer->getCamera()->setProjectionMatrixAsPerspective(30.0f, static_cast<double>(traits->width)/static_cast<double>(traits->height), 1.0f, 10000.0f);
