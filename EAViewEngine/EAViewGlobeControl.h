@@ -26,7 +26,7 @@ namespace EAViewEngine {
 	/// Summary for EAViewGlobeControl
 	/// </summary>
 	//[ToolboxBitmap(EAViewGlobeControl::typeid)]//,"EAViewGlobeControl.bmp")]//the icon
-	DWORD WINAPI RenderThreadProc(LPVOID lpParameter);
+	//DWORD WINAPI RenderThreadProc(LPVOID lpParameter);
 	void RenderThreadStart(void*);
 	public ref class EAViewGlobeControl : public System::Windows::Forms::UserControl
 	{
