@@ -29,9 +29,94 @@ namespace EAViewEngine
 	protected:
 		float _angle;
 	};
+	//--------------------------------
+	class AttributePrinter:public osg::Drawable::AttributeFunctor
+	{
+	public:
+		typedef osg::Drawable::AttributeType AttributeType;
+		inline const char* getTypeName(AttributeType type)
+		{
+			static const char* typeNames[]=
+			{
+				"Vertices","Weights","Normals","Colors",
+				"Fog Coords","Sencondary Colors","Attribute6","Attribute7",
+				"Texture Coords 0","Texture Coords 1","Texture Coords 2",
+				"Texture Coordinates 3","Texture Coords 4",
+				"Texture Coords 5","Texture Coords 6","Texture Coords 7"
+			};
+			return typeNames[type];
+		}
+		template<typename T>
+		void printInfo(AttributeType type,unsigned int size,T* front)
+		{
+			std::cout<<"***"<<getTypeName(type)<<":"<<size<<std::endl;
+			for (unsigned int i=0;i<size;++i)
+			{
+				std::cout<<"("<<*(front+i)<<");";
+			}
+			std::cout<<std::endl<<std::endl;
+		}
+		virtual void apply(AttributeType type,unsigned int size,float* front)
+		{
+			printInfo(type,size,front);
+		}
+		virtual void apply(AttributeType type,unsigned int size,osg::Vec2* front)
+		{
+			printInfo(type,size,front);
+		}
+		virtual void apply(AttributeType type,unsigned int size,osg::Vec3* front)
+		{
+			printInfo(type,size,front);
+		}
+		virtual void apply(AttributeType type,unsigned int size,osg::Vec4* front)
+		{
+			printInfo(type,size,front);
+		}
+	};
+	class TrianglePrinter
+	{
+	public:
+		TrianglePrinter()
+		{
+			std::cout<<"***Triangles***"<<std::endl;
+		}
+		void operator()(const osg::Vec3& v1,const osg::Vec3& v2,
+			const osg::Vec3& v3,bool)const
+		{
+			std::cout<<"("<<v1<<");("<<v2<<");("<<v3<<")"<<std::endl;
+		}
+	};
 
+	class FindGeomtryVisitor:public osg::NodeVisitor
+	{
+	public:
+		FindGeomtryVisitor():osg::NodeVisitor(TraversalMode::TRAVERSE_ALL_CHILDREN){}
+		virtual void apply(osg::Node& node)
+		{
+			traverse(node);
+		}
+		virtual void apply(osg::Geode& node)
+		{
+			for (unsigned int i=0;i<node.getNumDrawables();++i)
+			{
+				osg::Drawable* drawable=node.getDrawable(i);
+				if (!drawable)
+				{
+					continue;
+				}
+				std::cout<<"["<<drawable->libraryName()
+					<<"::"<<drawable->className()<<"]"<<std::endl;
+				AttributePrinter attrPrinter;
+				drawable->accept(attrPrinter);
+				osg::TriangleFunctor<TrianglePrinter> triPrinter;
+				drawable->accept(triPrinter);
 
-
+				std::cout<<std::endl;
+			}
+			traverse(node);
+		}
+	};
+	
 
 	//------------------------------------
 	test::test(void)
@@ -68,7 +153,12 @@ namespace EAViewEngine
 		geode->addDrawable(lineGeom.get());
 		_viewer->setSceneData(geode.get());*/
 
-
+		osg::Node* model=osgDB::readNodeFile("cow.osg");
+		FindGeomtryVisitor fgv;
+		if (model)
+		{
+			model->accept(fgv);
+		}
 	}
 
 

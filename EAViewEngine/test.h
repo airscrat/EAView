@@ -3,6 +3,9 @@
 #include <osg/Geode>
 #include <osgViewer/Viewer>
 #include <osgDB/ReadFile>
+#include <osg/io_utils>
+#include <osg/TriangleFunctor>
+#include <osg/Drawable>
 #include "Instance.h"
 
 #pragma once
