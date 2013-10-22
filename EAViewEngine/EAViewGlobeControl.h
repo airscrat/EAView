@@ -4,9 +4,9 @@
 [Email   ]:hsq2013(at)foxmail(dot)com
 [Content ]:The main 3d view control
 /********************************************************/
-#include "vld.h"
 #include "Instance.h"
 #include "EAViewGlobe.h"
+#include "MemLeakCheck.h"
 #include <windows.h>
 #include <process.h>
 
@@ -38,7 +38,9 @@ namespace EAViewEngine {
 			InitializeComponent();
 			//
 			//TODO: Add the constructor code here
-			//			
+			//
+			MemLeakCheck::InitMemLeakCheck();
+			char* p=new char[1];
 			Instance::EAViewGlobeInit(_window);
 			Object=gcnew EAViewGlobe;
 			_viewer=Instance::GetEAViewer();	

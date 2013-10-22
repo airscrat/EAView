@@ -2,7 +2,6 @@
 #include "EAViewGlobe.h"
 #include "EAHUDLayer.h"
 #include "test.h"
-#include "vld.h"
 
 namespace EAViewEngine
 {

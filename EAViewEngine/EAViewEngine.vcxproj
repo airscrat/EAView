@@ -118,6 +118,7 @@
     </ClInclude>
     <ClInclude Include="IEAViewGlobe.h" />
     <ClInclude Include="Instance.h" />
+    <ClInclude Include="MemLeakCheck.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="test.h" />
