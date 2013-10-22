@@ -1,7 +1,7 @@
 // EAView.cpp : 定义控制台应用程序的入口点。
 //
-
 #include "stdafx.h"
+#include "vld.h"
 #include <osgDB\ReadFile>
 #include <osgViewer\Viewer>
 #include <iostream>
@@ -263,6 +263,7 @@ private:
 osg::Drawable* createHouseWall()
 {
 	//House vertices
+	char* p=new char[1];
 	osg::ref_ptr<osg::Vec3Array> vertices=new osg::Vec3Array;
 	vertices->push_back(osg::Vec3(0,0,4));
 	vertices->push_back(osg::Vec3(0,0,0));
@@ -475,8 +476,7 @@ int _tmain(int argc, char** argv)
 	//------------简易房屋---------------
 	osg::ref_ptr<osg::Geode> geode=new osg::Geode;
 	geode->addDrawable(createHouseWall());
-	geode->addDrawable(createHouseRoof());
-
+	geode->addDrawable(createHouseRoof());	
 	osgViewer::Viewer viewer;
 	viewer.setSceneData(geode.get());
 	return viewer.run();
