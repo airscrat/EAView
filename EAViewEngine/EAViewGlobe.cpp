@@ -2,11 +2,12 @@
 #include "EAViewGlobe.h"
 #include "EAHUDLayer.h"
 #include "test.h"
+#include "vld.h"
 
 namespace EAViewEngine
 {
 	EAViewGlobe::EAViewGlobe(void)
-	{	
+	{
 		_viewer=Instance::GetEAViewer();
 		
 		osg::Node*	model=osgDB::readNodeFile("D:\\Program Files\\OpenSceneGraph\\data\\lz.osgt");
@@ -18,7 +19,6 @@ namespace EAViewEngine
 		
 		EAHUDLayer hud;
 		hud.SetHUDText("EAView 1.0");	
-
 		//---------------
 		test test;
 

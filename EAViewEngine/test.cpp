@@ -83,7 +83,7 @@ namespace EAViewEngine
 		void operator()(const osg::Vec3& v1,const osg::Vec3& v2,
 			const osg::Vec3& v3,bool)const
 		{
-			std::cout<<"("<<v1<<");("<<v2<<");("<<v3<<")"<<std::endl;
+			std::cout<<"("<<v1<<");("<<v2<<");("<<v3<<")***"<<std::endl;
 		}
 	};
 
@@ -131,7 +131,7 @@ namespace EAViewEngine
 		_viewer->setSceneData(root.get());*/
 
 		
-		/*_viewer=Instance::GetEAViewer();
+		_viewer=Instance::GetEAViewer();
 		osg::ref_ptr<osg::Vec3Array> vertices=new osg::Vec3Array(10);
 		for (unsigned int i=0;i<10;++i)
 		{
@@ -151,14 +151,14 @@ namespace EAViewEngine
 		geode->getOrCreateStateSet()->setMode(GL_LIGHTING,osg::StateAttribute::OFF);
 		geode->getOrCreateStateSet()->setAttribute(new osg::LineWidth(2));
 		geode->addDrawable(lineGeom.get());
-		_viewer->setSceneData(geode.get());*/
+		_viewer->setSceneData(geode.get());
 
-		osg::Node* model=osgDB::readNodeFile("cow.osg");
+		/*osg::Node* model=osgDB::readNodeFile("cow.osg");
 		FindGeomtryVisitor fgv;
 		if (model)
 		{
 			model->accept(fgv);
-		}
+		}*/
 	}
 
 

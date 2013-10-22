@@ -55,13 +55,13 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <AdditionalUsingDirectories>
       </AdditionalUsingDirectories>
-      <AdditionalIncludeDirectories>$(OSGDIR)\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OSGDIR)\include;$(VLDDIR)\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>OpenThreadsd.lib;osgd.lib;osgDBd.lib;osgUtild.lib;osgGAd.lib;osgViewerd.lib;osgTextd.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <EmbedManagedResourceFile>Resource\EAViewGlobeControl.png;%(EmbedManagedResourceFile)</EmbedManagedResourceFile>
-      <AdditionalLibraryDirectories>$(OSGDIR)\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(OSGDIR)\lib;$(VLDDIR)\lib\Win32</AdditionalLibraryDirectories>
     </Link>
     <ResourceCompile>
       <AdditionalIncludeDirectories>

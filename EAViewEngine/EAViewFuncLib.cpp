@@ -18,4 +18,5 @@ namespace EAViewEngine
 		char* p=(char*)q;
 		return std::string(p);
 	}
+
 }

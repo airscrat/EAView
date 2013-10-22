@@ -17,7 +17,7 @@ namespace EAViewEngine
 		/*HANDLE hThread1=CreateThread(NULL,0,RenderThreadProc,NULL,0,NULL);
 		CloseHandle(hThread1);*/
 
-		_beginthread(RenderThreadStart,0,NULL);
+		_beginthread(RenderThreadStart,0,NULL);//渲染线程
 	}
 
 	//渲染的线程，全局函数
