@@ -162,15 +162,15 @@ namespace EAViewEngine
 
 		osg::ref_ptr<osg::DrawPixels> bitmap1=new osg::DrawPixels;
 		bitmap1->setPosition(osg::Vec3(0,0,0));
-		bitmap1->setImage(osgDB::readImageFile("Images/osg64.png"));
+		bitmap1->setImage(osgDB::readImageFile("D:\\Program Files\\OpenSceneGraph\\data\\Images\\osg64.png"));
 
 		osg::ref_ptr<osg::DrawPixels> bitmap2=new osg::DrawPixels;
 		bitmap2->setPosition(osg::Vec3(80,0,0));
-		bitmap2->setImage(osgDB::readImageFile("Images/osg128.png"));
+		bitmap2->setImage(osgDB::readImageFile("D:\\Program Files\\OpenSceneGraph\\data\\Images\\osg128.png"));
 
 		osg::ref_ptr<osg::DrawPixels> bitmap3=new osg::DrawPixels;
 		bitmap3->setPosition(osg::Vec3(200,0,0));
-		bitmap3->setImage(osgDB::readImageFile("Images/osg256.png"));
+		bitmap3->setImage(osgDB::readImageFile("D:\\Program Files\\OpenSceneGraph\\data\\Images\\osg256.png"));
 		bitmap3->setSubImageDimensions(64,64,128,128);
 		bitmap3->setUseSubImage(true);
 
@@ -179,6 +179,7 @@ namespace EAViewEngine
 		geode->addDrawable(bitmap2.get());
 		geode->addDrawable(bitmap3.get());
 
+		_viewer=Instance::GetEAViewer();
 		_viewer->setSceneData(geode.get());
 	}
 
