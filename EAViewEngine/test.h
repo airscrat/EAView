@@ -6,6 +6,7 @@
 #include <osg/io_utils>
 #include <osg/TriangleFunctor>
 #include <osg/Drawable>
+#include <osg/DrawPixels>
 #include "Instance.h"
 
 #pragma once
