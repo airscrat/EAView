@@ -1,5 +1,8 @@
 #include "StdAfx.h"
 #include "test.h"
+#include "boost/lexical_cast.hpp"
+#include "boost/format.hpp"
+#include "boost/smart_ptr.hpp"
 
 namespace EAViewEngine
 {
@@ -117,7 +120,6 @@ namespace EAViewEngine
 		}
 	};
 	
-
 	//------------------------------------
 	test::test(void)
 	{
@@ -126,7 +128,7 @@ namespace EAViewEngine
 		osg::Node*	model=osgDB::readNodeFile("D:\\Program Files\\OpenSceneGraph\\tests\\boston_buildings.earth");
 
 		osg::ref_ptr<osg::Group> root=new osg::Group;
-		root->addChild(model);		
+		root->addChild(model);
 
 		_viewer->setSceneData(root.get());
 
