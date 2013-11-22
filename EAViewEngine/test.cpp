@@ -121,14 +121,14 @@ namespace EAViewEngine
 	//------------------------------------
 	test::test(void)
 	{
-		/*_viewer=Instance::GetEAViewer();
+		_viewer=Instance::GetEAViewer();
 
-		osg::Node*	model=osgDB::readNodeFile("D:\\Program Files\\OpenSceneGraph\\data\\lz.osgt");
+		osg::Node*	model=osgDB::readNodeFile("D:\\Program Files\\OpenSceneGraph\\tests\\boston_buildings.earth");
 
 		osg::ref_ptr<osg::Group> root=new osg::Group;
 		root->addChild(model);		
 
-		_viewer->setSceneData(root.get());*/
+		_viewer->setSceneData(root.get());
 
 		
 		/*_viewer=Instance::GetEAViewer();
@@ -160,7 +160,7 @@ namespace EAViewEngine
 			model->accept(fgv);
 		}*/
 
-		osg::ref_ptr<osg::DrawPixels> bitmap1=new osg::DrawPixels;
+		/*osg::ref_ptr<osg::DrawPixels> bitmap1=new osg::DrawPixels;
 		bitmap1->setPosition(osg::Vec3(0,0,0));
 		bitmap1->setImage(osgDB::readImageFile("D:\\Program Files\\OpenSceneGraph\\data\\Images\\osg64.png"));
 
@@ -180,7 +180,7 @@ namespace EAViewEngine
 		geode->addDrawable(bitmap3.get());
 
 		_viewer=Instance::GetEAViewer();
-		_viewer->setSceneData(geode.get());
+		_viewer->setSceneData(geode.get());*/
 	}
 
 
