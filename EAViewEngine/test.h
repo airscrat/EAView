@@ -7,6 +7,12 @@
 #include <osg/TriangleFunctor>
 #include <osg/Drawable>
 #include <osg/DrawPixels>
+#include <osg/Texture1D>
+#include <osg/Texture2D>
+#include <osg/TextureCubeMap>
+#include <osg/TextGen>
+#include <ShapeDrawable>
+#include <osg/PositionAttitudeTransform>
 #include "Instance.h"
 
 #pragma once

@@ -119,6 +119,26 @@ namespace EAViewEngine
 			traverse(node);
 		}
 	};
+
+	void test::createTexture1D(osg::StateSet& ss)
+	{
+		osg::ref_ptr<osg::Image> image=new osg::Image;
+		image->setImage(256,1,1,GL_RGBA,GL_RGBA,GL_UNSIGNED_BYTE_3_3_2,
+			new unsigned char[4*256],osg::Image::USE_NEW_DELETE);
+		unsigned char* ptr=image->data();
+		for (unsigned int i=0;i<256;++i)
+		{
+			*ptr++=i;
+			*ptr++=i;
+			*ptr++=255;
+			*ptr++=255;
+		}
+		osg::ref_ptr<osg::Texture1D> texture=new osg::Texture1D;
+		texture->setImage(image.get());
+		texture->setWrap(osg::Texture::WRAP_S,osg::Texture::REPEAT);
+		texture->setFilter(osg::Texture::MIN_FILTER,osg::Texture::LINEAR);
+		ss.setTextureAttributeAndModes(0,texture.get());
+	}
 	
 	//------------------------------------
 	test::test(void)
