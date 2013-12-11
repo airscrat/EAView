@@ -10,8 +10,8 @@
 #include <osg/Texture1D>
 #include <osg/Texture2D>
 #include <osg/TextureCubeMap>
-#include <osg/TextGen>
-#include <ShapeDrawable>
+#include <osg/TexGen>
+#include <osg/ShapeDrawable>
 #include <osg/PositionAttitudeTransform>
 #include "Instance.h"
 
@@ -26,6 +26,9 @@ namespace EAViewEngine
 		~test(void);
 	private:
 		osgViewer::Viewer* _viewer;
+		void createTexture1D(osg::StateSet& ss);
+		void createTexture2D(osg::StateSet& ss);
+		void createTextureCubeMap(osg::StateSet& ss);
 	};
 }
 

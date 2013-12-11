@@ -140,6 +140,45 @@ namespace EAViewEngine
 		ss.setTextureAttributeAndModes(0,texture.get());
 	}
 	
+	void test::createTexture2D(osg::StateSet& ss)
+	{
+		osg::ref_ptr<osg::Texture2D> texture=new osg::Texture2D;
+		texture->setImage(osgDB::readImageFile("clockface.jpg"));
+		texture->setFilter(osg::Texture::MIN_FILTER,osg::Texture::LINEAR);
+		texture->setFilter(osg::Texture::MAG_FILTER,osg::Texture::LINEAR);
+		texture->setWrap(osg::Texture::WRAP_S,osg::Texture::CLAMP_TO_BORDER);
+		texture->setWrap(osg::Texture::WRAP_T,osg::Texture::CLAMP_TO_BORDER);
+		texture->setBorderColor(osg::Vec4(1,1,0,1));
+		ss.setTextureAttributeAndModes(0,texture.get());
+	}
+
+	void test::createTextureCubeMap(osg::StateSet& ss)
+	{
+		osg::ref_ptr<osg::TextureCubeMap> texture=new osg::TextureCubeMap;
+		texture->setImage(osg::TextureCubeMap::POSITIVE_X,
+			osgDB::readImageFile("posx.jpg"));
+		texture->setImage(osg::TextureCubeMap::NEGATIVE_X,
+			osgDB::readImageFile("negx.jpg"));
+		texture->setImage(osg::TextureCubeMap::POSITIVE_Y,
+			osgDB::readImageFile("posy.jpg"));
+		texture->setImage(osg::TextureCubeMap::NEGATIVE_Y,
+			osgDB::readImageFile("negy.jpg"));
+		texture->setImage(osg::TextureCubeMap::POSITIVE_Z,
+			osgDB::readImageFile("posz.jpg"));
+		texture->setImage(osg::TextureCubeMap::NEGATIVE_Z,
+			osgDB::readImageFile("negz.jpg"));
+		texture->setWrap(osg::Texture::WRAP_S,
+			osg::Texture::CLAMP_TO_EDGE);
+		texture->setWrap(osg::Texture::WRAP_T,
+			osg::Texture::CLAMP_TO_EDGE);
+		texture->setWrap(osg::Texture::WRAP_R,
+			osg::Texture::CLAMP_TO_EDGE);
+		texture->setFilter(osg::Texture::MIN_FILTER,osg::Texture::LINEAR);
+		texture->setFilter(osg::Texture::MAG_FILTER,osg::Texture::LINEAR);
+		ss.setTextureAttributeAndModes(0,texture.get());
+		ss.setTextureAttributeAndModes(0,new osg::TexGen);//£¿£¿£¿£¿£¿£¿£¿
+	}
+
 	//------------------------------------
 	test::test(void)
 	{
