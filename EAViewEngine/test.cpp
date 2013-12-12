@@ -123,7 +123,7 @@ namespace EAViewEngine
 	void test::createTexture1D(osg::StateSet& ss)
 	{
 		osg::ref_ptr<osg::Image> image=new osg::Image;
-		image->setImage(256,1,1,GL_RGBA,GL_RGBA,GL_UNSIGNED_BYTE_3_3_2,
+		image->setImage(256,1,1,GL_RGBA,GL_RGBA,GL_UNSIGNED_BYTE,
 			new unsigned char[4*256],osg::Image::USE_NEW_DELETE);
 		unsigned char* ptr=image->data();
 		for (unsigned int i=0;i<256;++i)
