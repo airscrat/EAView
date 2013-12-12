@@ -143,7 +143,7 @@ namespace EAViewEngine
 	void test::createTexture2D(osg::StateSet& ss)
 	{
 		osg::ref_ptr<osg::Texture2D> texture=new osg::Texture2D;
-		texture->setImage(osgDB::readImageFile("clockface.jpg"));
+		texture->setImage(osgDB::readImageFile(std::string(OSGFilePath)+std::string("/Images/clockface.jpg")));
 		texture->setFilter(osg::Texture::MIN_FILTER,osg::Texture::LINEAR);
 		texture->setFilter(osg::Texture::MAG_FILTER,osg::Texture::LINEAR);
 		texture->setWrap(osg::Texture::WRAP_S,osg::Texture::CLAMP_TO_BORDER);
@@ -156,17 +156,17 @@ namespace EAViewEngine
 	{
 		osg::ref_ptr<osg::TextureCubeMap> texture=new osg::TextureCubeMap;
 		texture->setImage(osg::TextureCubeMap::POSITIVE_X,
-			osgDB::readImageFile("posx.jpg"));
+			osgDB::readImageFile(std::string(OSGFilePath)+std::string("/Cubemap_snow/posx.jpg")));
 		texture->setImage(osg::TextureCubeMap::NEGATIVE_X,
-			osgDB::readImageFile("negx.jpg"));
+			osgDB::readImageFile(std::string(OSGFilePath)+std::string("/Cubemap_snow/negx.jpg")));
 		texture->setImage(osg::TextureCubeMap::POSITIVE_Y,
-			osgDB::readImageFile("posy.jpg"));
+			osgDB::readImageFile(std::string(OSGFilePath)+std::string("/Cubemap_snow/posy.jpg")));
 		texture->setImage(osg::TextureCubeMap::NEGATIVE_Y,
-			osgDB::readImageFile("negy.jpg"));
+			osgDB::readImageFile(std::string(OSGFilePath)+std::string("/Cubemap_snow/negy.jpg")));
 		texture->setImage(osg::TextureCubeMap::POSITIVE_Z,
-			osgDB::readImageFile("posz.jpg"));
+			osgDB::readImageFile(std::string(OSGFilePath)+std::string("/Cubemap_snow/posz.jpg")));
 		texture->setImage(osg::TextureCubeMap::NEGATIVE_Z,
-			osgDB::readImageFile("negz.jpg"));
+			osgDB::readImageFile(std::string(OSGFilePath)+std::string("/Cubemap_snow/negz.jpg")));
 		texture->setWrap(osg::Texture::WRAP_S,
 			osg::Texture::CLAMP_TO_EDGE);
 		texture->setWrap(osg::Texture::WRAP_T,
@@ -176,20 +176,20 @@ namespace EAViewEngine
 		texture->setFilter(osg::Texture::MIN_FILTER,osg::Texture::LINEAR);
 		texture->setFilter(osg::Texture::MAG_FILTER,osg::Texture::LINEAR);
 		ss.setTextureAttributeAndModes(0,texture.get());
-		ss.setTextureAttributeAndModes(0,new osg::TexGen);//£¿£¿£¿£¿£¿£¿£¿
+		ss.setTextureAttributeAndModes(0,new osg::TexGen);
 	}
 
 	//------------------------------------
 	test::test(void)
 	{
-		_viewer=Instance::GetEAViewer();
+		/*_viewer=Instance::GetEAViewer();
 
 		osg::Node*	model=osgDB::readNodeFile("D:\\Program Files\\OpenSceneGraph\\tests\\boston_buildings.earth");
 
 		osg::ref_ptr<osg::Group> root=new osg::Group;
 		root->addChild(model);
 
-		_viewer->setSceneData(root.get());
+		_viewer->setSceneData(root.get());*/
 
 		
 		/*_viewer=Instance::GetEAViewer();
@@ -242,6 +242,31 @@ namespace EAViewEngine
 
 		_viewer=Instance::GetEAViewer();
 		_viewer->setSceneData(geode.get());*/
+
+		osg::ref_ptr<osg::Geode> quad1=new osg::Geode;
+		quad1->addDrawable(osg::createTexturedQuadGeometry(
+			osg::Vec3(-3,0,-0.5),osg::Vec3(1,0,0),
+			osg::Vec3(0,0,1),0,0,3,1));
+		createTexture1D(*(quad1->getOrCreateStateSet()));
+
+		osg::ref_ptr<osg::Geode> quad2=new osg::Geode;
+		quad2->addDrawable(osg::createTexturedQuadGeometry(
+			osg::Vec3(-0.5,0,-0.5),osg::Vec3(1,0,0),
+			osg::Vec3(0,0,1),-0.1,-0.1,1.1,1.1));
+		createTexture2D(*(quad2->getOrCreateStateSet()));
+
+		osg::ref_ptr<osg::Geode> box=new osg::Geode;
+		box->addDrawable(new osg::ShapeDrawable(
+			new osg::Box(osg::Vec3(3,0,0),1)));
+		createTextureCubeMap(*(box->getOrCreateStateSet()));
+
+		osg::ref_ptr<osg::Group> root=new osg::Group;
+		root->addChild(quad1.get());
+		root->addChild(quad2.get());
+		root->addChild(box.get());
+
+		_viewer=Instance::GetEAViewer();
+		_viewer->setSceneData(root.get());
 	}
 
 

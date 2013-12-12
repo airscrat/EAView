@@ -16,6 +16,7 @@
 #include "Instance.h"
 
 #pragma once
+#define OSGFilePath "D:/Program Files/OpenSceneGraph/OpenSceneGraph-Data-3.0.0"
 
 namespace EAViewEngine
 {
@@ -25,7 +26,7 @@ namespace EAViewEngine
 		test(void);
 		~test(void);
 	private:
-		osgViewer::Viewer* _viewer;
+		osgViewer::Viewer* _viewer;		
 		void createTexture1D(osg::StateSet& ss);
 		void createTexture2D(osg::StateSet& ss);
 		void createTextureCubeMap(osg::StateSet& ss);
