@@ -30,6 +30,9 @@ namespace EAViewEngine
 		void createTexture1D(osg::StateSet& ss);
 		void createTexture2D(osg::StateSet& ss);
 		void createTextureCubeMap(osg::StateSet& ss);
+		osg::Image* createCustomMipmap(unsigned int resolution);
+		osg::Image* createInternalMipmap(unsigned int resolution);
+		void createTexture2D(osg::StateSet& ss,bool useCustomizedData);
 	};
 }
 
