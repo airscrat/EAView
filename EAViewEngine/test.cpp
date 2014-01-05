@@ -246,7 +246,7 @@ namespace EAViewEngine
 		osg::ref_ptr<osg::Geode> quad1=new osg::Geode;
 		quad1->addDrawable(osg::createTexturedQuadGeometry(
 			osg::Vec3(-3,0,-0.5),osg::Vec3(1,0,0),
-			osg::Vec3(0,0,1),0,0,3,1));
+			osg::Vec3(0,0,1),0,0,2,1));
 		createTexture1D(*(quad1->getOrCreateStateSet()));
 
 		osg::ref_ptr<osg::Geode> quad2=new osg::Geode;
