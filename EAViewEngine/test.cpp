@@ -184,7 +184,7 @@ namespace EAViewEngine
 		unsigned int totalSize=0;
 		unsigned int res=resolution;
 		osg::Image::MipmapDataType mipmapData;
-		for(unsigned int i=0;res>0;res>>1,++i)
+		for(unsigned int i=0;res>0;res>>=1,++i)
 		{
 			if (i>0)
 			{
