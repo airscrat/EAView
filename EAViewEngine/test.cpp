@@ -348,7 +348,7 @@ namespace EAViewEngine
 		quad2->addDrawable(osg::createTexturedQuadGeometry(
 			osg::Vec3(2,0,0),osg::Vec3(1,0,0),
 			osg::Vec3(0,0,1)));
-		createTexture2D(*(quad2->getOrCreateStateSet()),true);
+		createTexture2D(*(quad2->getOrCreateStateSet()),false);
 		osg::ref_ptr<osg::Group> root=new osg::Group;
 		root->addChild(quad1.get());
 		root->addChild(quad2.get());
