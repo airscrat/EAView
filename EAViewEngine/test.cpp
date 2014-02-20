@@ -253,7 +253,31 @@ namespace EAViewEngine
 		texture->setWrap(osg::Texture::WRAP_T,osg::Texture::REPEAT);
 		ss.setTextureAttributeAndModes(0,texture.get());
 	}
-	//------------------------------------
+	//----------ÎíÐ§¹û--------------------
+	class FogCallback:public osg::StateSet::Callback
+	{
+	public:
+		virtual void operator()(osg::StateSet* ss,osg::NodeVisitor* nv)
+		{
+			if (!ss)
+			{
+				return;
+			}
+			osg::Fog* fog=dynamic_cast<osg::Fog*>(
+				ss->getAttribute(osg::StateAttribute::FOG));
+			if (fog)
+			{
+				float start=fog->getStart();
+				if (start<fog->getEnd()-5.0)
+				{
+					fog->setStart(start+5.0);
+				}
+			}
+		}
+	protected:
+	private:
+	};
+	//--------------------------------
 	test::test(void)
 	{
 		/*_viewer=Instance::GetEAViewer();
@@ -353,10 +377,18 @@ namespace EAViewEngine
 		root->addChild(quad1.get());
 		root->addChild(quad2.get());*/
 
-
+		osg::Node* model=osgDB::readNodeFile("D:\\Program Files\\OpenSceneGraph\\OpenSceneGraph-Data-3.0.0\\lz.osg");
+		osg::ref_ptr<osg::Fog> fog=new osg::Fog;
+		fog->setMode(osg::Fog::Mode::LINEAR);
+		fog->setColor(osg::Vec4(1,1,1,1));
+		fog->setStart(1);
+		fog->setEnd(2000);
+		osg::StateSet* ss=model->getOrCreateStateSet();
+		ss->setAttributeAndModes(fog.get());
+		ss->setUpdateCallback(new FogCallback);
 
 		_viewer=Instance::GetEAViewer();
-		//_viewer->setSceneData(root.get());
+		_viewer->setSceneData(model);
 	}
 
 

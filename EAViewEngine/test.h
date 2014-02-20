@@ -13,6 +13,7 @@
 #include <osg/TexGen>
 #include <osg/ShapeDrawable>
 #include <osg/PositionAttitudeTransform>
+#include <osg/Fog>
 #include "Instance.h"
 
 #pragma once
