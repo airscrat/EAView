@@ -339,7 +339,7 @@ namespace EAViewEngine
 		root->addChild(quad2.get());
 		root->addChild(box.get());*/
 
-		osg::ref_ptr<osg::Geode> quad1=new osg::Geode;
+		/*osg::ref_ptr<osg::Geode> quad1=new osg::Geode;
 		quad1->addDrawable(osg::createTexturedQuadGeometry(
 			osg::Vec3(0,0,0),osg::Vec3(1,0,0),
 			osg::Vec3(0,0,1)));
@@ -351,10 +351,12 @@ namespace EAViewEngine
 		createTexture2D(*(quad2->getOrCreateStateSet()),false);
 		osg::ref_ptr<osg::Group> root=new osg::Group;
 		root->addChild(quad1.get());
-		root->addChild(quad2.get());
+		root->addChild(quad2.get());*/
+
+
 
 		_viewer=Instance::GetEAViewer();
-		_viewer->setSceneData(root.get());
+		//_viewer->setSceneData(root.get());
 	}
 
 
