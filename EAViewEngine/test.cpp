@@ -277,6 +277,81 @@ namespace EAViewEngine
 	protected:
 	private:
 	};
+	//-------在场景中使用GLSL---------
+	static const char* vertSource={
+		"varying vec3 normal;\n"
+		"void main()\n"
+		"{\n"
+		"   normal=normalize(gl_NormalMatrix* gl_Normal);\n"
+		"   gl_Position=ftransform();\n"
+		"}\n"
+	};
+	static const char* fragSource={
+		"uniform vec4 mainColor;\n"
+		"varying vec3 normal;\n"
+		"void main()\n"
+		"{\n"
+		"   float intensity=dot(vec3(gl_LightSource[0].position),normal);\n"
+		"   if(intensity>0.95)gl_FragColor=mainColor;\n"
+		"   else if(intensity>0.5)gl_FragColor=vec4(0.6,0.3,0.3,1.0);\n"
+		"   else if(intensity>0.25)gl_FragColor=vec4(0.4,0.2,0.2,1.0);\n"
+		"   else gl_FragColor=vec4(0.2,0.1,0.1,1.0);\n"
+		"}\n"
+	};
+	class ColorCallback:public osg::Uniform::Callback
+	{
+	public:
+		ColorCallback():_incRed(false){}
+		virtual void operator()(osg::Uniform* uniform,osg::NodeVisitor* nv)
+		{
+			if (!uniform)
+			{
+				return;
+			}
+			osg::Vec4 color;
+			uniform->get(color);
+			if (_incRed==true)
+			{
+				if (color.x()<1)
+				{
+					color.x()+=0.01;
+				}else
+				{
+					_incRed=false;
+				}
+			}else
+			{
+				if (color.x()>0)
+				{
+					color.x()-=0.01;
+				}else
+				{
+					_incRed=true;
+				}
+			}
+			uniform->set(color);
+		}
+	protected:
+		bool _incRed;
+	};
+	void createShaders(osg::StateSet& ss)
+	{
+		osg::ref_ptr<osg::Shader> verShader=
+			new osg::Shader(osg::Shader::VERTEX,vertSource);
+		osg::ref_ptr<osg::Shader> fragShader=
+			new osg::Shader(osg::Shader::FRAGMENT,fragSource);
+
+		osg::ref_ptr<osg::Program> program=new osg::Program;
+		program->addShader(verShader.get());
+		program->addShader(fragShader.get());
+
+		osg::ref_ptr<osg::Uniform> mainColor=
+			new osg::Uniform("mainColor",osg::Vec4(1,0.5,0.5,1));
+		mainColor->setUpdateCallback(new ColorCallback);
+
+		ss.addUniform(mainColor.get());
+		ss.setAttributeAndModes(program.get());
+	}
 	//--------------------------------
 	test::test(void)
 	{
@@ -377,7 +452,7 @@ namespace EAViewEngine
 		root->addChild(quad1.get());
 		root->addChild(quad2.get());*/
 
-		osg::Node* model=osgDB::readNodeFile("D:\\Program Files\\OpenSceneGraph\\OpenSceneGraph-Data-3.0.0\\lz.osg");
+		/*osg::Node* model=osgDB::readNodeFile("D:\\Program Files\\OpenSceneGraph\\OpenSceneGraph-Data-3.0.0\\lz.osg");
 		osg::ref_ptr<osg::Fog> fog=new osg::Fog;
 		fog->setMode(osg::Fog::Mode::LINEAR);
 		fog->setColor(osg::Vec4(1,1,1,1));
@@ -385,7 +460,10 @@ namespace EAViewEngine
 		fog->setEnd(2000);
 		osg::StateSet* ss=model->getOrCreateStateSet();
 		ss->setAttributeAndModes(fog.get());
-		ss->setUpdateCallback(new FogCallback);
+		ss->setUpdateCallback(new FogCallback);*/
+
+		osg::Node* model=osgDB::readNodeFile("cow.osg");
+		createShaders(*(model->getOrCreateStateSet()));
 
 		_viewer=Instance::GetEAViewer();
 		_viewer->setSceneData(model);

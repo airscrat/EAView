@@ -14,6 +14,7 @@
 #include <osg/ShapeDrawable>
 #include <osg/PositionAttitudeTransform>
 #include <osg/Fog>
+#include <osg/Program>
 #include "Instance.h"
 
 #pragma once
