@@ -15,6 +15,7 @@
 #include <osg/PositionAttitudeTransform>
 #include <osg/Fog>
 #include <osg/Program>
+#include <osgDB/FileUtils>
 #include "Instance.h"
 
 #pragma once

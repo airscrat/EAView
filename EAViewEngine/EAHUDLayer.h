@@ -10,7 +10,8 @@
 #include <osg/Point>
 #include <osgText/Text>
 #include <osg/ShapeDrawable>
-#include <osg/CameraNode>
+//#include <osg/CameraNode>
+#include <osg/Camera>
 #include <osg/MatrixTransform>
 #include <osgViewer/api/Win32/GraphicsWindowWin32>
 

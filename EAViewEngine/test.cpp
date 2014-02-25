@@ -352,6 +352,18 @@ namespace EAViewEngine
 		ss.addUniform(mainColor.get());
 		ss.setAttributeAndModes(program.get());
 	}
+	static void LoadShaderSource(osg::Shader* shader,const std::string& fileName)
+	{
+		std::string fqFileName=osgDB::findDataFile(fileName);
+		if (fqFileName.length()!=0)
+		{
+			shader->loadShaderSourceFromFile(fqFileName.c_str());
+		}
+		else
+		{
+			osg::notify(osg::WARN) << "File \"" << fileName << "\" not found." << std::endl;
+		}
+	}
 	//--------------------------------
 	test::test(void)
 	{
@@ -461,6 +473,8 @@ namespace EAViewEngine
 		osg::StateSet* ss=model->getOrCreateStateSet();
 		ss->setAttributeAndModes(fog.get());
 		ss->setUpdateCallback(new FogCallback);*/
+
+		
 
 		osg::Node* model=osgDB::readNodeFile("cow.osg");
 		createShaders(*(model->getOrCreateStateSet()));
