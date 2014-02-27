@@ -1,8 +1,8 @@
 #include "StdAfx.h"
 #include "test.h"
-#include "boost/lexical_cast.hpp"
-#include "boost/format.hpp"
-#include "boost/smart_ptr.hpp"
+//#include "boost/lexical_cast.hpp"
+//#include "boost/format.hpp"
+//#include "boost/smart_ptr.hpp"
 
 namespace EAViewEngine
 {
