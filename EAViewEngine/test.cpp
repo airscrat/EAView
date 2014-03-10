@@ -475,7 +475,7 @@ namespace EAViewEngine
 		ss->setUpdateCallback(new FogCallback);*/
 
 		
-		osg::Node* model=osgDB::readNodeFile("cow.osg");
+		osg::Node* model=osgDB::readNodeFile(std::string(OSGFilePath)+std::string("/cow.osg"));
 		createShaders(*(model->getOrCreateStateSet()));
 
 		_viewer=Instance::GetEAViewer();
