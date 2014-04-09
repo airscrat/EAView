@@ -16,6 +16,7 @@
 #include <osg/Fog>
 #include <osg/Program>
 #include <osgDB/FileUtils>
+#include <osg/Camera>
 #include "Instance.h"
 
 #pragma once
@@ -36,6 +37,6 @@ namespace EAViewEngine
 		osg::Image* createCustomMipmap(unsigned int resolution);
 		osg::Image* createInternalMipmap(unsigned int resolution);
 		void createTexture2D(osg::StateSet& ss,bool useCustomizedData);
+		osg::Camera* createBirdsEye(const osg::BoundingSphere& bs);
 	};
 }
-

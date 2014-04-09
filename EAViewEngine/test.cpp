@@ -365,6 +365,28 @@ namespace EAViewEngine
 		}
 	}
 	//--------------------------------
+	osg::Camera* test::createBirdsEye(const osg::BoundingSphere& bs)
+	{
+		osg::ref_ptr<osg::Camera> camera=new osg::Camera;
+		camera->setClearMask(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
+		camera->setReferenceFrame(osg::Transform::ABSOLUTE_RF);
+
+		double viewDistance=2.0*bs.radius();
+		double znear=viewDistance-bs.radius();
+		double zfar=viewDistance+bs.radius();
+		float top=bs.radius();
+		float right=bs.radius();
+		camera->setProjectionMatrixAsOrtho(-right,right,-top,top,znear,zfar);
+
+		osg::Vec3d upDirection(0,1,0);
+		osg::Vec3d viewDirection(0,0,1);
+		osg::Vec3d center=bs.center();
+		osg::Vec3d eyePoint=center+viewDirection*viewDistance;
+		camera->setViewMatrixAsLookAt(eyePoint,center,upDirection);
+
+		return camera.release();
+	}
+
 	test::test(void)
 	{
 		/*_viewer=Instance::GetEAViewer();
@@ -474,12 +496,17 @@ namespace EAViewEngine
 		ss->setAttributeAndModes(fog.get());
 		ss->setUpdateCallback(new FogCallback);*/
 
-		
+		/*
 		osg::Node* model=osgDB::readNodeFile(std::string(OSGFilePath)+std::string("/cessnafire.osg"));
 		createShaders(*(model->getOrCreateStateSet()));
+		*/
 
+        osg::Node* model=osgDB::readNodeFile(std::string(OSGFilePath)+std::string("/lz.osg"));
+		osg::Camera* camera=createBirdsEye(model->getBound());
+		camera->addChild(model);
+        
 		_viewer=Instance::GetEAViewer();
-		_viewer->setSceneData(model);
+		_viewer->setSceneData(camera);
 	}
 
 
