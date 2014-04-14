@@ -38,5 +38,8 @@ namespace EAViewEngine
 		osg::Image* createInternalMipmap(unsigned int resolution);
 		void createTexture2D(osg::StateSet& ss,bool useCustomizedData);
 		osg::Camera* createBirdsEye(const osg::BoundingSphere& bs);
+		osg::Texture* createRttTexture(int texWidth,int texHeight);
+		osg::Camera* createRttCamera(int texWidth,int texHeight,
+			const osg::BoundingSphere& bs);
 	};
 }
