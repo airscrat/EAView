@@ -557,6 +557,8 @@ namespace EAViewEngine
 		root->addChild(quad.get());
 		root->addChild(rttCamera);
 
+
+
 		_viewer=Instance::GetEAViewer();
 		_viewer->setSceneData(root.get());
 	}
