@@ -539,7 +539,7 @@ namespace EAViewEngine
 		osg::Camera* camera=createBirdsEye(model->getBound());
 		camera->addChild(model);*/
 
-		osg::Node* model=osgDB::readNodeFile(std::string(OSGFilePath)+std::string("/axes.osgt"));
+		/*osg::Node* model=osgDB::readNodeFile(std::string(OSGFilePath)+std::string("/axes.osgt"));
         model->getOrCreateStateSet()->setMode(GL_LIGHTING,osg::StateAttribute::OFF);
 
 		osg::ref_ptr<osg::Geode> quad=new osg::Geode;
@@ -555,7 +555,7 @@ namespace EAViewEngine
 
 		osg::ref_ptr<osg::Group> root=new osg::Group;
 		root->addChild(quad.get());
-		root->addChild(rttCamera);
+		root->addChild(rttCamera);*/
 
 
 
