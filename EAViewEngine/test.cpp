@@ -539,25 +539,25 @@ namespace EAViewEngine
 		osg::Camera* camera=createBirdsEye(model->getBound());
 		camera->addChild(model);*/
 
-		/*osg::Node* model=osgDB::readNodeFile(std::string(OSGFilePath)+std::string("/axes.osgt"));
-        model->getOrCreateStateSet()->setMode(GL_LIGHTING,osg::StateAttribute::OFF);
+		osg::Node* model=osgDB::readNodeFile(std::string(OSGFilePath)+std::string("/cow.osg"));
+  //      model->getOrCreateStateSet()->setMode(GL_LIGHTING,osg::StateAttribute::OFF);
 
-		osg::ref_ptr<osg::Geode> quad=new osg::Geode;
-		quad->addDrawable(osg::createTexturedQuadGeometry(osg::Vec3d(0,0,0),
-			osg::Vec3d(1,0,0),osg::Vec3d(0,0,1)));
-		int texWidth=512,texHeight=512;
-		osg::Camera* rttCamera=createRttCamera(texWidth,texHeight,model->getBound());
-		osg::Texture* rttTexture=createRttTexture(texWidth,texHeight);
+		//osg::ref_ptr<osg::Geode> quad=new osg::Geode;
+		//quad->addDrawable(osg::createTexturedQuadGeometry(osg::Vec3d(0,0,0),
+		//	osg::Vec3d(1,0,0),osg::Vec3d(0,0,1)));
+		//int texWidth=512,texHeight=512;
+		//osg::Camera* rttCamera=createRttCamera(texWidth,texHeight,model->getBound());
+		//osg::Texture* rttTexture=createRttTexture(texWidth,texHeight);
 
-		rttCamera->addChild(model);
-		rttCamera->attach(osg::Camera::COLOR_BUFFER,rttTexture);
-		quad->getOrCreateStateSet()->setTextureAttributeAndModes(0,rttTexture);
+		//rttCamera->addChild(model);
+		//rttCamera->attach(osg::Camera::COLOR_BUFFER,rttTexture);
+		//quad->getOrCreateStateSet()->setTextureAttributeAndModes(0,rttTexture);
 
+		//osg::ref_ptr<osg::Group> root=new osg::Group;
+		//root->addChild(quad.get());
+		//root->addChild(rttCamera);
 		osg::ref_ptr<osg::Group> root=new osg::Group;
-		root->addChild(quad.get());
-		root->addChild(rttCamera);*/
-
-
+		root->addChild(model);
 
 		_viewer=Instance::GetEAViewer();
 		_viewer->setSceneData(root.get());
