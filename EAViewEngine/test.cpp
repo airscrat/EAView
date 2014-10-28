@@ -550,16 +550,20 @@ namespace EAViewEngine
 		//osg::Texture* rttTexture=createRttTexture(texWidth,texHeight);
 
 		//rttCamera->addChild(model);
-		//rttCamera->attach(osg::Camera::COLOR_BUFFER,rttTexture);
+		//rttCamera->attach(osg::Camera::COLOR_BUFFER,rttTexture);¡¢
+		
 		//quad->getOrCreateStateSet()->setTextureAttributeAndModes(0,rttTexture);
 
-		//osg::ref_ptr<osg::Group> root=new osg::Group;
+		osg::ref_ptr<osg::Group> root=new osg::Group;
 		//root->addChild(quad.get());
 		//root->addChild(rttCamera);
-		osg::ref_ptr<osg::Group> root=new osg::Group;
+		//osg::ref_ptr<osg::Group> root=new osg::Group;
 		root->addChild(model);
+		
 
+		
 		_viewer=Instance::GetEAViewer();
+		
 		_viewer->setSceneData(root.get());
 	}
 

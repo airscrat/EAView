@@ -48,6 +48,7 @@ namespace EAViewEngine
 		_viewer->addEventHandler(new osgViewer::ThreadingHandler());
 		_viewer->setKeyEventSetsDone(0);
 		_viewer->setQuitEventSetsDone(false);
+		_viewer->setRunMaxFrameRate(30);
 
 		return true;
 	}
