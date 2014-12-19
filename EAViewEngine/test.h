@@ -17,6 +17,7 @@
 #include <osg/Program>
 #include <osgDB/FileUtils>
 #include <osg/Camera>
+#include <osg/View>
 #include "Instance.h"
 
 #pragma once

@@ -559,7 +559,6 @@ namespace EAViewEngine
 		//root->addChild(rttCamera);
 		//osg::ref_ptr<osg::Group> root=new osg::Group;
 		root->addChild(model);
-		
 
 		
 		_viewer=Instance::GetEAViewer();
