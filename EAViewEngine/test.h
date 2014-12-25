@@ -18,6 +18,8 @@
 #include <osgDB/FileUtils>
 #include <osg/Camera>
 #include <osg/View>
+#include <osg/Switch>
+#include <osgGA/GUIEventHandler>
 #include "Instance.h"
 
 #pragma once

@@ -421,6 +421,50 @@ namespace EAViewEngine
 		return rttCamera.release();
 	}
 
+	class KeyboardHandler:public osgGA::GUIEventHandler
+	{
+	public:
+		virtual bool handle(const osgGA::GUIEventAdapter& ea,osgGA::GUIActionAdapter& aa, osg::Object*, osg::NodeVisitor*)
+		{
+			osgViewer::Viewer* viewer=dynamic_cast<osgViewer::Viewer*>(&aa);
+			if (!viewer)
+			{
+				return false;
+			}
+			switch(ea.getEventType())
+			{
+			case osgGA::GUIEventAdapter::KEYDOWN:
+				/*if (ea.getKey()==osgGA::GUIEventAdapter::KEY_Space)
+				{
+					int width=ea.getWindowWidth();
+					int height=ea.getWindowHeight();
+					viewer->requestWarpPointer(width*0.7,height*0.7);
+				}else*/
+				{
+					osg::Switch* root = dynamic_cast<osg::Switch*>(viewer->getSceneData());
+					if (!root)
+					{
+						return false;
+					}
+					if (ea.getKey()=='1')
+					{
+						root->setValue(0,true);
+						root->setValue(1,false);
+					}
+					else if (ea.getKey()=='2')
+					{
+						root->setValue(0,false);
+						root->setValue(1,true);
+					}
+				}
+				break;
+			default:
+				break;
+			}
+			return false;
+		}
+	};
+
 	test::test(void)
 	{
 		/*_viewer=Instance::GetEAViewer();
@@ -539,7 +583,7 @@ namespace EAViewEngine
 		osg::Camera* camera=createBirdsEye(model->getBound());
 		camera->addChild(model);*/
 
-		osg::Node* model=osgDB::readNodeFile(std::string(OSGFilePath)+std::string("/cow.osg"));
+		//osg::Node* model=osgDB::readNodeFile(std::string(OSGFilePath)+std::string("/cow.osg"));
   //      model->getOrCreateStateSet()->setMode(GL_LIGHTING,osg::StateAttribute::OFF);
 
 		//osg::ref_ptr<osg::Geode> quad=new osg::Geode;
@@ -554,16 +598,21 @@ namespace EAViewEngine
 		
 		//quad->getOrCreateStateSet()->setTextureAttributeAndModes(0,rttTexture);
 
-		osg::ref_ptr<osg::Group> root=new osg::Group;
+		//osg::ref_ptr<osg::Group> root=new osg::Group;
 		//root->addChild(quad.get());
 		//root->addChild(rttCamera);
 		//osg::ref_ptr<osg::Group> root=new osg::Group;
-		root->addChild(model);
+		//root->addChild(model);
 
+
+		osg::ref_ptr<osg::Switch> root =new osg::Switch;
+		root->addChild(osgDB::readNodeFile(std::string(OSGFilePath)+std::string("/cessna.osg")),true);
+		root->addChild(osgDB::readNodeFile(std::string(OSGFilePath)+std::string("/cessnafire.osg")),false);
 		
 		_viewer=Instance::GetEAViewer();
 		
 		_viewer->setSceneData(root.get());
+		_viewer->addEventHandler(new KeyboardHandler);
 	}
 
 
