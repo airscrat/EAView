@@ -9,10 +9,10 @@ namespace EAViewEngine
 	{
 		_viewer=Instance::GetEAViewer();
 		
-		osg::Node*	model=osgDB::readNodeFile("D:\\Program Files\\OpenSceneGraph\\data\\lz.osgt");
+		//osg::Node*	model=osgDB::readNodeFile("D:\\Program Files\\OpenSceneGraph\\data\\lz.osgt");
 
 		osg::ref_ptr<osg::Group> root=new osg::Group;
-		root->addChild(model);		
+		//root->addChild(model);		
 
 		_viewer->setSceneData(root.get());
 		
@@ -28,18 +28,28 @@ namespace EAViewEngine
 	{	
 		if (file=="")
 		{
-			file="D:\\Program Files\\OpenSceneGraph\\data\\lz.osgt";
+			return;
 		}
 		_viewer=Instance::GetEAViewer();
 
 		osg::Node*	model=osgDB::readNodeFile(EAViewFuncLib::ConvertToString(file));
 
-		osg::ref_ptr<osg::Group> root=new osg::Group;
+		/*osg::ref_ptr<osg::Group> root=new osg::Group;
 		root->addChild(model);
-		_viewer->setSceneData(root.get());
+		_viewer->setSceneData(root.get());*/
+		
+		osg::Node* node=_viewer->getSceneData();
+		osg::Group* group = node->asGroup();
+		if (group==0)
+		{
+			return;
+		}
+		int childCount=group->getNumChildren();
+		group->removeChildren(1,childCount-1);
+		group->addChild(model);
 
-		EAHUDLayer hud;
-		hud.SetHUDText("EAView 1.0");
+		/*EAHUDLayer hud;
+		hud.SetHUDText("EAView 1.0");*/
 
 		//osg::Stats* stats = _viewer->getViewerStats();
 		//double frameRate=0;

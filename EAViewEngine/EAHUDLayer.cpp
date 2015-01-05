@@ -59,8 +59,10 @@ namespace EAViewEngine
 		//‘ÿ»ÎŒ∆¿Ì  
 		osg::ref_ptr<osg::Texture2D> HUDTexture = new osg::Texture2D;  
 		HUDTexture->setDataVariance(osg::Object::DYNAMIC);  
-		osg::ref_ptr<osg::Image> HUDImage = osgDB::readImageFile("D:\\Program Files\\OpenSceneGraph\\data\\Images\\skymap.jpg");  
-		HUDTexture->setImage(HUDImage.get());  
+		/*osg::ref_ptr<osg::Image> HUDImage = osgDB::readImageFile("D:\\Program Files\\OpenSceneGraph\\data\\Images\\skymap.jpg");  
+		HUDTexture->setImage(HUDImage.get());  */
+		
+		HUDTexture->setBorderColor(osg::Vec4( 255.0, 50.0, 50.0, 180.0 ));
 		osg::ref_ptr<osg::StateSet> HUDStateSet = new osg::StateSet;  
 		HUDStateSet->setTextureAttributeAndModes(0,HUDTexture.get());  
 		HUDStateSet->setMode(GL_BLEND, osg::StateAttribute::ON);  
@@ -110,7 +112,7 @@ namespace EAViewEngine
 		//begin  
 		m_text = new osgText::Text; 
 		m_text->setCharacterSize(30);  
-		m_text->setFont("D:\\Program Files\\OpenSceneGraph\\data\\Fonts\\simhei.ttf");
+		m_text->setFont(".\\Fonts\\times.ttf");
 		m_text->setText(inText);  
 		m_text->setAlignment(osgText::Text::CENTER_CENTER);  
 		m_text->setAxisAlignment(osgText::Text::SCREEN);  

@@ -464,7 +464,34 @@ namespace EAViewEngine
 			return false;
 		}
 	};
-
+/*
+	class PickModelHandler:public osgGA::GUIEventHandler
+	{
+	public:
+		PickModelHandler():_activeDragger(0){}
+		bool handle(const osgGA::GUIEventAdapter& ea,
+			osgGA::GUIActionAdapter& aa, osg::Object*, osg::NodeVisitor*)
+		{
+			osgViewer::View* view=dynamic_cast<osgViewer::View*>(&aa);
+			if (!view)
+			{
+				return false;
+			}
+			switch(ea.getEventType())
+			{
+			case osgGA::GUIEventAdapter::PUSH:
+				{
+					_pointer.reset();
+					osgUtil::LineSegmentIntersector::Intersections hits;
+					if (view->computeIntersections(ea.getX(),ea.getY(),hits))
+					{
+						_pointer.setCamera(view->getCamera());
+					}
+				}
+			}
+		}		
+	};
+	*/
 	test::test(void)
 	{
 		/*_viewer=Instance::GetEAViewer();
@@ -604,7 +631,7 @@ namespace EAViewEngine
 		//osg::ref_ptr<osg::Group> root=new osg::Group;
 		//root->addChild(model);
 
-
+		/*
 		osg::ref_ptr<osg::Switch> root =new osg::Switch;
 		root->addChild(osgDB::readNodeFile(std::string(OSGFilePath)+std::string("/cessna.osg")),true);
 		root->addChild(osgDB::readNodeFile(std::string(OSGFilePath)+std::string("/cessnafire.osg")),false);
@@ -613,6 +640,8 @@ namespace EAViewEngine
 		
 		_viewer->setSceneData(root.get());
 		_viewer->addEventHandler(new KeyboardHandler);
+		//_viewer->setCameraManipulator(new osgGA::SphericalManipulator);
+		*/
 	}
 
 

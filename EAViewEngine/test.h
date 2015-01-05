@@ -20,7 +20,12 @@
 #include <osg/View>
 #include <osg/Switch>
 #include <osgGA/GUIEventHandler>
+#include <osgga/GUIEventAdapter>
+#include <osgga/SphericalManipulator>
 #include "Instance.h"
+//#include <boost/property_tree/xml_parser.hpp>
+#include <osgManipulator/CommandManager>
+#include <osgManipulator/TranslateAxisDragger>
 
 #pragma once
 #define OSGFilePath "D:/Program Files/OpenSceneGraph/OpenSceneGraph-Data-3.0.0"
