@@ -62,6 +62,7 @@ namespace EAViewEngine
 			_viewer->stopThreading();
 			_viewer = 0L;//赋值为长整型的0
 		}
+		
 		return true;
 	}
 

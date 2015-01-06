@@ -474,12 +474,12 @@ int _tmain(int argc, char** argv)
 	//return viewer.run();
 
 	//------------¼òÒ×·¿ÎÝ---------------
-	osg::ref_ptr<osg::Geode> geode=new osg::Geode;
+	/*osg::ref_ptr<osg::Geode> geode=new osg::Geode;
 	geode->addDrawable(createHouseWall());
 	geode->addDrawable(createHouseRoof());	
 	osgViewer::Viewer viewer;
 	viewer.setSceneData(geode.get());
-	return viewer.run();
+	return viewer.run();*/
 
 }
 

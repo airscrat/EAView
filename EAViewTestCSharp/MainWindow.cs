@@ -16,17 +16,32 @@ namespace EAViewTestCSharp
         EAViewGlobe ea;
         public MainWindow()
         {
-            InitializeComponent();
-            ea=this.eaViewGlobeControl1.Object as EAViewGlobe;
+            try
+            {
+                InitializeComponent();
+                ea = this.eaViewGlobeControl1.Object as EAViewGlobe;
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace);
+            }
+            
         }
 
         private void loadModelToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            OpenFileDialog oDlg = new OpenFileDialog();
-            oDlg.Multiselect = false;
-            if (oDlg.ShowDialog()==DialogResult.OK)
+            try
             {
-                ea.LoadOSGModel(oDlg.FileName);
+                OpenFileDialog oDlg = new OpenFileDialog();
+                oDlg.Multiselect = false;
+                if (oDlg.ShowDialog()==DialogResult.OK)
+                {
+                    ea.LoadOSGModel(oDlg.FileName);
+                }
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace);
             }
             
         }

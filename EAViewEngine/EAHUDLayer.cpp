@@ -112,7 +112,7 @@ namespace EAViewEngine
 		//begin  
 		m_text = new osgText::Text; 
 		m_text->setCharacterSize(30);  
-		m_text->setFont(".\\Fonts\\times.ttf");
+		m_text->setFont("..\\Fonts\\times.ttf");
 		m_text->setText(inText);  
 		m_text->setAlignment(osgText::Text::CENTER_CENTER);  
 		m_text->setAxisAlignment(osgText::Text::SCREEN);  
@@ -120,8 +120,9 @@ namespace EAViewEngine
 		m_text->setColor(osg::Vec4(199, 77, 15, 1));  
 		panelGeode->addDrawable(m_text.get());
 		//end
-		root->addChild(HUDProjection.get());  
-		/*root->addChild(tankXForm.get());  
+		//root->addChild(HUDProjection.get()); 
+		root->insertChild(0,HUDProjection.get());
+		/*root->addChild(tankXForm.get());
 		root->addChild(landTankNode.get());  */
 		_viewer->setSceneData(root.get());
 		_valid=true;

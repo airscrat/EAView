@@ -28,7 +28,11 @@ namespace EAViewEngine {
 	/// </summary>
 	//[ToolboxBitmap(EAViewGlobeControl::typeid)]//,"EAViewGlobeControl.bmp")]//the icon
 	//DWORD WINAPI RenderThreadProc(LPVOID lpParameter);
-	void RenderThreadStart(void*);
+
+	unsigned int RTID;
+	HANDLE RTHandle;
+	unsigned int __stdcall RenderThreadStart(void*);
+
 	public ref class EAViewGlobeControl : public System::Windows::Forms::UserControl
 	{
 	public:
@@ -39,8 +43,8 @@ namespace EAViewEngine {
 			//
 			//TODO: Add the constructor code here
 			//
-			MemLeakCheck::InitMemLeakCheck();
-			char* p=new char[1];
+			/*MemLeakCheck::InitMemLeakCheck();
+			char* p=new char[1];*/
 			Instance::EAViewGlobeInit(_window);
 			Object=gcnew EAViewGlobe;
 			_viewer=Instance::GetEAViewer();	
@@ -53,6 +57,10 @@ namespace EAViewEngine {
 		~EAViewGlobeControl()
 		{
 			Instance::EAViewGlobeTerminate();
+			if(RTHandle!=0)
+			{
+				CloseHandle(RTHandle);
+			}
 			if (components)
 			{
 				delete components;
