@@ -45,9 +45,11 @@ namespace EAViewEngine
 			return;
 		}
 		int childCount=group->getNumChildren();
+		//_viewer->setDone(true);//尽量早结束线程
+		//Sleep(50);//等待渲染线程走完一帧
 		group->removeChildren(1,childCount-1);
 		group->addChild(model);
-
+		//_viewer->setDone(false);
 		/*EAHUDLayer hud;
 		hud.SetHUDText("EAView 1.0");*/
 

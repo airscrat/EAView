@@ -631,17 +631,27 @@ namespace EAViewEngine
 		//osg::ref_ptr<osg::Group> root=new osg::Group;
 		//root->addChild(model);
 
-		/*
-		osg::ref_ptr<osg::Switch> root =new osg::Switch;
+		
+		/*osg::ref_ptr<osg::Switch> root =new osg::Switch;
 		root->addChild(osgDB::readNodeFile(std::string(OSGFilePath)+std::string("/cessna.osg")),true);
-		root->addChild(osgDB::readNodeFile(std::string(OSGFilePath)+std::string("/cessnafire.osg")),false);
+		root->addChild(osgDB::readNodeFile(std::string(OSGFilePath)+std::string("/cessnafire.osg")),false);*/
 		
 		_viewer=Instance::GetEAViewer();
 		
-		_viewer->setSceneData(root.get());
-		_viewer->addEventHandler(new KeyboardHandler);
-		//_viewer->setCameraManipulator(new osgGA::SphericalManipulator);
-		*/
+		/*_viewer->setSceneData(root.get());*/
+		_viewer->addEventHandler(new ViewStatsHandler);
+		osg::Node* node=_viewer->getSceneData();
+		osg::Group* group = node->asGroup();
+		if (group==0)
+		{
+			return;
+		}
+		osg::Node* modeldx=osgDB::readNodeFile(std::string("E:\\快盘\\科技项目\\三维引擎\\jnxq_dx.osg"));
+		osg::Node* modeljz1=osgDB::readNodeFile(std::string("E:\\快盘\\科技项目\\三维引擎\\jnxq_jz1.osg"));
+		/*osg::Node* modeljz2=osgDB::readNodeFile(std::string("E:\\快盘\\科技项目\\三维引擎\\jnxq_jz2.osg"));*/
+		group->addChild(modeldx);
+		group->addChild(modeljz1);
+		/*group->addChild(modeljz2);*/
 	}
 
 

@@ -26,6 +26,7 @@
 //#include <boost/property_tree/xml_parser.hpp>
 #include <osgManipulator/CommandManager>
 #include <osgManipulator/TranslateAxisDragger>
+#include "ViewStatsHandler.h"
 
 #pragma once
 #define OSGFilePath "D:/Program Files/OpenSceneGraph/OpenSceneGraph-Data-3.0.0"
