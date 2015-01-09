@@ -36,4 +36,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MainWindow.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+  </ItemGroup>
 </Project>

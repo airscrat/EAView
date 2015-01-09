@@ -6,7 +6,7 @@
 /********************************************************/
 #include "Instance.h"
 #include "EAViewGlobe.h"
-#include "MemLeakCheck.h"
+//#include "MemLeakCheck.h"
 #include <windows.h>
 #include <process.h>
 
