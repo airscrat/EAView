@@ -647,7 +647,7 @@ namespace EAViewEngine
 			return;
 		}
 		/*osg::Node* modeldx=osgDB::readNodeFile(std::string("E:\\快盘\\科技项目\\三维引擎\\jnxq_dx.osg"));
-		osg::Node* modeljz1=osgDB::readNodeFile(std::string("E:\\快盘\\科技项目\\三维引擎\\jnxq_jz1.osg"));*/
+		osg::Node* modeljz1=osgDB::readNodeFile(std::string("E:\\快盘\\科技项目\\三维引擎\\jnxq_jz1.osg"));
 		/*osg::Node* modeljz2=osgDB::readNodeFile(std::string("E:\\快盘\\科技项目\\三维引擎\\jnxq_jz2.osg"));*/
 		/*group->addChild(modeldx);
 		group->addChild(modeljz1);*/

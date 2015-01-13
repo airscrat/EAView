@@ -33,6 +33,7 @@ namespace EAViewTestCSharp
             try
             {
                 OpenFileDialog oDlg = new OpenFileDialog();
+                oDlg.Filter = "模型文件|*.osg;*.osgt;*.ive";
                 oDlg.Multiselect = false;
                 if (oDlg.ShowDialog()==DialogResult.OK)
                 {
@@ -44,6 +45,24 @@ namespace EAViewTestCSharp
                 MessageBox.Show(ex.StackTrace);
             }
             
+        }
+
+        private void loadProjectToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog oDlg = new OpenFileDialog();
+                oDlg.Filter = "工程文件|*.eaml";
+                oDlg.Multiselect = false;
+                if (oDlg.ShowDialog() == DialogResult.OK)
+                {
+                    ea.LoadProject(oDlg.FileName);
+                }
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace);
+            }
         }
     }
 }

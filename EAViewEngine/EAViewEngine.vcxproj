@@ -173,6 +173,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="ChineseCode.cpp" />
     <ClCompile Include="EAHUDLayer.cpp" />
     <ClCompile Include="EAViewFuncLib.cpp" />
     <ClCompile Include="EAViewGlobe.cpp" />
@@ -188,6 +189,7 @@
     <ClCompile Include="ViewStatsHandler.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ChineseCode.h" />
     <ClInclude Include="EAHUDLayer.h" />
     <ClInclude Include="EAViewFuncLib.h" />
     <ClInclude Include="EAViewGlobe.h" />

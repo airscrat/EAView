@@ -25,8 +25,15 @@ namespace EAViewEngine
 		/// </summary>
 		/// <param name="file">输入模型文件的路径</param>
 		void LoadOSGModel(System::String^ file);//string file);
+		/// <summary>
+		/// 加载一个模型工程文件
+		/// </summary>
+		/// <param name="var"></param>
+		void LoadProject(System::String^ file);
 	private:
 		osgViewer::Viewer* _viewer;
+		bool EAViewInit();
+		osg::Group* EAGroupDataReset();
 		
 	};
 

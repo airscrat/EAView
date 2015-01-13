@@ -104,6 +104,7 @@ namespace EAViewEngine {
 			// 
 			// EAViewGlobeControl
 			// 
+			this->AllowDrop = true;
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 12);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->Controls->Add(this->_window);

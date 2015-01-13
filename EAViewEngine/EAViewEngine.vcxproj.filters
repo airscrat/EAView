@@ -10,6 +10,7 @@
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="test.cpp" />
     <ClCompile Include="ViewStatsHandler.cpp" />
+    <ClCompile Include="ChineseCode.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EAHUDLayer.h" />
@@ -23,6 +24,7 @@
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="test.h" />
     <ClInclude Include="ViewStatsHandler.h" />
+    <ClInclude Include="ChineseCode.h" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="EAViewGlobeControl.resX" />

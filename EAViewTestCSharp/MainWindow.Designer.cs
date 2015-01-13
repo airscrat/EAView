@@ -32,16 +32,19 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadModelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.loadProjectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // eaViewGlobeControl1
             // 
-            this.eaViewGlobeControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.eaViewGlobeControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.eaViewGlobeControl1.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.eaViewGlobeControl1.Location = new System.Drawing.Point(0, 25);
+            this.eaViewGlobeControl1.Location = new System.Drawing.Point(0, 28);
             this.eaViewGlobeControl1.Name = "eaViewGlobeControl1";
-            this.eaViewGlobeControl1.Size = new System.Drawing.Size(661, 467);
+            this.eaViewGlobeControl1.Size = new System.Drawing.Size(661, 464);
             this.eaViewGlobeControl1.TabIndex = 0;
             // 
             // menuStrip1
@@ -57,7 +60,8 @@
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.loadModelToolStripMenuItem});
+            this.loadModelToolStripMenuItem,
+            this.loadProjectToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(39, 21);
             this.fileToolStripMenuItem.Text = "File";
@@ -65,17 +69,24 @@
             // loadModelToolStripMenuItem
             // 
             this.loadModelToolStripMenuItem.Name = "loadModelToolStripMenuItem";
-            this.loadModelToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.loadModelToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.loadModelToolStripMenuItem.Text = "LoadModel";
             this.loadModelToolStripMenuItem.Click += new System.EventHandler(this.loadModelToolStripMenuItem_Click);
+            // 
+            // loadProjectToolStripMenuItem
+            // 
+            this.loadProjectToolStripMenuItem.Name = "loadProjectToolStripMenuItem";
+            this.loadProjectToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.loadProjectToolStripMenuItem.Text = "LoadProject";
+            this.loadProjectToolStripMenuItem.Click += new System.EventHandler(this.loadProjectToolStripMenuItem_Click);
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(661, 492);
-            this.Controls.Add(this.eaViewGlobeControl1);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.eaViewGlobeControl1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainWindow";
             this.Text = "EAView 1.0";
@@ -92,6 +103,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loadModelToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem loadProjectToolStripMenuItem;
 
     }
 }

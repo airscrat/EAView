@@ -8,20 +8,50 @@ namespace EAViewEngine
 	EAViewGlobe::EAViewGlobe(void)
 	{
 		_viewer=Instance::GetEAViewer();
-		
-		//osg::Node*	model=osgDB::readNodeFile("D:\\Program Files\\OpenSceneGraph\\data\\lz.osgt");
-
 		osg::ref_ptr<osg::Group> root=new osg::Group;
-		//root->addChild(model);		
-
 		_viewer->setSceneData(root.get());
-		
-		EAHUDLayer hud;
-		hud.SetHUDText("EAView 1.0");	
+		EAViewInit();
+		EAGroupDataReset();
 		//---------------
 		test test;
 
 		
+	}
+
+	bool EAViewGlobe::EAViewInit()
+	{
+		//show hud logo
+		EAHUDLayer hud;
+		hud.SetHUDText("EAView 1.0");
+		//remove statshandler
+		osgViewer::View::EventHandlers handlers = 
+			_viewer->getEventHandlers();
+		for (osgViewer::View::EventHandlers::iterator itr=handlers.begin();
+			itr!=handlers.end();++itr)
+		{
+			osgViewer::StatsHandler* statsHandler = dynamic_cast<osgViewer::StatsHandler*>((*itr).get());
+			if (statsHandler!=0)
+			{
+				_viewer->removeEventHandler(statsHandler);
+			}
+		}
+		
+		return true;
+	}
+
+	osg::Group* EAViewGlobe::EAGroupDataReset()
+	{
+		osg::Node* node=_viewer->getSceneData();
+		osg::Group* group = node->asGroup();
+		if (group==0)
+		{
+			return NULL;
+		}
+		int childCount=group->getNumChildren();
+
+		group->removeChildren(1,childCount-1);
+		
+		return group;
 	}
 
 	void EAViewGlobe::LoadOSGModel(System::String^ file)//string file)
@@ -30,7 +60,6 @@ namespace EAViewEngine
 		{
 			return;
 		}
-		_viewer=Instance::GetEAViewer();
 
 		osg::Node*	model=osgDB::readNodeFile(EAViewFuncLib::ConvertToString(file));
 
@@ -38,16 +67,7 @@ namespace EAViewEngine
 		root->addChild(model);
 		_viewer->setSceneData(root.get());*/
 		
-		osg::Node* node=_viewer->getSceneData();
-		osg::Group* group = node->asGroup();
-		if (group==0)
-		{
-			return;
-		}
-		int childCount=group->getNumChildren();
-		//_viewer->setDone(true);//尽量早结束线程
-		//Sleep(50);//等待渲染线程走完一帧
-		group->removeChildren(1,childCount-1);
+		osg::Group* group=EAGroupDataReset();
 		group->addChild(model);
 		//_viewer->setDone(false);
 		/*EAHUDLayer hud;
@@ -62,7 +82,9 @@ namespace EAViewEngine
 		//hud.UpdateHUDText(ans);
 	}
 
-
+	void EAViewGlobe::LoadProject(System::String^ file)
+	{
+	}
 }
 
 
