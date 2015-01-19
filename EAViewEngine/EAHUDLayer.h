@@ -32,7 +32,7 @@ namespace EAViewEngine
 		//bool UpdateHUDText(const std::string& inText);
 	protected:
 	private:		
-		osgViewer::Viewer* _viewer;
+		osgViewer::Viewer* _eaview;
 		osg::ref_ptr<osgText::Text> m_text;
 		osg::ref_ptr<osg::Geode> CreatePanel();
 		bool _valid;

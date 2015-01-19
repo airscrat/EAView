@@ -8,7 +8,7 @@ namespace EAViewEngine
 	//--------------下面为鼠标求交的一个案例--------------------
 	EAHUDLayer::EAHUDLayer()
 	{
-		_viewer=Instance::GetEAViewer();
+		_eaview=Instance::GetEAViewer();
 		_valid=false;
 	}
 
@@ -96,7 +96,7 @@ namespace EAViewEngine
 		//end  
 		*/
 
-		osg::ref_ptr<osg::Group> root = _viewer->getSceneData()->asGroup();  
+		osg::ref_ptr<osg::Group> root = _eaview->getSceneData()->asGroup();  
 		osg::ref_ptr<osg::Geode> panelGeode = CreatePanel();
 		//begin  
 		//裁剪一个矩形，用来承装文字，并且不随场景的变化而变化  
@@ -124,7 +124,7 @@ namespace EAViewEngine
 		root->insertChild(0,HUDProjection.get());
 		/*root->addChild(tankXForm.get());
 		root->addChild(landTankNode.get());  */
-		_viewer->setSceneData(root.get());
+		_eaview->setSceneData(root.get());
 		_valid=true;
 		return true;
 	}

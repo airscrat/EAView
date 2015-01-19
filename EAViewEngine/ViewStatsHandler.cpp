@@ -11,9 +11,9 @@ namespace EAViewEngine
 		_initialized(false),
 		_threadModel(osgViewer::ViewerBase::SingleThreaded),
 		_frameRateChildNum(0),
-		_viewerChildNum(0),
+		_eaviewChildNum(0),
 		_cameraSceneChildNum(0),
-		_viewerSceneChildNum(0),
+		_eaviewSceneChildNum(0),
 		_numBlocks(8),
 		_blockMultiplier(10000.0),
 		_statsWidth(1280.0f),
@@ -37,12 +37,13 @@ namespace EAViewEngine
 		osgViewer::View* myview = dynamic_cast<osgViewer::View*>(&aa);
 		if (!myview) return false;
 		osgViewer::ViewerBase* viewer = myview->getViewerBase();
-		if (viewer && _threadModelText.valid() && viewer->getThreadingModel()!=_threadModel)
+		/*if (viewer && _threadModelText.valid() && viewer->getThreadingModel()!=_threadModel)
 		{
 			_threadModel = viewer->getThreadingModel();
 
 			updateThreadingModelText();
 		}
+		*/
 		if (ea.getHandled()) return false;
 		switch(ea.getEventType())
 		{
@@ -90,9 +91,9 @@ namespace EAViewEngine
 								viewer->getViewerStats()->collectStats("frame_rate",true);
 								_camera->setNodeMask(0xffffffff);
 								_switch->setValue(_frameRateChildNum, true);
-								break;
+								//break;
 							}
-						case VIEWER_STATS:
+						//case VIEWER_STATS:
 							{
 								osgViewer::ViewerBase::Scenes scenes;
 								viewer->getScenes(scenes);
@@ -116,10 +117,10 @@ namespace EAViewEngine
 									if ((*itr)->getStats()) (*itr)->getStats()->collectStats("gpu",true);
 								}
 								_camera->setNodeMask(0xffffffff);
-								_switch->setValue(_viewerChildNum, true);
-								break;
+								_switch->setValue(_eaviewChildNum, true);
+								//break;
 							}
-						case(CAMERA_SCENE_STATS):
+						//case(CAMERA_SCENE_STATS):
 							{
 								_camera->setNodeMask(0xffffffff);
 								_switch->setValue(_cameraSceneChildNum, true);
@@ -135,13 +136,13 @@ namespace EAViewEngine
 								}
 								break;
 							}
-						case(VIEWER_SCENE_STATS):
+						/*case(VIEWER_SCENE_STATS):
 							{
 								_camera->setNodeMask(0xffffffff);
-								_switch->setValue(_viewerSceneChildNum, true);
+								_switch->setValue(_eaviewSceneChildNum, true);
 								viewer->getViewerStats()->collectStats("scene",true);
 								break;
-							}
+							}*/
 						default:
 							break;
 						}
@@ -388,16 +389,17 @@ namespace EAViewEngine
 				if (stats && renderer)
 				{
 					viewStr.setf(std::ios::left, std::ios::adjustfield);
-					viewStr.width(14);
+					viewStr.width(4);
 					// Used fixed formatting, as scientific will switch to "...e+.." notation for
 					// large numbers of vertices/drawables/etc.
 					viewStr.setf(std::ios::fixed);
 					viewStr.precision(0);
-					viewStr << std::setw(1) << "#" << _cameraNumber << std::endl;
+					/*viewStr << std::setw(1) << "#" << _cameraNumber << std::endl;
 					// Camera name
 					if (!_camera->getName().empty())
 						viewStr << _camera->getName();
 					viewStr << std::endl;
+					*/
 					unsigned int frameNumber = renderInfo.getState()->getFrameStamp()->getFrameNumber();
 					if (!(renderer->getGraphicsThreadDoesCull()))
 					{
@@ -405,30 +407,30 @@ namespace EAViewEngine
 					}
 					#define STATS_ATTRIBUTE(str) \
 						if (stats->getAttribute(frameNumber, str, value)) \
-							viewStr << std::setw(8) << value << std::endl; \
+							viewStr << std::setw(2) << value << std::endl; \
 						else \
-						viewStr << std::setw(8) << "." << std::endl; 
+						viewStr << std::setw(2) << "." << std::endl; 
 						double value = 0.0;
 						//STATS_ATTRIBUTE("Visible number of lights")
 						//STATS_ATTRIBUTE("Visible number of render bins")
 						//STATS_ATTRIBUTE("Visible depth")
 						//STATS_ATTRIBUTE("Number of StateGraphs")
 						//STATS_ATTRIBUTE("Visible number of impostors")
-						//STATS_ATTRIBUTE("Visible number of drawables")
+						STATS_ATTRIBUTE("Visible number of drawables")
 						//STATS_ATTRIBUTE("Number of ordered leaves")
 						//STATS_ATTRIBUTE("Visible number of fast drawables")
 						STATS_ATTRIBUTE("Visible vertex count")
 						//STATS_ATTRIBUTE("Visible number of PrimitiveSets")
-						//STATS_ATTRIBUTE("Visible number of GL_POINTS")
-						//STATS_ATTRIBUTE("Visible number of GL_LINES")
-						//STATS_ATTRIBUTE("Visible number of GL_LINE_STRIP")
-						//STATS_ATTRIBUTE("Visible number of GL_LINE_LOOP")
-						//STATS_ATTRIBUTE("Visible number of GL_TRIANGLES")
-						//STATS_ATTRIBUTE("Visible number of GL_TRIANGLE_STRIP")
-						//STATS_ATTRIBUTE("Visible number of GL_TRIANGLE_FAN")
-						//STATS_ATTRIBUTE("Visible number of GL_QUADS")
-						//STATS_ATTRIBUTE("Visible number of GL_QUAD_STRIP")
-						//STATS_ATTRIBUTE("Visible number of GL_POLYGON")
+						STATS_ATTRIBUTE("Visible number of GL_POINTS")
+						STATS_ATTRIBUTE("Visible number of GL_LINES")
+						STATS_ATTRIBUTE("Visible number of GL_LINE_STRIP")
+						STATS_ATTRIBUTE("Visible number of GL_LINE_LOOP")
+						STATS_ATTRIBUTE("Visible number of GL_TRIANGLES")
+						STATS_ATTRIBUTE("Visible number of GL_TRIANGLE_STRIP")
+						STATS_ATTRIBUTE("Visible number of GL_TRIANGLE_FAN")
+						STATS_ATTRIBUTE("Visible number of GL_QUADS")
+						STATS_ATTRIBUTE("Visible number of GL_QUAD_STRIP")
+						STATS_ATTRIBUTE("Visible number of GL_POLYGON")
 						text->setText(viewStr.str());
 				}
 			}
@@ -516,7 +518,7 @@ namespace EAViewEngine
 		BlockDrawCallback(ViewStatsHandler* statsHandler, float xPos, osg::Stats* viewerStats, osg::Stats* stats, const std::string& beginName, const std::string& endName, int frameDelta, int numFrames):
 		_statsHandler(statsHandler),
 		_xPos(xPos),
-		_viewerStats(viewerStats),
+		_eaviewStats(viewerStats),
 		_stats(stats),
 		_beginName(beginName),
 		_endName(endName),
@@ -531,7 +533,7 @@ namespace EAViewEngine
 			int startFrame = frameNumber + _frameDelta - _numFrames + 1;
 			int endFrame = frameNumber + _frameDelta;
 			double referenceTime;
-			if (!_viewerStats->getAttribute( startFrame, "Reference time", referenceTime))
+			if (!_eaviewStats->getAttribute( startFrame, "Reference time", referenceTime))
 			{
 				return;
 			}
@@ -554,7 +556,7 @@ namespace EAViewEngine
 		}
 		ViewStatsHandler* _statsHandler;
 		float _xPos;
-		osg::ref_ptr<osg::Stats> _viewerStats;
+		osg::ref_ptr<osg::Stats> _eaviewStats;
 		osg::ref_ptr<osg::Stats> _stats;
 		std::string _beginName;
 		std::string _endName;
@@ -621,7 +623,7 @@ namespace EAViewEngine
 			GraphUpdateCallback(const osg::Vec3& pos, float width, float height, osg::Stats* viewerStats, osg::Stats* stats,
 				float max, const std::string& nameBegin, const std::string& nameEnd = "")
 				: _pos(pos), _width((unsigned int)width), _height((unsigned int)height), _curX(0),
-				_viewerStats(viewerStats), _stats(stats), _max(max), _nameBegin(nameBegin), _nameEnd(nameEnd)
+				_eaviewStats(viewerStats), _stats(stats), _max(max), _nameBegin(nameBegin), _nameEnd(nameEnd)
 			{
 			}
 			virtual void drawImplementation(osg::RenderInfo& renderInfo,const osg::Drawable* drawable) const
@@ -697,7 +699,7 @@ namespace EAViewEngine
 			const unsigned int _width;
 			const unsigned int _height;
 			mutable unsigned int _curX;
-			osg::Stats* _viewerStats;
+			osg::Stats* _eaviewStats;
 			osg::Stats* _stats;
 			const float _max;
 			const std::string _nameBegin;
@@ -731,7 +733,7 @@ namespace EAViewEngine
 		FrameMarkerDrawCallback(ViewStatsHandler* statsHandler, float xPos, osg::Stats* viewerStats, int frameDelta, int numFrames):
 		_statsHandler(statsHandler),
 		_xPos(xPos),
-		_viewerStats(viewerStats),
+		_eaviewStats(viewerStats),
 		_frameDelta(frameDelta),
 		_numFrames(numFrames) {}
 		//** do customized draw code.*/
@@ -743,7 +745,7 @@ namespace EAViewEngine
 			int startFrame = frameNumber + _frameDelta - _numFrames + 1;
 			int endFrame = frameNumber + _frameDelta;
 			double referenceTime;
-			if (!_viewerStats->getAttribute( startFrame, "Reference time", referenceTime))
+			if (!_eaviewStats->getAttribute( startFrame, "Reference time", referenceTime))
 			{
 				return;
 			}
@@ -751,7 +753,7 @@ namespace EAViewEngine
 			double currentReferenceTime;
 			for(int i = startFrame; i <= endFrame; ++i)
 			{
-				if (_viewerStats->getAttribute( i, "Reference time", currentReferenceTime))
+				if (_eaviewStats->getAttribute( i, "Reference time", currentReferenceTime))
 				{
 					(*vertices)[vi++].x() = _xPos + (currentReferenceTime - referenceTime) * _statsHandler->getBlockMultiplier();
 					(*vertices)[vi++].x() = _xPos + (currentReferenceTime - referenceTime) * _statsHandler->getBlockMultiplier();
@@ -761,7 +763,7 @@ namespace EAViewEngine
 		}
 		ViewStatsHandler* _statsHandler;
 		float _xPos;
-		osg::ref_ptr<osg::Stats> _viewerStats;
+		osg::ref_ptr<osg::Stats> _eaviewStats;
 		std::string _endName;
 		int _frameDelta;
 		int _numFrames;
@@ -939,7 +941,7 @@ namespace EAViewEngine
 			frameRateLabel->setFont(_font);
 			frameRateLabel->setCharacterSize(_characterSize);
 			frameRateLabel->setPosition(pos);
-			frameRateLabel->setText("Frame Rate: ");
+			frameRateLabel->setText(L"场景帧速: ");
 			pos.x() = frameRateLabel->getBound().xMax();
 			osg::ref_ptr<osgText::Text> frameRateValue = new osgText::Text;
 			geode->addDrawable( frameRateValue.get() );
@@ -959,19 +961,19 @@ namespace EAViewEngine
 		// viewer stats
 		{
 			osg::Group* group = new osg::Group;
-			_viewerChildNum = _switch->getNumChildren();
+			_eaviewChildNum = _switch->getNumChildren();
 			_switch->addChild(group, false);
 			_statsGeode = new osg::Geode();
 			group->addChild(_statsGeode.get());
 			{
 				pos.x() = _leftPos;
-				_threadModelText = new osgText::Text;
+				/*_threadModelText = new osgText::Text;
 				_statsGeode->addDrawable( _threadModelText.get() );
 				_threadModelText->setColor(colorFR);
 				_threadModelText->setFont(_font);
 				_threadModelText->setCharacterSize(_characterSize);
 				_threadModelText->setPosition(pos);
-				updateThreadingModelText();
+				updateThreadingModelText();*/
 				pos.y() -= _characterSize*_lineHeight;
 			}
 			float topOfViewerStats = pos.y() + _characterSize;
@@ -997,7 +999,7 @@ namespace EAViewEngine
 					line.timeTakenName, line.multiplier, line.average, line.averageInInverseSpace, line.beginTimeName, line.endTimeName);
 				pos.y() -= _characterSize*_lineHeight;
 			}
-			{
+			/*{
 				pos.x() = _leftPos;
 				createTimeStatsLine("Event", pos, colorUpdate, colorUpdateAlpha, viewer->getViewerStats(), viewer->getViewerStats(),
 					"Event traversal time taken", 1000.0, true, false, "Event traversal begin time", "Event traversal end time");
@@ -1009,6 +1011,7 @@ namespace EAViewEngine
 					"Update traversal time taken", 1000.0, true, false, "Update traversal begin time", "Update traversal end time");
 				pos.y() -= _characterSize*_lineHeight;
 			}
+			*/
 		
 			pos.x() = _leftPos;
 			// add camera stats
@@ -1195,10 +1198,10 @@ namespace EAViewEngine
 			std::ostringstream viewStr;
 			viewStr.clear();
 			viewStr.setf(std::ios::left, std::ios::adjustfield);
-			viewStr.width(14);
+			viewStr.width(8);
 			//viewStr << "Camera" << std::endl;
-			viewStr << "视图：" << std::endl;
-			viewStr << "" << std::endl; // placeholder for Camera name
+			//viewStr << "视图：" << std::endl;
+			//viewStr << "" << std::endl; // placeholder for Camera name
 			//viewStr << "Lights" << std::endl;
 			//viewStr << "Bins" << std::endl;
 			//viewStr << "Depth" << std::endl;
@@ -1207,8 +1210,7 @@ namespace EAViewEngine
 			//viewStr << "Drawables" << std::endl;
 			//viewStr << "Sorted Drawables" << std::endl;
 			//viewStr << "Fast Drawables" << std::endl;
-			//viewStr << "Vertices" << std::endl;
-			viewStr << "顶点数" << std::endl;
+			//viewStr << "Vertices" << std::endl;			
 			//viewStr << "PrimitiveSets" << std::endl;
 			//viewStr << "Points" << std::endl;
 			//viewStr << "Lines" << std::endl;
@@ -1220,6 +1222,18 @@ namespace EAViewEngine
 			//viewStr << "Quads" << std::endl;
 			//viewStr << "Quad strips" << std::endl;
 			//viewStr << "Polygons" << std::endl;
+			viewStr << "可绘对象：" << std::endl;
+			viewStr << "顶点:" << std::endl;			
+			viewStr << "点：" << std::endl;
+			viewStr << "线段：" << std::endl;
+			viewStr << "线条带：" << std::endl;
+			viewStr << "闭环线：" << std::endl;
+			viewStr << "三角形：" << std::endl;
+			viewStr << "三角条带：" << std::endl;
+			viewStr << "三角扇面：" << std::endl;
+			viewStr << "四边形：" << std::endl;
+			viewStr << "四边条带：" << std::endl;
+			viewStr << "多边形：" << std::endl;
 			viewStr.setf(std::ios::right,std::ios::adjustfield);
 			/*std::string viewhead;			
 			CChineseCode::GB2312ToUtf8(viewStr.str(),viewhead);*/
@@ -1238,7 +1252,7 @@ namespace EAViewEngine
 					backgroundColor));
 				// Camera scene stats
 				osg::ref_ptr<osgText::Text> camStatsText = new osgText::Text;
-				geode->addDrawable( camStatsText.get() );
+				geode->addDrawable(camStatsText.get());
 				camStatsText->setColor(dynamicTextColor);
 				camStatsText->setFont(_font);
 				camStatsText->setCharacterSize(_characterSize);
@@ -1247,13 +1261,14 @@ namespace EAViewEngine
 				camStatsText->setDrawCallback(new CameraSceneStatsTextDrawCallback(*citr, cameraCounter));
 				// Move camera block to the right
 				pos.x() += 5 * _characterSize + 2 * backgroundMargin + backgroundSpacing;
+				
 				cameraCounter++;
 			}
 		}
 		// Viewer scene stats
 		{/*
 			osg::Group* group = new osg::Group;
-			_viewerSceneChildNum = _switch->getNumChildren();
+			_eaviewSceneChildNum = _switch->getNumChildren();
 			_switch->addChild(group, false);
 			osg::Geode* geode = new osg::Geode();
 			geode->setCullingActive(false);
@@ -1324,7 +1339,9 @@ namespace EAViewEngine
 		label->setFont(_font);
 		label->setCharacterSize(_characterSize);
 		label->setPosition(pos);
-		label->setText(lineLabel + ": ");
+		std::wstring wstr;
+		CChineseCode::StringToWString(lineLabel+":",wstr);
+		label->setText(wstr.c_str());
 		pos.x() = label->getBound().xMax();
 		osg::ref_ptr<osgText::Text> value = new osgText::Text;
 		_statsGeode->addDrawable( value.get() );
@@ -1357,12 +1374,13 @@ namespace EAViewEngine
 	{
 		osg::Stats* stats = camera->getStats();
 		if (!stats) return;
-		osg::Vec4 colorCull( 0.0f,1.0f,1.0f,1.0f);
+		/*osg::Vec4 colorCull( 0.0f,1.0f,1.0f,1.0f);
 		osg::Vec4 colorCullAlpha( 0.0f,1.0f,1.0f,0.5f);
 		osg::Vec4 colorDraw( 1.0f,1.0f,0.0f,1.0f);
-		osg::Vec4 colorDrawAlpha( 1.0f,1.0f,0.0f,0.5f);
+		osg::Vec4 colorDrawAlpha( 1.0f,1.0f,0.0f,0.5f);*/
 		osg::Vec4 colorGPU( 1.0f,0.5f,0.0f,1.0f);
 		osg::Vec4 colorGPUAlpha( 1.0f,0.5f,0.0f,0.5f);
+		/*
 		{
 			pos.x() = _leftPos;
 			createTimeStatsLine("Cull", pos, colorCull, colorCullAlpha, viewerStats, stats,
@@ -1375,10 +1393,11 @@ namespace EAViewEngine
 				"Draw traversal time taken", 1000.0, true, false, "Draw traversal begin time", "Draw traversal end time");
 			pos.y() -= _characterSize*_lineHeight;
 		}
+		*/
 		if (acquireGPUStats)
 		{
 			pos.x() = _leftPos;
-			createTimeStatsLine("GPU", pos, colorGPU, colorGPUAlpha, viewerStats, stats,
+			createTimeStatsLine("GPU占用率", pos, colorGPU, colorGPUAlpha, viewerStats, stats,
 				"GPU draw time taken", 1000.0, true, false, "GPU draw begin time", "GPU draw end time");
 			pos.y() -= _characterSize*_lineHeight;
 		}

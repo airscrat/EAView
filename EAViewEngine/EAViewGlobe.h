@@ -31,7 +31,7 @@ namespace EAViewEngine
 		/// <param name="var"></param>
 		void LoadProject(System::String^ file);
 	private:
-		osgViewer::Viewer* _viewer;
+		osgViewer::Viewer* _eaview;
 		bool EAViewInit();
 		osg::Group* EAGroupDataReset();
 		

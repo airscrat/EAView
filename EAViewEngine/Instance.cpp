@@ -13,7 +13,7 @@ namespace EAViewEngine
 	{
 	}
 
-	osg::observer_ptr<osgViewer::Viewer> Instance::_viewer=new osgViewer::Viewer;
+	osg::observer_ptr<osgViewer::ViewerBase> Instance::_eaview=new osgViewer::ViewerBase;
 
 	bool Instance::EAViewGlobeInit(Control^ eaViewControl)
 	{
@@ -37,30 +37,30 @@ namespace EAViewEngine
 		traits->height = rect.bottom - rect.top;
 		
 		osg::ref_ptr<osg::GraphicsContext> gc = osg::GraphicsContext::createGraphicsContext(traits.get());
-		_viewer->getCamera()->setGraphicsContext( gc.get() );
-		_viewer->getCamera()->setViewport( new osg::Viewport( 0, 0, traits->width, traits->height ) );
-		_viewer->getCamera()->setProjectionMatrixAsPerspective(30.0f, static_cast<double>(traits->width)/static_cast<double>(traits->height), 1.0f, 10000.0f);
+		_eaview->getCamera()->setGraphicsContext( gc.get() );
+		_eaview->getCamera()->setViewport( new osg::Viewport( 0, 0, traits->width, traits->height ) );
+		_eaview->getCamera()->setProjectionMatrixAsPerspective(30.0f, static_cast<double>(traits->width)/static_cast<double>(traits->height), 1.0f, 10000.0f);
 
-		_viewer->setThreadingModel(osgViewer::Viewer::DrawThreadPerContext);
+		_eaview->setThreadingModel(osgViewer::Viewer::DrawThreadPerContext);
 		
-		_viewer->addEventHandler(new osgViewer::StatsHandler());
-		_viewer->addEventHandler(new osgGA::StateSetManipulator());
-		_viewer->addEventHandler(new osgViewer::ThreadingHandler());
-		_viewer->setKeyEventSetsDone(0);
-		_viewer->setQuitEventSetsDone(false);
-		_viewer->setRunMaxFrameRate(30);
+		//_eaview->addEventHandler(new osgViewer::StatsHandler());
+		_eaview->addEventHandler(new osgGA::StateSetManipulator());
+		_eaview->addEventHandler(new osgViewer::ThreadingHandler());
+		_eaview->setKeyEventSetsDone(0);
+		_eaview->setQuitEventSetsDone(false);
+		_eaview->setRunMaxFrameRate(30);
 
 		return true;
 	}
 
 	bool Instance::EAViewGlobeTerminate()
 	{
-		if ( _viewer.valid() )
+		if ( _eaview.valid() )
 		{
-			_viewer->setDone(true);//尽量早结束线程
+			_eaview->setDone(true);//尽量早结束线程
 			Sleep(50);//等待渲染线程走完一帧
-			_viewer->stopThreading();
-			_viewer = 0L;//赋值为长整型的0
+			_eaview->stopThreading();
+			_eaview = 0L;//赋值为长整型的0
 		}
 		
 		return true;
@@ -68,30 +68,30 @@ namespace EAViewEngine
 
 	int Instance::EAViewGlobeRun()
 	{
-		if (!_viewer->getCameraManipulator() && _viewer->getCamera()->getAllowEventFocus())
+		if (!_eaview->getCameraManipulator() && _eaview->getCamera()->getAllowEventFocus())
 		{
-			_viewer->setCameraManipulator(new osgGA::TrackballManipulator());
+			_eaview->setCameraManipulator(new osgGA::TrackballManipulator());
 		}
-		_viewer->setReleaseContextAtEndOfFrameHint(false);
+		_eaview->setReleaseContextAtEndOfFrameHint(false);
 
 		const char* run_frame_count_str = getenv("OSG_RUN_FRAME_COUNT");
 		//const char* run_frame_count_str1 = getenv("OSGDIR");//这个函数取操作系统环境变量的值
 		unsigned int runTillFrameNumber = run_frame_count_str==0 ? osg::UNINITIALIZED_FRAME_NUMBER : atoi(run_frame_count_str);
-		//while(!_viewer->done() )//&& (_viewer->getViewerFrameStamp()->getFrameNumber()<runTillFrameNumber))
-		//while(!_viewer->done() && (run_frame_count_str==0 || _viewer->getViewerFrameStamp()->getFrameNumber()<1))//runTillFrameNumber))
+		//while(!_eaview->done() )//&& (_eaview->getViewerFrameStamp()->getFrameNumber()<runTillFrameNumber))
+		//while(!_eaview->done() && (run_frame_count_str==0 || _eaview->getViewerFrameStamp()->getFrameNumber()<1))//runTillFrameNumber))
 		
 		
 		
-		while(_viewer.valid()&&!_viewer->done())
+		while(_eaview.valid()&&!_eaview->done())
 		{					 
-			double minFrameTime = _viewer->getRunMaxFrameRate()>0.0 ? 1.0/_viewer->getRunMaxFrameRate() : 0.0;
+			double minFrameTime = _eaview->getRunMaxFrameRate()>0.0 ? 1.0/_eaview->getRunMaxFrameRate() : 0.0;
 			osg::Timer_t startFrameTick = osg::Timer::instance()->tick();
-			if (minFrameTime==0.0) minFrameTime=0.02;
-			if (_viewer->getRunFrameScheme()==osgViewer::ViewerBase::FrameScheme::ON_DEMAND)
+			if (minFrameTime==0.0) minFrameTime=0.02;			
+			if (_eaview->getRunFrameScheme()==osgViewer::ViewerBase::FrameScheme::ON_DEMAND)
 			{
-				if (_viewer->checkNeedToDoFrame())
+				if (_eaview->checkNeedToDoFrame())
 				{
-					_viewer->frame();
+					_eaview->frame();
 				}
 				else
 				{
@@ -103,9 +103,7 @@ namespace EAViewEngine
 			}
 			else
 			{
-				
-				_viewer->frame();
-				
+				_eaview->frame();
 			}
 			// work out if we need to force a sleep to hold back the frame rate
 			osg::Timer_t endFrameTick = osg::Timer::instance()->tick();
@@ -137,20 +135,20 @@ namespace EAViewEngine
 		traits->height = rect.bottom - rect.top;
 
 		osg::ref_ptr<osg::GraphicsContext> gc = osg::GraphicsContext::createGraphicsContext( traits.get() );
-		_viewer->getCamera()->setGraphicsContext( gc.get() );
-		_viewer->getCamera()->setViewport( new osg::Viewport( 0, 0, traits->width, traits->height ) );
-		_viewer->getCamera()->setProjectionMatrixAsPerspective(30.0f, static_cast<double>(traits->width)/static_cast<double>(traits->height), 1.0f, 10000.0f);
+		_eaview->getCamera()->setGraphicsContext( gc.get() );
+		_eaview->getCamera()->setViewport( new osg::Viewport( 0, 0, traits->width, traits->height ) );
+		_eaview->getCamera()->setProjectionMatrixAsPerspective(30.0f, static_cast<double>(traits->width)/static_cast<double>(traits->height), 1.0f, 10000.0f);
 		return true;
 	}
 
 	osgViewer::Viewer* Instance::GetEAViewer()
 	{
-		return _viewer.get();
+		return _eaview.get();
 	}
 
 	void Instance::GetEAWindowRect(int& x,int& y,int& w,int&h)
 	{		
-		osg::GraphicsContext* gc=_viewer->getCamera()->getGraphicsContext();
+		osg::GraphicsContext* gc=_eaview->getCamera()->getGraphicsContext();
 		osgViewer::GraphicsWindowWin32* window=static_cast<osgViewer::GraphicsWindowWin32*>(gc);
 
 		if (window!=NULL&&window->valid())

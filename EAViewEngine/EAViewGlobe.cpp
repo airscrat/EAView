@@ -7,9 +7,9 @@ namespace EAViewEngine
 {
 	EAViewGlobe::EAViewGlobe(void)
 	{
-		_viewer=Instance::GetEAViewer();
+		_eaview=Instance::GetEAViewer();
 		osg::ref_ptr<osg::Group> root=new osg::Group;
-		_viewer->setSceneData(root.get());
+		_eaview->setSceneData(root.get());
 		EAViewInit();
 		EAGroupDataReset();
 		//---------------
@@ -25,14 +25,14 @@ namespace EAViewEngine
 		hud.SetHUDText("EAView 1.0");
 		//remove statshandler
 		osgViewer::View::EventHandlers handlers = 
-			_viewer->getEventHandlers();
+			_eaview->getEventHandlers();
 		for (osgViewer::View::EventHandlers::iterator itr=handlers.begin();
 			itr!=handlers.end();++itr)
 		{
 			osgViewer::StatsHandler* statsHandler = dynamic_cast<osgViewer::StatsHandler*>((*itr).get());
 			if (statsHandler!=0)
 			{
-				_viewer->removeEventHandler(statsHandler);
+				_eaview->removeEventHandler(statsHandler);
 			}
 		}
 		
@@ -41,7 +41,7 @@ namespace EAViewEngine
 
 	osg::Group* EAViewGlobe::EAGroupDataReset()
 	{
-		osg::Node* node=_viewer->getSceneData();
+		osg::Node* node=_eaview->getSceneData();
 		osg::Group* group = node->asGroup();
 		if (group==0)
 		{
@@ -65,15 +65,15 @@ namespace EAViewEngine
 
 		/*osg::ref_ptr<osg::Group> root=new osg::Group;
 		root->addChild(model);
-		_viewer->setSceneData(root.get());*/
+		_eaview->setSceneData(root.get());*/
 		
 		osg::Group* group=EAGroupDataReset();
 		group->addChild(model);
-		//_viewer->setDone(false);
+		//_eaview->setDone(false);
 		/*EAHUDLayer hud;
 		hud.SetHUDText("EAView 1.0");*/
 
-		//osg::Stats* stats = _viewer->getViewerStats();
+		//osg::Stats* stats = _eaview->getViewerStats();
 		//double frameRate=0;
 		////stats->getAveragedAttribute("Frame rate",frameRate,true);
 		//std::stringstream strstream;

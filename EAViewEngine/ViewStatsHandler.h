@@ -26,10 +26,10 @@ namespace EAViewEngine
 		{
 			NO_STATS = 0,
 			FRAME_RATE = 1,
-			VIEWER_STATS = 2,
-			CAMERA_SCENE_STATS = 3,
-			VIEWER_SCENE_STATS = 4,
-			LAST = 5
+			//VIEWER_STATS = 2,
+			//CAMERA_SCENE_STATS = 3,
+			//VIEWER_SCENE_STATS = 4,
+			LAST = 2
 		};
 		void setKeyEventTogglesOnScreenStats(int key) { _keyEventTogglesOnScreenStats = key; }
 		int getKeyEventTogglesOnScreenStats() const { return _keyEventTogglesOnScreenStats; }
@@ -103,9 +103,9 @@ namespace EAViewEngine
 		osgViewer::ViewerBase::ThreadingModel _threadModel;
 		osg::ref_ptr<osgText::Text> _threadModelText;
 		unsigned int _frameRateChildNum;
-		unsigned int _viewerChildNum;
+		unsigned int _eaviewChildNum;
 		unsigned int _cameraSceneChildNum;
-		unsigned int _viewerSceneChildNum;
+		unsigned int _eaviewSceneChildNum;
 		unsigned int _numBlocks;
 		double _blockMultiplier;
 		float _statsWidth;
