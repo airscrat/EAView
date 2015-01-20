@@ -29,7 +29,8 @@ namespace EAViewEngine
 		/// <summary>
 		/// this member is private,we can call GetViewer() to get it's pointer*/
 		/// <summary>
-		static osg::observer_ptr<osgViewer::Viewer> _viewer;
+		static osg::observer_ptr<osgViewer::Viewer> _eaview;
+		static bool _isPause;
 	public:
 		Instance(void);
 		~Instance(void);
@@ -45,6 +46,10 @@ namespace EAViewEngine
 		/// start viewer's render thread.
 		/// </summary>
 		static int EAViewGlobeRun();
+		/// <summary>
+		/// set viewer's render thread frame pause.
+		/// </summary>
+		static bool EAViewGlobeSetPause(bool isPause);
 		/// <summary>
 		/// reconfig viewer's parameters.
 		/// </summary>

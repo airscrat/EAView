@@ -13,7 +13,8 @@ namespace EAViewEngine
 	{
 	}
 
-	osg::observer_ptr<osgViewer::ViewerBase> Instance::_eaview=new osgViewer::ViewerBase;
+	osg::observer_ptr<osgViewer::Viewer> Instance::_eaview=new osgViewer::Viewer;
+	bool Instance::_isPause=false;
 
 	bool Instance::EAViewGlobeInit(Control^ eaViewControl)
 	{
@@ -50,6 +51,9 @@ namespace EAViewEngine
 		_eaview->setQuitEventSetsDone(false);
 		_eaview->setRunMaxFrameRate(30);
 
+		//--------
+		/*_isPause=false;*/
+
 		return true;
 	}
 
@@ -58,11 +62,18 @@ namespace EAViewEngine
 		if ( _eaview.valid() )
 		{
 			_eaview->setDone(true);//尽量早结束线程
-			Sleep(50);//等待渲染线程走完一帧
+			Sleep(100);//等待渲染线程走完一帧
 			_eaview->stopThreading();
 			_eaview = 0L;//赋值为长整型的0
 		}
 		
+		return true;
+	}
+
+	bool Instance::EAViewGlobeSetPause(bool isPause)
+	{
+		_isPause=isPause;
+		Sleep(100);
 		return true;
 	}
 
@@ -86,7 +97,13 @@ namespace EAViewEngine
 		{					 
 			double minFrameTime = _eaview->getRunMaxFrameRate()>0.0 ? 1.0/_eaview->getRunMaxFrameRate() : 0.0;
 			osg::Timer_t startFrameTick = osg::Timer::instance()->tick();
-			if (minFrameTime==0.0) minFrameTime=0.02;			
+			if (minFrameTime==0.0) minFrameTime=0.02;
+			//在特定情况下，对场景暂停渲染
+			if (_isPause)
+			{
+				OpenThreads::Thread::microSleep(100000);
+				continue;
+			}
 			if (_eaview->getRunFrameScheme()==osgViewer::ViewerBase::FrameScheme::ON_DEMAND)
 			{
 				if (_eaview->checkNeedToDoFrame())

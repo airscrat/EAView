@@ -9,7 +9,9 @@ namespace EAViewEngine
 	{
 		_eaview=Instance::GetEAViewer();
 		osg::ref_ptr<osg::Group> root=new osg::Group;
+		Instance::EAViewGlobeSetPause(true);
 		_eaview->setSceneData(root.get());
+		Instance::EAViewGlobeSetPause(false);
 		EAViewInit();
 		EAGroupDataReset();
 		//---------------
@@ -24,7 +26,7 @@ namespace EAViewEngine
 		EAHUDLayer hud;
 		hud.SetHUDText("EAView 1.0");
 		//remove statshandler
-		osgViewer::View::EventHandlers handlers = 
+		/*osgViewer::View::EventHandlers handlers = 
 			_eaview->getEventHandlers();
 		for (osgViewer::View::EventHandlers::iterator itr=handlers.begin();
 			itr!=handlers.end();++itr)
@@ -34,7 +36,7 @@ namespace EAViewEngine
 			{
 				_eaview->removeEventHandler(statsHandler);
 			}
-		}
+		}*/
 		
 		return true;
 	}
@@ -48,9 +50,9 @@ namespace EAViewEngine
 			return NULL;
 		}
 		int childCount=group->getNumChildren();
-
+		Instance::EAViewGlobeSetPause(true);
 		group->removeChildren(1,childCount-1);
-		
+		Instance::EAViewGlobeSetPause(false);
 		return group;
 	}
 
@@ -68,8 +70,10 @@ namespace EAViewEngine
 		_eaview->setSceneData(root.get());*/
 		
 		osg::Group* group=EAGroupDataReset();
+		Instance::EAViewGlobeSetPause(true);
 		group->addChild(model);
-		//_eaview->setDone(false);
+		Instance::EAViewGlobeSetPause(false);
+
 		/*EAHUDLayer hud;
 		hud.SetHUDText("EAView 1.0");*/
 
