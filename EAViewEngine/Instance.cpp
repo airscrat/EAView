@@ -73,7 +73,10 @@ namespace EAViewEngine
 	bool Instance::EAViewGlobeSetPause(bool isPause)
 	{
 		_isPause=isPause;
-		Sleep(100);
+		if (isPause)
+		{
+			Sleep(100);
+		}		
 		return true;
 	}
 
