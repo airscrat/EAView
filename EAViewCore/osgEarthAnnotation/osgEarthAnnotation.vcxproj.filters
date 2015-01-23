@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthAnnotation\AnnotationEditing.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthAnnotation\AnnotationSettings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthAnnotation\AnnotationData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthAnnotation\AnnotationNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthAnnotation\AnnotationRegistry.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthAnnotation\AnnotationUtils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthAnnotation\CircleNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthAnnotation\Decoration.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthAnnotation\EllipseNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthAnnotation\FeatureNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthAnnotation\LocalGeometryNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthAnnotation\HighlightDecoration.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthAnnotation\ImageOverlay.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthAnnotation\ImageOverlayEditor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthAnnotation\LabelNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthAnnotation\LocalizedNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthAnnotation\RectangleNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthAnnotation\ModelNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthAnnotation\OrthoNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthAnnotation\PlaceNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthAnnotation\TrackNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthAnnotation\FeatureEditing.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\OSGEarth\src\osgEarthAnnotation\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\OSGEarth\src\osgEarthAnnotation\AnnotationSettings">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthAnnotation\AnnotationEditing">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthAnnotation\AnnotationData">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthAnnotation\AnnotationNode">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthAnnotation\AnnotationRegistry">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthAnnotation\AnnotationUtils">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthAnnotation\CircleNode">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthAnnotation\Common">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthAnnotation\Decoration">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthAnnotation\EllipseNode">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthAnnotation\Export">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthAnnotation\FeatureNode">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthAnnotation\LocalGeometryNode">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthAnnotation\HighlightDecoration">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthAnnotation\ImageOverlay">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthAnnotation\ImageOverlayEditor">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthAnnotation\LabelNode">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthAnnotation\LocalizedNode">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthAnnotation\ModelNode">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthAnnotation\OrthoNode">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthAnnotation\PlaceNode">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthAnnotation\RectangleNode">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthAnnotation\ScaleDecoration">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthAnnotation\TrackNode">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthAnnotation\FeatureEditing">
+      <Filter>Headers</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{5D3268AE-CD76-4724-8575-CE1FAB5B0F1B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers">
+      <UniqueIdentifier>{3EA52376-D0DA-4C53-B55F-C0D821C80D81}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

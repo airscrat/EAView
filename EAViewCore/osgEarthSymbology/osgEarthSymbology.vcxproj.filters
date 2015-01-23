@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\AltitudeSymbol.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\Color.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\CssUtils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\Expression.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\ExtrusionSymbol.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\Fill.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\Geometry.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\GeometryFactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\GEOS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\GeometryRasterizer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\IconResource.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\IconSymbol.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\InstanceResource.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\InstanceSymbol.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\LineSymbol.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\MarkerResource.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\MarkerSymbol.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\MeshConsolidator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\MeshSubdivider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\ModelResource.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\ModelSymbol.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\PointSymbol.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\PolygonSymbol.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\Query.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\RenderSymbol.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\Resource.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\ResourceCache.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\ResourceLibrary.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\Skins.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\StencilVolumeNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\Stroke.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\Style.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\StyleSelector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\StyleSheet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\Symbol.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\TextSymbol.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\OSGEarth\src\osgEarthSymbology\AGG.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\OSGEarth\src\osgEarthSymbology\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\AltitudeSymbol">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\Common">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\Color">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\CssUtils">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\Expression">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\ExtrusionSymbol">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\Fill">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\Geometry">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\GeometryFactory">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\GEOS">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\GeometryRasterizer">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\IconResource">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\IconSymbol">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\InstanceResource">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\InstanceSymbol">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\LineSymbol">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\MarkerResource">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\MarkerSymbol">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\MeshConsolidator">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\MeshSubdivider">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\ModelResource">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\ModelSymbol">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\PointSymbol">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\PolygonSymbol">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\Query">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\RenderSymbol">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\Resource">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\ResourceCache">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\ResourceLibrary">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\Skins">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\StencilVolumeNode">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\Stroke">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\Style">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\StyleSelector">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\StyleSheet">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\Symbol">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\Tags">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\TextSymbol">
+      <Filter>Headers</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{5D3268AE-CD76-4724-8575-CE1FAB5B0F1B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers">
+      <UniqueIdentifier>{3EA52376-D0DA-4C53-B55F-C0D821C80D81}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

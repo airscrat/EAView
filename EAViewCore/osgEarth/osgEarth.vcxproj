@@ -1,0 +1,528 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{59196A46-6B3D-40A9-879D-B35E00081388}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>osgEarth</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)\bin\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">osgEarth.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">osgEarthd</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:\code\OSGEarth_VS\lib\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">osgEarth.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">osgEarth</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:\code\OSGEarth_VS\lib\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">osgEarth.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">osgEarths</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:\code\OSGEarth_VS\lib\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">osgEarth.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">osgEarthrd</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:/code/OSGEarth/src;$(OSGDIR)\include;$(OSGDIR)\3third-party\GDAL-1.10\include;$(OSGDIR)\3third-party\Curl_Zlib\debug\include;D:\Applications\Qt\5.1.1\msvc2010_opengl\include;$(OSGDIR)\3third-party\Geos3.3.4\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;OSGEARTH_LIBRARY;TIXML_USE_STL;CURL_STATICLIB;CMAKE_INTDIR="Debug";osgEarth_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;OSGEARTH_LIBRARY;TIXML_USE_STL;CURL_STATICLIB;CMAKE_INTDIR=\"Debug\";osgEarth_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:/code/OSGEarth/src;D:/Program Files/OpenSceneGraph/include;D:/Program Files/OpenSceneGraph/3third-party/GDAL-1.9.0/include;D:/Program Files/OpenSceneGraph/3third-party/release/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:/code/OSGEarth/src;D:/Program Files/OpenSceneGraph/include;D:/Program Files/OpenSceneGraph/3third-party/GDAL-1.9.0/include;D:/Program Files/OpenSceneGraph/3third-party/release/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;ws2_32.lib;winmm.lib;wldap32.lib;osgd.lib;osgUtild.lib;osgSimd.lib;osgTerraind.lib;osgDBd.lib;osgFXd.lib;osgViewerd.lib;osgTextd.lib;osgGAd.lib;osgShadowd.lib;OpenThreadsd.lib;osgManipulatord.lib;glu32.lib;opengl32.lib;gdal_i.lib;curllib.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OSGDIR)\3third-party\GDAL-1.10\lib;$(OSGDIR)\lib;$(OSGDIR)\3third-party\Geos3.3.4\lib\debug;$(OSGDIR)\3third-party\Curl_Zlib\debug\lib;E:/code/OSGEarth_VS/lib;E:/code/OSGEarth_VS/lib/$(Configuration);D:\Applications\Qt\5.1.1\msvc2010_opengl\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>MSVCRT</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/code/OSGEarth_VS/lib/Debug/osgEarthd.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/code/OSGEarth_VS/lib/Debug/osgEarthd.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:/code/OSGEarth/src;$(OSGDIR)\include;$(OSGDIR)\3third-party\GDAL-1.10\include;$(OSGDIR)\3third-party\Geos3.3.4\include;$(OSGDIR)\3third-party\Curl_Zlib\debug\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;OSGEARTH_LIBRARY;TIXML_USE_STL;CURL_STATICLIB;CMAKE_INTDIR="Release";osgEarth_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;OSGEARTH_LIBRARY;TIXML_USE_STL;CURL_STATICLIB;CMAKE_INTDIR=\"Release\";osgEarth_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:/code/OSGEarth/src;D:/Program Files/OpenSceneGraph/include;D:/Program Files/OpenSceneGraph/3third-party/GDAL-1.9.0/include;D:/Program Files/OpenSceneGraph/3third-party/release/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:/code/OSGEarth/src;D:/Program Files/OpenSceneGraph/include;D:/Program Files/OpenSceneGraph/3third-party/GDAL-1.9.0/include;D:/Program Files/OpenSceneGraph/3third-party/release/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;ws2_32.lib;winmm.lib;wldap32.lib;$(OSGDIR)\lib\osg.lib;$(OSGDIR)\lib\osgUtil.lib;$(OSGDIR)\lib\osgSim.lib;$(OSGDIR)\lib\osgTerrain.lib;$(OSGDIR)\lib\osgDB.lib;$(OSGDIR)\lib\osgFX.lib;$(OSGDIR)\lib\osgViewer.lib;$(OSGDIR)\lib\osgText.lib;$(OSGDIR)\lib\osgGA.lib;$(OSGDIR)\lib\osgShadow.lib;$(OSGDIR)\lib\OpenThreads.lib;$(OSGDIR)\lib\osgManipulator.lib;$(OSGDIR)\3third-party\GDAL-1.10\lib\gdal_i.lib;$(OSGDIR)\3third-party\Curl_Zlib\release\lib\curllib.lib;glu32.lib;opengl32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:/code/OSGEarth_VS/lib;$(OSGDIR)\3third-party\GDAL-1.10\lib;$(OSGDIR)\3third-party\Geos3.3.4\lib;$(OSGDIR)\3third-party\Curl_Zlib\debug\lib;$(OSGDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ImportLibrary>E:/code/OSGEarth_VS/lib/Release/osgEarth.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/code/OSGEarth_VS/lib/Release/osgEarth.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:/code/OSGEarth/src;D:/Program Files/OpenSceneGraph/include;D:/Program Files/OpenSceneGraph/3third-party/GDAL-1.9.0/include;D:/Program Files/OpenSceneGraph/3third-party/release/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;OSGEARTH_LIBRARY;TIXML_USE_STL;CURL_STATICLIB;CMAKE_INTDIR="MinSizeRel";osgEarth_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;OSGEARTH_LIBRARY;TIXML_USE_STL;CURL_STATICLIB;CMAKE_INTDIR=\"MinSizeRel\";osgEarth_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:/code/OSGEarth/src;D:/Program Files/OpenSceneGraph/include;D:/Program Files/OpenSceneGraph/3third-party/GDAL-1.9.0/include;D:/Program Files/OpenSceneGraph/3third-party/release/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:/code/OSGEarth/src;D:/Program Files/OpenSceneGraph/include;D:/Program Files/OpenSceneGraph/3third-party/GDAL-1.9.0/include;D:/Program Files/OpenSceneGraph/3third-party/release/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;ws2_32.lib;winmm.lib;wldap32.lib;D:\Program Files\OpenSceneGraph\lib\osg.lib;D:\Program Files\OpenSceneGraph\lib\osgUtil.lib;D:\Program Files\OpenSceneGraph\lib\osgSim.lib;D:\Program Files\OpenSceneGraph\lib\osgTerrain.lib;D:\Program Files\OpenSceneGraph\lib\osgDB.lib;D:\Program Files\OpenSceneGraph\lib\osgFX.lib;D:\Program Files\OpenSceneGraph\lib\osgViewer.lib;D:\Program Files\OpenSceneGraph\lib\osgText.lib;D:\Program Files\OpenSceneGraph\lib\osgGA.lib;D:\Program Files\OpenSceneGraph\lib\osgShadow.lib;D:\Program Files\OpenSceneGraph\lib\OpenThreads.lib;D:\Program Files\OpenSceneGraph\lib\osgManipulator.lib;glu32.lib;opengl32.lib;D:\Program Files\OpenSceneGraph\lib\OpenThreads.lib;D:\Program Files\OpenSceneGraph\lib\osgManipulator.lib;glu32.lib;opengl32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:/code/OSGEarth_VS/lib;E:/code/OSGEarth_VS/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ImportLibrary>E:/code/OSGEarth_VS/lib/MinSizeRel/osgEarths.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/code/OSGEarth_VS/lib/MinSizeRel/osgEarths.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:/code/OSGEarth/src;D:/Program Files/OpenSceneGraph/include;D:/Program Files/OpenSceneGraph/3third-party/GDAL-1.9.0/include;D:/Program Files/OpenSceneGraph/3third-party/release/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;OSGEARTH_LIBRARY;TIXML_USE_STL;CURL_STATICLIB;CMAKE_INTDIR="RelWithDebInfo";osgEarth_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;OSGEARTH_LIBRARY;TIXML_USE_STL;CURL_STATICLIB;CMAKE_INTDIR=\"RelWithDebInfo\";osgEarth_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:/code/OSGEarth/src;D:/Program Files/OpenSceneGraph/include;D:/Program Files/OpenSceneGraph/3third-party/GDAL-1.9.0/include;D:/Program Files/OpenSceneGraph/3third-party/release/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:/code/OSGEarth/src;D:/Program Files/OpenSceneGraph/include;D:/Program Files/OpenSceneGraph/3third-party/GDAL-1.9.0/include;D:/Program Files/OpenSceneGraph/3third-party/release/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;ws2_32.lib;winmm.lib;wldap32.lib;D:\Program Files\OpenSceneGraph\lib\osg.lib;D:\Program Files\OpenSceneGraph\lib\osgUtil.lib;D:\Program Files\OpenSceneGraph\lib\osgSim.lib;D:\Program Files\OpenSceneGraph\lib\osgTerrain.lib;D:\Program Files\OpenSceneGraph\lib\osgDB.lib;D:\Program Files\OpenSceneGraph\lib\osgFX.lib;D:\Program Files\OpenSceneGraph\lib\osgViewer.lib;D:\Program Files\OpenSceneGraph\lib\osgText.lib;D:\Program Files\OpenSceneGraph\lib\osgGA.lib;D:\Program Files\OpenSceneGraph\lib\osgShadow.lib;D:\Program Files\OpenSceneGraph\lib\OpenThreads.lib;D:\Program Files\OpenSceneGraph\lib\osgManipulator.lib;glu32.lib;opengl32.lib;D:\Program Files\OpenSceneGraph\lib\OpenThreads.lib;D:\Program Files\OpenSceneGraph\lib\osgManipulator.lib;glu32.lib;opengl32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:/code/OSGEarth_VS/lib;E:/code/OSGEarth_VS/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ImportLibrary>E:/code/OSGEarth_VS/lib/RelWithDebInfo/osgEarthrd.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/code/OSGEarth_VS/lib/RelWithDebInfo/osgEarthrd.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\OSGEarth\src\osgEarth\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule E:/code/OSGEarth/src/osgEarth/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"D:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HE:/code/OSGEarth -BE:/code/OSGEarth_VS --check-stamp-file E:\code\OSGEarth_VS\src\osgEarth\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:/code/OSGEarth/src/osgEarth/CMakeLists.txt;E:\code\OSGEarth\src\osgEarth\CMakeLists.txt;E:\code\OSGEarth\src\osgEarth\VersionGit.cpp.in;E:\code\OSGEarth\CMakeModules\ModuleInstall.cmake;E:\code\OSGEarth\src\osgEarth\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:\code\OSGEarth_VS\src\osgEarth\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule E:/code/OSGEarth/src/osgEarth/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"D:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HE:/code/OSGEarth -BE:/code/OSGEarth_VS --check-stamp-file E:\code\OSGEarth_VS\src\osgEarth\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:/code/OSGEarth/src/osgEarth/CMakeLists.txt;E:\code\OSGEarth\src\osgEarth\CMakeLists.txt;E:\code\OSGEarth\src\osgEarth\VersionGit.cpp.in;E:\code\OSGEarth\CMakeModules\ModuleInstall.cmake;E:\code\OSGEarth\src\osgEarth\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:\code\OSGEarth_VS\src\osgEarth\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule E:/code/OSGEarth/src/osgEarth/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"D:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HE:/code/OSGEarth -BE:/code/OSGEarth_VS --check-stamp-file E:\code\OSGEarth_VS\src\osgEarth\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:/code/OSGEarth/src/osgEarth/CMakeLists.txt;E:\code\OSGEarth\src\osgEarth\CMakeLists.txt;E:\code\OSGEarth\src\osgEarth\VersionGit.cpp.in;E:\code\OSGEarth\CMakeModules\ModuleInstall.cmake;E:\code\OSGEarth\src\osgEarth\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:\code\OSGEarth_VS\src\osgEarth\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule E:/code/OSGEarth/src/osgEarth/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"D:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HE:/code/OSGEarth -BE:/code/OSGEarth_VS --check-stamp-file E:\code\OSGEarth_VS\src\osgEarth\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:/code/OSGEarth/src/osgEarth/CMakeLists.txt;E:\code\OSGEarth\src\osgEarth\CMakeLists.txt;E:\code\OSGEarth\src\osgEarth\VersionGit.cpp.in;E:\code\OSGEarth\CMakeModules\ModuleInstall.cmake;E:\code\OSGEarth\src\osgEarth\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:\code\OSGEarth_VS\src\osgEarth\CMakeFiles\generate.stamp</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\OSGEarth\src\osgEarth\tinystr.h" />
+    <ClInclude Include="..\..\..\OSGEarth\src\osgEarth\tinyxml.h" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\tinystr.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\tinyxml.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\tinyxmlerror.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\tinyxmlparser.cpp" />
+    <ClCompile Include="VersionGit.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\AlphaEffect.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\AutoScale.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Bounds.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Cache.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\CacheEstimator.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\CachePolicy.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\CacheSeed.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Capabilities.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\ClampableNode.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\ClampingTechnique.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\ColorFilter.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\CompositeTileSource.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Config.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Cube.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\CullingUtils.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\DateTime.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Decluttering.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\DepthOffset.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Draggers.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\DPLineSegmentIntersector.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\DrapeableNode.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\DrapingTechnique.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\DrawInstanced.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\ECEF.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\ElevationLayer.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\ElevationLOD.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\ElevationQuery.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\FadeEffect.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\FileUtils.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\GeoData.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Geoid.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\GeoMath.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\HeightFieldUtils.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\HTTPClient.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\ImageLayer.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\ImageMosaic.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\ImageToHeightFieldConverter.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\ImageUtils.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\IOTypes.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\JsonUtils.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Layer.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Locators.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\LocalTangentPlane.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Map.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\MapCallback.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\MapFrame.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\MapInfo.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\MapNode.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\MapNodeOptions.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\MapOptions.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\MaskLayer.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\MaskNode.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\MaskSource.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\MemCache.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\MimeTypes.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\ModelLayer.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\ModelSource.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\NodeUtils.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Notify.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\OverlayDecorator.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\OverlayNode.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Pickers.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\PrimitiveIntersector.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Profile.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Progress.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Random.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Registry.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Revisioning.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\ShaderFactory.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\ShaderGenerator.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\ShaderUtils.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\SparseTexture2DArray.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\SpatialReference.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\StateSetCache.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\StringUtils.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\TaskService.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Terrain.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\TerrainLayer.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\TerrainOptions.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\TerrainEngineNode.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\TextureCompositor.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\TextureCompositorMulti.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\TextureCompositorTexArray.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\TileKey.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\TileSource.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\TimeControl.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\TraversalData.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\ThreadingUtils.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Units.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\URI.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Utils.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Version.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\VerticalDatum.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Viewpoint.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\VirtualProgram.cpp" />
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\XmlUtils.cpp" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\AlphaEffect" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\AutoScale" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\Bounds" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\Cache" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\CacheEstimator" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\CacheBin" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\CachePolicy" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\CacheSeed" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\Capabilities" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\ClampableNode" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\ClampingTechnique" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\ColorFilter" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\Common" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\CompositeTileSource" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\Config" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\Containers" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\Cube" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\CullingUtils" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\DateTime" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\Decluttering" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\DepthOffset" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\DPLineSegmentIntersector" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\Draggers" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\DrapeableNode" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\DrapingTechnique" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\DrawInstanced" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\ECEF" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\ElevationLayer" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\ElevationLOD" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\ElevationQuery" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\Export" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\FadeEffect" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\FileUtils" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\GeoCommon" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\GeoData" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\Geoid" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\GeoMath" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\HeightFieldUtils" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\HTTPClient" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\ImageLayer" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\ImageMosaic" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\ImageToHeightFieldConverter" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\ImageUtils" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\IOTypes" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\JsonUtils" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\Layer" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\LineFunctor" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\Locators" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\LocalTangentPlane" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\Map" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\MapCallback" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\MapFrame" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\MapInfo" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\MapModelChange" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\MapNode" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\MapNodeObserver" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\MapNodeOptions" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\MapOptions" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\MaskLayer" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\MaskNode" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\MaskSource" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\MemCache" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\ModelLayer" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\ModelSource" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\NodeUtils" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\Notify" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\optional" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\OverlayDecorator" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\OverlayNode" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\Pickers" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\PrimitiveIntersector" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\Profile" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\Progress" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\Random" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\Registry" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\Revisioning" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\ShaderFactory" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\ShaderGenerator" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\ShaderUtils" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\SparseTexture2DArray" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\SpatialReference" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\StateSetCache" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\StringUtils" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\TaskService" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\Terrain" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\TerrainEffect" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\TerrainLayer" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\TerrainOptions" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\TerrainEngineNode" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\TextureCompositor" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\TextureCompositorMulti" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\TextureCompositorTexArray" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\TileKey" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\TileSource" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\TimeControl" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\TraversalData" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\ThreadingUtils" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\Units" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\URI" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\Utils" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\Version" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\VerticalDatum" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\Viewpoint" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\VirtualProgram" />
+    <None Include="..\..\..\OSGEarth\src\osgEarth\XmlUtils" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="E:/code/OSGEarth_VS/ZERO_CHECK.vcxproj">
+      <Project>10DD88F8-D5D0-413D-AAC1-C1028916DB14</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

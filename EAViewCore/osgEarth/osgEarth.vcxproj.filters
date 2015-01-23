@@ -1,0 +1,644 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\tinystr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\tinyxml.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\tinyxmlerror.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\tinyxmlparser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VersionGit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\AlphaEffect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\AutoScale.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Bounds.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Cache.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\CacheEstimator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\CachePolicy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\CacheSeed.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Capabilities.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\ClampableNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\ClampingTechnique.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\ColorFilter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\CompositeTileSource.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Config.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Cube.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\CullingUtils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\DateTime.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Decluttering.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\DepthOffset.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Draggers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\DPLineSegmentIntersector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\DrapeableNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\DrapingTechnique.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\DrawInstanced.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\ECEF.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\ElevationLayer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\ElevationLOD.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\ElevationQuery.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\FadeEffect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\FileUtils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\GeoData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Geoid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\GeoMath.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\HeightFieldUtils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\HTTPClient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\ImageLayer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\ImageMosaic.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\ImageToHeightFieldConverter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\ImageUtils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\IOTypes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\JsonUtils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Layer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Locators.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\LocalTangentPlane.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Map.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\MapCallback.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\MapFrame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\MapInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\MapNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\MapNodeOptions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\MapOptions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\MaskLayer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\MaskNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\MaskSource.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\MemCache.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\MimeTypes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\ModelLayer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\ModelSource.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\NodeUtils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Notify.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\OverlayDecorator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\OverlayNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Pickers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\PrimitiveIntersector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Profile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Progress.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Random.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Registry.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Revisioning.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\ShaderFactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\ShaderGenerator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\ShaderUtils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\SparseTexture2DArray.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\SpatialReference.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\StateSetCache.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\StringUtils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\TaskService.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Terrain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\TerrainLayer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\TerrainOptions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\TerrainEngineNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\TextureCompositor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\TextureCompositorMulti.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\TextureCompositorTexArray.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\TileKey.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\TileSource.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\TimeControl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\TraversalData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\ThreadingUtils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Units.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\URI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Version.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\VerticalDatum.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Viewpoint.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\VirtualProgram.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\XmlUtils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\OSGEarth\src\osgEarth\tinystr.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\OSGEarth\src\osgEarth\tinyxml.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\OSGEarth\src\osgEarth\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\AlphaEffect">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\AutoScale">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\Bounds">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\Cache">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\CacheEstimator">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\CacheBin">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\CachePolicy">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\CacheSeed">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\Capabilities">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\ClampableNode">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\ClampingTechnique">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\ColorFilter">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\Common">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\CompositeTileSource">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\Config">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\Containers">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\Cube">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\CullingUtils">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\DateTime">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\Decluttering">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\DepthOffset">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\DPLineSegmentIntersector">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\Draggers">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\DrapeableNode">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\DrapingTechnique">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\DrawInstanced">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\ECEF">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\ElevationLayer">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\ElevationLOD">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\ElevationQuery">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\Export">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\FadeEffect">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\FileUtils">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\GeoCommon">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\GeoData">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\Geoid">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\GeoMath">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\HeightFieldUtils">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\HTTPClient">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\ImageLayer">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\ImageMosaic">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\ImageToHeightFieldConverter">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\ImageUtils">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\IOTypes">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\JsonUtils">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\Layer">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\LineFunctor">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\Locators">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\LocalTangentPlane">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\Map">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\MapCallback">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\MapFrame">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\MapInfo">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\MapModelChange">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\MapNode">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\MapNodeObserver">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\MapNodeOptions">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\MapOptions">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\MaskLayer">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\MaskNode">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\MaskSource">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\MemCache">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\ModelLayer">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\ModelSource">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\NodeUtils">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\Notify">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\optional">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\OverlayDecorator">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\OverlayNode">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\Pickers">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\PrimitiveIntersector">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\Profile">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\Progress">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\Random">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\Registry">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\Revisioning">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\ShaderFactory">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\ShaderGenerator">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\ShaderUtils">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\SparseTexture2DArray">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\SpatialReference">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\StateSetCache">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\StringUtils">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\TaskService">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\Terrain">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\TerrainEffect">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\TerrainLayer">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\TerrainOptions">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\TerrainEngineNode">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\TextureCompositor">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\TextureCompositorMulti">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\TextureCompositorTexArray">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\TileKey">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\TileSource">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\TimeControl">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\TraversalData">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\ThreadingUtils">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\Units">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\URI">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\Utils">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\Version">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\VerticalDatum">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\Viewpoint">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\VirtualProgram">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="..\..\..\OSGEarth\src\osgEarth\XmlUtils">
+      <Filter>Headers</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{5D3268AE-CD76-4724-8575-CE1FAB5B0F1B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers">
+      <UniqueIdentifier>{3EA52376-D0DA-4C53-B55F-C0D821C80D81}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
