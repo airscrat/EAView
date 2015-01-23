@@ -802,7 +802,7 @@ void
 MapNodeHelper::configureView( osgViewer::View* view ) const
 {
     // add some stock OSG handlers:
-    view->addEventHandler(new osgViewer::StatsHandler());
+    //view->addEventHandler(new osgViewer::StatsHandler());
     view->addEventHandler(new osgViewer::WindowSizeHandler());
     view->addEventHandler(new osgViewer::ThreadingHandler());
     view->addEventHandler(new osgViewer::LODScaleHandler());
