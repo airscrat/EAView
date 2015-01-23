@@ -54,7 +54,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)\bin\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)\$(Configuration)\bin\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">osgEarthUtil.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">osgEarthUtild</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.dll</TargetExt>
@@ -81,7 +81,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>E:/code/OSGEarth/src;$(OSGDIR)\include;E:/code/OSGEarth;$(OSGDIR)\3third-party\GDAL-1.10\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\EAViewCore;$(OSGDIR)\include;E:/code/OSGEarth;$(OSGDIR)\3third-party\GDAL-1.10\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Debug/</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CompileAs>CompileAsCpp</CompileAs>
@@ -110,8 +110,8 @@
     </Midl>
     <Link>
       <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\lib\Debug\osgEarthd.lib;..\..\lib\Debug\osgEarthFeaturesd.lib;..\..\lib\Debug\osgEarthSymbologyd.lib;..\..\lib\Debug\osgEarthAnnotationd.lib;osgd.lib;osgUtild.lib;osgSimd.lib;osgTerraind.lib;osgDBd.lib;osgFXd.lib;osgManipulatord.lib;osgViewerd.lib;osgTextd.lib;osgGAd.lib;osgShadowd.lib;OpenThreadsd.lib;glu32.lib;opengl32.lib;ws2_32.lib;winmm.lib;wldap32.lib;osgWidgetd.lib;gdal_i.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>E:/code/OSGEarth_VS/lib;E:/code/OSGEarth_VS/lib/$(Configuration);$(OSGDIR)\3third-party\GDAL-1.10\lib;$(OSGDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;osgd.lib;osgUtild.lib;osgSimd.lib;osgTerraind.lib;osgDBd.lib;osgFXd.lib;osgManipulatord.lib;osgViewerd.lib;osgTextd.lib;osgGAd.lib;osgShadowd.lib;OpenThreadsd.lib;glu32.lib;opengl32.lib;ws2_32.lib;winmm.lib;wldap32.lib;osgWidgetd.lib;gdal_i.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OSGDIR)\3third-party\GDAL-1.10\lib;$(OSGDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ImportLibrary>E:/code/OSGEarth_VS/lib/Debug/osgEarthUtild.lib</ImportLibrary>
       <ProgramDataBaseFile>E:/code/OSGEarth_VS/lib/Debug/osgEarthUtild.pdb</ProgramDataBaseFile>
@@ -409,20 +409,40 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <None Include="..\..\..\OSGEarth\src\osgEarthUtil\ChromaKeyColorFilter" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\osgEarthAnnotation\osgEarthAnnotation.vcxproj">
+      <Project>{2ae01687-ab19-4683-b01b-f4558a2fdbca}</Project>
+      <Private>true</Private>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\osgEarthFeatures\osgEarthFeatures.vcxproj">
+      <Project>{077be9f7-88bf-4c25-8061-81b337bcb277}</Project>
+      <Private>true</Private>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\osgEarthSymbology\osgEarthSymbology.vcxproj">
+      <Project>{d221619e-6ba8-4c7c-bf46-781f17ce7a7f}</Project>
+      <Private>true</Private>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\osgEarth\osgEarth.vcxproj">
+      <Project>{59196a46-6b3d-40a9-879d-b35e00081388}</Project>
+      <Private>true</Private>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
     <ProjectReference Include="E:/code/OSGEarth_VS/ZERO_CHECK.vcxproj">
       <Project>10DD88F8-D5D0-413D-AAC1-C1028916DB14</Project>
-    </ProjectReference>
-    <ProjectReference Include="E:/code/OSGEarth_VS/src/osgEarth/osgEarth.vcxproj">
-      <Project>59196A46-6B3D-40A9-879D-B35E00081388</Project>
-    </ProjectReference>
-    <ProjectReference Include="E:/code/OSGEarth_VS/src/osgEarthAnnotation/osgEarthAnnotation.vcxproj">
-      <Project>2AE01687-AB19-4683-B01B-F4558A2FDBCA</Project>
-    </ProjectReference>
-    <ProjectReference Include="E:/code/OSGEarth_VS/src/osgEarthFeatures/osgEarthFeatures.vcxproj">
-      <Project>077BE9F7-88BF-4C25-8061-81B337BCB277</Project>
-    </ProjectReference>
-    <ProjectReference Include="E:/code/OSGEarth_VS/src/osgEarthSymbology/osgEarthSymbology.vcxproj">
-      <Project>D221619E-6BA8-4C7C-BF46-781F17CE7A7F</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

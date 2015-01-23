@@ -54,7 +54,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)\bin\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)\$(Configuration)\bin\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">osgEarth.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">osgEarthd</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.dll</TargetExt>
@@ -81,7 +81,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>E:/code/OSGEarth/src;$(OSGDIR)\include;$(OSGDIR)\3third-party\GDAL-1.10\include;$(OSGDIR)\3third-party\Curl_Zlib\debug\include;D:\Applications\Qt\5.1.1\msvc2010_opengl\include;$(OSGDIR)\3third-party\Geos3.3.4\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OSGDIR)\include;$(OSGDIR)\3third-party\GDAL-1.10\include;$(OSGDIR)\3third-party\Curl_Zlib\debug\include;D:\Applications\Qt\5.1.1\msvc2010_opengl\include;$(OSGDIR)\3third-party\Geos3.3.4\include;$(SolutionDir)\EAViewCore;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Debug/</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CompileAs>CompileAsCpp</CompileAs>
@@ -256,271 +256,227 @@
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="..\..\..\OSGEarth\src\osgEarth\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule E:/code/OSGEarth/src/osgEarth/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
-"D:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HE:/code/OSGEarth -BE:/code/OSGEarth_VS --check-stamp-file E:\code\OSGEarth_VS\src\osgEarth\CMakeFiles\generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:/code/OSGEarth/src/osgEarth/CMakeLists.txt;E:\code\OSGEarth\src\osgEarth\CMakeLists.txt;E:\code\OSGEarth\src\osgEarth\VersionGit.cpp.in;E:\code\OSGEarth\CMakeModules\ModuleInstall.cmake;E:\code\OSGEarth\src\osgEarth\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:\code\OSGEarth_VS\src\osgEarth\CMakeFiles\generate.stamp</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule E:/code/OSGEarth/src/osgEarth/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
-"D:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HE:/code/OSGEarth -BE:/code/OSGEarth_VS --check-stamp-file E:\code\OSGEarth_VS\src\osgEarth\CMakeFiles\generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:/code/OSGEarth/src/osgEarth/CMakeLists.txt;E:\code\OSGEarth\src\osgEarth\CMakeLists.txt;E:\code\OSGEarth\src\osgEarth\VersionGit.cpp.in;E:\code\OSGEarth\CMakeModules\ModuleInstall.cmake;E:\code\OSGEarth\src\osgEarth\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:\code\OSGEarth_VS\src\osgEarth\CMakeFiles\generate.stamp</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule E:/code/OSGEarth/src/osgEarth/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
-"D:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HE:/code/OSGEarth -BE:/code/OSGEarth_VS --check-stamp-file E:\code\OSGEarth_VS\src\osgEarth\CMakeFiles\generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:/code/OSGEarth/src/osgEarth/CMakeLists.txt;E:\code\OSGEarth\src\osgEarth\CMakeLists.txt;E:\code\OSGEarth\src\osgEarth\VersionGit.cpp.in;E:\code\OSGEarth\CMakeModules\ModuleInstall.cmake;E:\code\OSGEarth\src\osgEarth\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:\code\OSGEarth_VS\src\osgEarth\CMakeFiles\generate.stamp</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule E:/code/OSGEarth/src/osgEarth/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
-"D:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HE:/code/OSGEarth -BE:/code/OSGEarth_VS --check-stamp-file E:\code\OSGEarth_VS\src\osgEarth\CMakeFiles\generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:/code/OSGEarth/src/osgEarth/CMakeLists.txt;E:\code\OSGEarth\src\osgEarth\CMakeLists.txt;E:\code\OSGEarth\src\osgEarth\VersionGit.cpp.in;E:\code\OSGEarth\CMakeModules\ModuleInstall.cmake;E:\code\OSGEarth\src\osgEarth\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:\code\OSGEarth_VS\src\osgEarth\CMakeFiles\generate.stamp</Outputs>
-    </CustomBuild>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\..\OSGEarth\src\osgEarth\tinystr.h" />
-    <ClInclude Include="..\..\..\OSGEarth\src\osgEarth\tinyxml.h" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\tinystr.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\tinyxml.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\tinyxmlerror.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\tinyxmlparser.cpp" />
-    <ClCompile Include="VersionGit.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\AlphaEffect.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\AutoScale.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Bounds.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Cache.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\CacheEstimator.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\CachePolicy.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\CacheSeed.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Capabilities.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\ClampableNode.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\ClampingTechnique.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\ColorFilter.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\CompositeTileSource.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Config.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Cube.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\CullingUtils.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\DateTime.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Decluttering.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\DepthOffset.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Draggers.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\DPLineSegmentIntersector.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\DrapeableNode.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\DrapingTechnique.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\DrawInstanced.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\ECEF.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\ElevationLayer.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\ElevationLOD.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\ElevationQuery.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\FadeEffect.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\FileUtils.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\GeoData.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Geoid.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\GeoMath.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\HeightFieldUtils.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\HTTPClient.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\ImageLayer.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\ImageMosaic.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\ImageToHeightFieldConverter.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\ImageUtils.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\IOTypes.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\JsonUtils.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Layer.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Locators.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\LocalTangentPlane.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Map.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\MapCallback.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\MapFrame.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\MapInfo.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\MapNode.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\MapNodeOptions.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\MapOptions.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\MaskLayer.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\MaskNode.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\MaskSource.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\MemCache.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\MimeTypes.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\ModelLayer.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\ModelSource.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\NodeUtils.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Notify.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\OverlayDecorator.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\OverlayNode.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Pickers.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\PrimitiveIntersector.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Profile.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Progress.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Random.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Registry.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Revisioning.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\ShaderFactory.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\ShaderGenerator.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\ShaderUtils.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\SparseTexture2DArray.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\SpatialReference.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\StateSetCache.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\StringUtils.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\TaskService.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Terrain.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\TerrainLayer.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\TerrainOptions.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\TerrainEngineNode.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\TextureCompositor.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\TextureCompositorMulti.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\TextureCompositorTexArray.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\TileKey.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\TileSource.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\TimeControl.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\TraversalData.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\ThreadingUtils.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Units.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\URI.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Utils.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Version.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\VerticalDatum.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\Viewpoint.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\VirtualProgram.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarth\XmlUtils.cpp" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\AlphaEffect" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\AutoScale" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\Bounds" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\Cache" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\CacheEstimator" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\CacheBin" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\CachePolicy" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\CacheSeed" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\Capabilities" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\ClampableNode" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\ClampingTechnique" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\ColorFilter" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\Common" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\CompositeTileSource" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\Config" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\Containers" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\Cube" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\CullingUtils" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\DateTime" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\Decluttering" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\DepthOffset" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\DPLineSegmentIntersector" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\Draggers" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\DrapeableNode" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\DrapingTechnique" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\DrawInstanced" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\ECEF" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\ElevationLayer" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\ElevationLOD" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\ElevationQuery" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\Export" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\FadeEffect" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\FileUtils" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\GeoCommon" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\GeoData" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\Geoid" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\GeoMath" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\HeightFieldUtils" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\HTTPClient" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\ImageLayer" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\ImageMosaic" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\ImageToHeightFieldConverter" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\ImageUtils" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\IOTypes" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\JsonUtils" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\Layer" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\LineFunctor" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\Locators" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\LocalTangentPlane" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\Map" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\MapCallback" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\MapFrame" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\MapInfo" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\MapModelChange" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\MapNode" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\MapNodeObserver" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\MapNodeOptions" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\MapOptions" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\MaskLayer" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\MaskNode" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\MaskSource" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\MemCache" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\ModelLayer" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\ModelSource" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\NodeUtils" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\Notify" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\optional" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\OverlayDecorator" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\OverlayNode" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\Pickers" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\PrimitiveIntersector" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\Profile" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\Progress" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\Random" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\Registry" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\Revisioning" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\ShaderFactory" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\ShaderGenerator" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\ShaderUtils" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\SparseTexture2DArray" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\SpatialReference" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\StateSetCache" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\StringUtils" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\TaskService" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\Terrain" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\TerrainEffect" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\TerrainLayer" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\TerrainOptions" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\TerrainEngineNode" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\TextureCompositor" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\TextureCompositorMulti" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\TextureCompositorTexArray" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\TileKey" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\TileSource" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\TimeControl" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\TraversalData" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\ThreadingUtils" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\Units" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\URI" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\Utils" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\Version" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\VerticalDatum" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\Viewpoint" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\VirtualProgram" />
-    <None Include="..\..\..\OSGEarth\src\osgEarth\XmlUtils" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="E:/code/OSGEarth_VS/ZERO_CHECK.vcxproj">
       <Project>10DD88F8-D5D0-413D-AAC1-C1028916DB14</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AlphaEffect" />
+    <None Include="AutoScale" />
+    <None Include="Bounds" />
+    <None Include="Cache" />
+    <None Include="CacheBin" />
+    <None Include="CacheEstimator" />
+    <None Include="CachePolicy" />
+    <None Include="CacheSeed" />
+    <None Include="Capabilities" />
+    <None Include="ClampableNode" />
+    <None Include="ClampingBinTechnique" />
+    <None Include="ClampingTechnique" />
+    <None Include="ColorFilter" />
+    <None Include="Common" />
+    <None Include="CompositeTileSource" />
+    <None Include="Config" />
+    <None Include="Containers" />
+    <None Include="Cube" />
+    <None Include="CullingUtils" />
+    <None Include="DateTime" />
+    <None Include="Decluttering" />
+    <None Include="DepthOffset" />
+    <None Include="DPLineSegmentIntersector" />
+    <None Include="Draggers" />
+    <None Include="DrapeableNode" />
+    <None Include="DrapingTechnique" />
+    <None Include="DrawInstanced" />
+    <None Include="ECEF" />
+    <None Include="ElevationLayer" />
+    <None Include="ElevationLOD" />
+    <None Include="ElevationQuery" />
+    <None Include="Export" />
+    <None Include="FadeEffect" />
+    <None Include="FileUtils" />
+    <None Include="GeoCommon" />
+    <None Include="GeoData" />
+    <None Include="Geoid" />
+    <None Include="GeoMath" />
+    <None Include="HeightFieldUtils" />
+    <None Include="HTTPClient" />
+    <None Include="ImageLayer" />
+    <None Include="ImageMosaic" />
+    <None Include="ImageToHeightFieldConverter" />
+    <None Include="ImageUtils" />
+    <None Include="IOTypes" />
+    <None Include="JsonUtils" />
+    <None Include="Layer" />
+    <None Include="LineFunctor" />
+    <None Include="LocalTangentPlane" />
+    <None Include="Locators" />
+    <None Include="Map" />
+    <None Include="MapCallback" />
+    <None Include="MapFrame" />
+    <None Include="MapInfo" />
+    <None Include="MapModelChange" />
+    <None Include="MapNode" />
+    <None Include="MapNodeOptions" />
+    <None Include="MapOptions" />
+    <None Include="MaskLayer" />
+    <None Include="MaskNode" />
+    <None Include="MaskSource" />
+    <None Include="Math" />
+    <None Include="MemCache" />
+    <None Include="Mercator" />
+    <None Include="ModelLayer" />
+    <None Include="ModelSource" />
+    <None Include="NodeUtils" />
+    <None Include="Notify" />
+    <None Include="optional" />
+    <None Include="OverlayDecorator" />
+    <None Include="OverlayNode" />
+    <None Include="Pickers" />
+    <None Include="PrimitiveIntersector" />
+    <None Include="Profile" />
+    <None Include="Progress" />
+    <None Include="Random" />
+    <None Include="Registry" />
+    <None Include="Revisioning" />
+    <None Include="ShaderFactory" />
+    <None Include="ShaderGenerator" />
+    <None Include="ShaderUtils" />
+    <None Include="SparseTexture2DArray" />
+    <None Include="SpatialReference" />
+    <None Include="StateSetCache" />
+    <None Include="StringUtils" />
+    <None Include="TaskService" />
+    <None Include="Terrain" />
+    <None Include="TerrainEffect" />
+    <None Include="TerrainEngineNode" />
+    <None Include="TerrainLayer" />
+    <None Include="TerrainOptions" />
+    <None Include="TextureCompositor" />
+    <None Include="TextureCompositorMulti" />
+    <None Include="TextureCompositorTexArray" />
+    <None Include="ThreadingUtils" />
+    <None Include="TileKey" />
+    <None Include="TileSource" />
+    <None Include="TimeControl" />
+    <None Include="TraversalData" />
+    <None Include="Units" />
+    <None Include="URI" />
+    <None Include="Utils" />
+    <None Include="Version" />
+    <None Include="VerticalDatum" />
+    <None Include="Viewpoint" />
+    <None Include="VirtualProgram" />
+    <None Include="XmlUtils" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AlphaEffect.cpp" />
+    <ClCompile Include="AutoScale.cpp" />
+    <ClCompile Include="Bounds.cpp" />
+    <ClCompile Include="Cache.cpp" />
+    <ClCompile Include="CacheEstimator.cpp" />
+    <ClCompile Include="CachePolicy.cpp" />
+    <ClCompile Include="CacheSeed.cpp" />
+    <ClCompile Include="Capabilities.cpp" />
+    <ClCompile Include="ClampableNode.cpp" />
+    <ClCompile Include="ClampingTechnique.cpp" />
+    <ClCompile Include="ColorFilter.cpp" />
+    <ClCompile Include="CompositeTileSource.cpp" />
+    <ClCompile Include="Config.cpp" />
+    <ClCompile Include="Cube.cpp" />
+    <ClCompile Include="CullingUtils.cpp" />
+    <ClCompile Include="DateTime.cpp" />
+    <ClCompile Include="Decluttering.cpp" />
+    <ClCompile Include="DepthOffset.cpp" />
+    <ClCompile Include="DPLineSegmentIntersector.cpp" />
+    <ClCompile Include="Draggers.cpp" />
+    <ClCompile Include="DrapeableNode.cpp" />
+    <ClCompile Include="DrapingTechnique.cpp" />
+    <ClCompile Include="DrawInstanced.cpp" />
+    <ClCompile Include="ECEF.cpp" />
+    <ClCompile Include="ElevationLayer.cpp" />
+    <ClCompile Include="ElevationLOD.cpp" />
+    <ClCompile Include="ElevationQuery.cpp" />
+    <ClCompile Include="FadeEffect.cpp" />
+    <ClCompile Include="FileUtils.cpp" />
+    <ClCompile Include="GeoData.cpp" />
+    <ClCompile Include="Geoid.cpp" />
+    <ClCompile Include="GeoMath.cpp" />
+    <ClCompile Include="HeightFieldUtils.cpp" />
+    <ClCompile Include="HTTPClient.cpp" />
+    <ClCompile Include="ImageLayer.cpp" />
+    <ClCompile Include="ImageMosaic.cpp" />
+    <ClCompile Include="ImageToHeightFieldConverter.cpp" />
+    <ClCompile Include="ImageUtils.cpp" />
+    <ClCompile Include="IOTypes.cpp" />
+    <ClCompile Include="JsonUtils.cpp" />
+    <ClCompile Include="Layer.cpp" />
+    <ClCompile Include="LocalTangentPlane.cpp" />
+    <ClCompile Include="Locators.cpp" />
+    <ClCompile Include="Map.cpp" />
+    <ClCompile Include="MapCallback.cpp" />
+    <ClCompile Include="MapFrame.cpp" />
+    <ClCompile Include="MapInfo.cpp" />
+    <ClCompile Include="MapNode.cpp" />
+    <ClCompile Include="MapNodeOptions.cpp" />
+    <ClCompile Include="MapOptions.cpp" />
+    <ClCompile Include="MaskLayer.cpp" />
+    <ClCompile Include="MaskNode.cpp" />
+    <ClCompile Include="MaskSource.cpp" />
+    <ClCompile Include="Math.cpp" />
+    <ClCompile Include="MemCache.cpp" />
+    <ClCompile Include="Mercator.cpp" />
+    <ClCompile Include="MimeTypes.cpp" />
+    <ClCompile Include="ModelLayer.cpp" />
+    <ClCompile Include="ModelSource.cpp" />
+    <ClCompile Include="NodeUtils.cpp" />
+    <ClCompile Include="Notify.cpp" />
+    <ClCompile Include="OverlayDecorator.cpp" />
+    <ClCompile Include="OverlayNode.cpp" />
+    <ClCompile Include="Pickers.cpp" />
+    <ClCompile Include="PrimitiveIntersector.cpp" />
+    <ClCompile Include="Profile.cpp" />
+    <ClCompile Include="Progress.cpp" />
+    <ClCompile Include="Random.cpp" />
+    <ClCompile Include="Registry.cpp" />
+    <ClCompile Include="Revisioning.cpp" />
+    <ClCompile Include="ShaderFactory.cpp" />
+    <ClCompile Include="ShaderGenerator.cpp" />
+    <ClCompile Include="ShaderUtils.cpp" />
+    <ClCompile Include="SparseTexture2DArray.cpp" />
+    <ClCompile Include="SpatialReference.cpp" />
+    <ClCompile Include="StateSetCache.cpp" />
+    <ClCompile Include="StringUtils.cpp" />
+    <ClCompile Include="TaskService.cpp" />
+    <ClCompile Include="Terrain.cpp" />
+    <ClCompile Include="TerrainEngineNode.cpp" />
+    <ClCompile Include="TerrainLayer.cpp" />
+    <ClCompile Include="TerrainOptions.cpp" />
+    <ClCompile Include="TextureCompositor.cpp" />
+    <ClCompile Include="TextureCompositorMulti.cpp" />
+    <ClCompile Include="TextureCompositorTexArray.cpp" />
+    <ClCompile Include="ThreadingUtils.cpp" />
+    <ClCompile Include="TileKey.cpp" />
+    <ClCompile Include="TileSource.cpp" />
+    <ClCompile Include="TimeControl.cpp" />
+    <ClCompile Include="tinystr.cpp" />
+    <ClCompile Include="tinyxml.cpp" />
+    <ClCompile Include="tinyxmlerror.cpp" />
+    <ClCompile Include="tinyxmlparser.cpp" />
+    <ClCompile Include="TraversalData.cpp" />
+    <ClCompile Include="Units.cpp" />
+    <ClCompile Include="URI.cpp" />
+    <ClCompile Include="Utils.cpp" />
+    <ClCompile Include="Version.cpp" />
+    <ClCompile Include="VersionGit.cpp" />
+    <ClCompile Include="VerticalDatum.cpp" />
+    <ClCompile Include="Viewpoint.cpp" />
+    <ClCompile Include="VirtualProgram.cpp" />
+    <ClCompile Include="XmlUtils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="tinystr.h" />
+    <ClInclude Include="tinyxml.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

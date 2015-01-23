@@ -54,7 +54,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)\bin\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)\$(Configuration)\bin\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">osgEarthSymbology.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">osgEarthSymbologyd</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.dll</TargetExt>
@@ -81,7 +81,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>E:/code/OSGEarth/src;$(OSGDIR)\include;E:/code/OSGEarth;$(OSGDIR)\3third-party\Geos3.3.4\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\EAViewCore;$(OSGDIR)\include;E:/code/OSGEarth;$(OSGDIR)\3third-party\Geos3.3.4\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Debug/</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CompileAs>CompileAsCpp</CompileAs>
@@ -110,8 +110,8 @@
     </Midl>
     <Link>
       <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\lib\Debug\osgEarthd.lib;osgd.lib;osgWidgetd.lib;osgUtild.lib;osgSimd.lib;osgTerraind.lib;osgDBd.lib;osgFXd.lib;osgViewerd.lib;osgTextd.lib;osgGAd.lib;OpenThreadsd.lib;glu32.lib;opengl32.lib;ws2_32.lib;winmm.lib;wldap32.lib;osgShadowd.lib;osgManipulatord.lib;geos.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>E:/code/OSGEarth_VS/lib;E:/code/OSGEarth_VS/lib/$(Configuration);$(OSGDIR)\3third-party\Geos3.3.4\lib\Debug;$(OSGDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;osgd.lib;osgWidgetd.lib;osgUtild.lib;osgSimd.lib;osgTerraind.lib;osgDBd.lib;osgFXd.lib;osgViewerd.lib;osgTextd.lib;osgGAd.lib;OpenThreadsd.lib;glu32.lib;opengl32.lib;ws2_32.lib;winmm.lib;wldap32.lib;osgShadowd.lib;osgManipulatord.lib;geos.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OSGDIR)\3third-party\Geos3.3.4\lib\Debug;$(OSGDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ImportLibrary>E:/code/OSGEarth_VS/lib/Debug/osgEarthSymbologyd.lib</ImportLibrary>
       <ProgramDataBaseFile>E:/code/OSGEarth_VS/lib/Debug/osgEarthSymbologyd.pdb</ProgramDataBaseFile>
@@ -384,11 +384,16 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\TextSymbol" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\osgEarth\osgEarth.vcxproj">
+      <Project>{59196a46-6b3d-40a9-879d-b35e00081388}</Project>
+      <Private>true</Private>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
     <ProjectReference Include="E:/code/OSGEarth_VS/ZERO_CHECK.vcxproj">
       <Project>10DD88F8-D5D0-413D-AAC1-C1028916DB14</Project>
-    </ProjectReference>
-    <ProjectReference Include="E:/code/OSGEarth_VS/src/osgEarth/osgEarth.vcxproj">
-      <Project>59196A46-6B3D-40A9-879D-B35E00081388</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
