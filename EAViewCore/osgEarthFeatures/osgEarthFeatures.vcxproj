@@ -255,138 +255,6 @@
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="..\..\..\OSGEarth\src\osgEarthFeatures\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule E:/code/OSGEarth/src/osgEarthFeatures/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
-"D:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HE:/code/OSGEarth -BE:/code/OSGEarth_VS --check-stamp-file E:\code\OSGEarth_VS\src\osgEarthFeatures\CMakeFiles\generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:/code/OSGEarth/src/osgEarthFeatures/CMakeLists.txt;E:\code\OSGEarth\src\osgEarthFeatures\CMakeLists.txt;E:\code\OSGEarth\CMakeModules\ModuleInstall.cmake;E:\code\OSGEarth\src\osgEarthFeatures\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:\code\OSGEarth_VS\src\osgEarthFeatures\CMakeFiles\generate.stamp</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule E:/code/OSGEarth/src/osgEarthFeatures/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
-"D:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HE:/code/OSGEarth -BE:/code/OSGEarth_VS --check-stamp-file E:\code\OSGEarth_VS\src\osgEarthFeatures\CMakeFiles\generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:/code/OSGEarth/src/osgEarthFeatures/CMakeLists.txt;E:\code\OSGEarth\src\osgEarthFeatures\CMakeLists.txt;E:\code\OSGEarth\CMakeModules\ModuleInstall.cmake;E:\code\OSGEarth\src\osgEarthFeatures\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:\code\OSGEarth_VS\src\osgEarthFeatures\CMakeFiles\generate.stamp</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule E:/code/OSGEarth/src/osgEarthFeatures/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
-"D:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HE:/code/OSGEarth -BE:/code/OSGEarth_VS --check-stamp-file E:\code\OSGEarth_VS\src\osgEarthFeatures\CMakeFiles\generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:/code/OSGEarth/src/osgEarthFeatures/CMakeLists.txt;E:\code\OSGEarth\src\osgEarthFeatures\CMakeLists.txt;E:\code\OSGEarth\CMakeModules\ModuleInstall.cmake;E:\code\OSGEarth\src\osgEarthFeatures\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:\code\OSGEarth_VS\src\osgEarthFeatures\CMakeFiles\generate.stamp</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule E:/code/OSGEarth/src/osgEarthFeatures/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
-"D:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HE:/code/OSGEarth -BE:/code/OSGEarth_VS --check-stamp-file E:\code\OSGEarth_VS\src\osgEarthFeatures\CMakeFiles\generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:/code/OSGEarth/src/osgEarthFeatures/CMakeLists.txt;E:\code\OSGEarth\src\osgEarthFeatures\CMakeLists.txt;E:\code\OSGEarth\CMakeModules\ModuleInstall.cmake;E:\code\OSGEarth\src\osgEarthFeatures\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:\code\OSGEarth_VS\src\osgEarthFeatures\CMakeFiles\generate.stamp</Outputs>
-    </CustomBuild>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthFeatures\AltitudeFilter.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthFeatures\BufferFilter.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthFeatures\BuildGeometryFilter.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthFeatures\BuildTextFilter.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthFeatures\BuildTextOperator.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthFeatures\CentroidFilter.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthFeatures\ConvertTypeFilter.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthFeatures\CropFilter.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthFeatures\ExtrudeGeometryFilter.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthFeatures\Feature.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthFeatures\FeatureCursor.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthFeatures\FeatureDisplayLayout.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthFeatures\FeatureDrawSet.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthFeatures\FeatureListSource.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthFeatures\FeatureModelGraph.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthFeatures\FeatureModelSource.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthFeatures\FeatureSource.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthFeatures\FeatureSourceIndexNode.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthFeatures\FeatureTileSource.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthFeatures\Filter.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthFeatures\FilterContext.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthFeatures\GeometryCompiler.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthFeatures\GeometryUtils.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthFeatures\LabelSource.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthFeatures\MeshClamper.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthFeatures\OgrUtils.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthFeatures\OptimizerHints.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthFeatures\PolygonizeLines.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthFeatures\ResampleFilter.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthFeatures\ScaleFilter.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthFeatures\Session.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthFeatures\ScatterFilter.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthFeatures\ScriptEngine.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthFeatures\SubstituteModelFilter.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthFeatures\TessellateOperator.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthFeatures\TextSymbolizer.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthFeatures\TransformFilter.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthFeatures\VirtualFeatureSource.cpp" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthFeatures\AltitudeFilter" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthFeatures\BufferFilter" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthFeatures\BuildGeometryFilter" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthFeatures\BuildTextFilter" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthFeatures\BuildTextOperator" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthFeatures\CentroidFilter" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthFeatures\Common" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthFeatures\ConvertTypeFilter" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthFeatures\CropFilter" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthFeatures\ExtrudeGeometryFilter" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthFeatures\Feature" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthFeatures\FeatureCursor" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthFeatures\FeatureDisplayLayout" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthFeatures\FeatureDrawSet" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthFeatures\FeatureListSource" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthFeatures\FeatureModelGraph" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthFeatures\FeatureModelSource" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthFeatures\FeatureSource" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthFeatures\FeatureSourceIndexNode" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthFeatures\FeatureTileSource" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthFeatures\Filter" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthFeatures\FilterContext" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthFeatures\GeometryCompiler" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthFeatures\GeometryUtils" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthFeatures\LabelSource" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthFeatures\MeshClamper" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthFeatures\OgrUtils" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthFeatures\OptimizerHints" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthFeatures\PolygonizeLines" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthFeatures\ResampleFilter" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthFeatures\ScaleFilter" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthFeatures\Session" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthFeatures\ScatterFilter" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthFeatures\Script" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthFeatures\ScriptEngine" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthFeatures\SubstituteModelFilter" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthFeatures\TessellateOperator" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthFeatures\TextSymbolizer" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthFeatures\TransformFilter" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthFeatures\VirtualFeatureSource" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\osgEarthSymbology\osgEarthSymbology.vcxproj">
       <Project>{d221619e-6ba8-4c7c-bf46-781f17ce7a7f}</Project>
       <Private>true</Private>
@@ -406,6 +274,90 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ProjectReference Include="E:/code/OSGEarth_VS/ZERO_CHECK.vcxproj">
       <Project>10DD88F8-D5D0-413D-AAC1-C1028916DB14</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AltitudeFilter" />
+    <None Include="BufferFilter" />
+    <None Include="BuildGeometryFilter" />
+    <None Include="BuildTextFilter" />
+    <None Include="BuildTextOperator" />
+    <None Include="CentroidFilter" />
+    <None Include="Common" />
+    <None Include="ConvertTypeFilter" />
+    <None Include="CropFilter" />
+    <None Include="ExtrudeGeometryFilter" />
+    <None Include="Feature" />
+    <None Include="FeatureCursor" />
+    <None Include="FeatureDisplayLayout" />
+    <None Include="FeatureDrawSet" />
+    <None Include="FeatureListSource" />
+    <None Include="FeatureModelGraph" />
+    <None Include="FeatureModelSource" />
+    <None Include="FeatureSource" />
+    <None Include="FeatureSourceIndexNode" />
+    <None Include="FeatureTileSource" />
+    <None Include="Filter" />
+    <None Include="FilterContext" />
+    <None Include="GeometryCompiler" />
+    <None Include="GeometryUtils" />
+    <None Include="LabelSource" />
+    <None Include="MarkerFactory" />
+    <None Include="MeshClamper" />
+    <None Include="OgrUtils" />
+    <None Include="OptimizerHints" />
+    <None Include="PolygonizeLines" />
+    <None Include="ResampleFilter" />
+    <None Include="ScaleFilter" />
+    <None Include="ScatterFilter" />
+    <None Include="Script" />
+    <None Include="ScriptEngine" />
+    <None Include="Session" />
+    <None Include="SubstituteModelFilter" />
+    <None Include="TessellateOperator" />
+    <None Include="TextSymbolizer" />
+    <None Include="TransformFilter" />
+    <None Include="VirtualFeatureSource" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AltitudeFilter.cpp" />
+    <ClCompile Include="BufferFilter.cpp" />
+    <ClCompile Include="BuildGeometryFilter.cpp" />
+    <ClCompile Include="BuildTextFilter.cpp" />
+    <ClCompile Include="BuildTextOperator.cpp" />
+    <ClCompile Include="CentroidFilter.cpp" />
+    <ClCompile Include="ConvertTypeFilter.cpp" />
+    <ClCompile Include="CropFilter.cpp" />
+    <ClCompile Include="ExtrudeGeometryFilter.cpp" />
+    <ClCompile Include="Feature.cpp" />
+    <ClCompile Include="FeatureCursor.cpp" />
+    <ClCompile Include="FeatureDisplayLayout.cpp" />
+    <ClCompile Include="FeatureDrawSet.cpp" />
+    <ClCompile Include="FeatureListSource.cpp" />
+    <ClCompile Include="FeatureModelGraph.cpp" />
+    <ClCompile Include="FeatureModelSource.cpp" />
+    <ClCompile Include="FeatureSource.cpp" />
+    <ClCompile Include="FeatureSourceIndexNode.cpp" />
+    <ClCompile Include="FeatureTileSource.cpp" />
+    <ClCompile Include="Filter.cpp" />
+    <ClCompile Include="FilterContext.cpp" />
+    <ClCompile Include="GeometryCompiler.cpp" />
+    <ClCompile Include="GeometryUtils.cpp" />
+    <ClCompile Include="LabelSource.cpp" />
+    <ClCompile Include="MarkerFactory.cpp" />
+    <ClCompile Include="MeshClamper.cpp" />
+    <ClCompile Include="OgrUtils.cpp" />
+    <ClCompile Include="OptimizerHints.cpp" />
+    <ClCompile Include="PolygonizeLines.cpp" />
+    <ClCompile Include="ResampleFilter.cpp" />
+    <ClCompile Include="ScaleFilter.cpp" />
+    <ClCompile Include="ScatterFilter.cpp" />
+    <ClCompile Include="ScriptEngine.cpp" />
+    <ClCompile Include="Session.cpp" />
+    <ClCompile Include="SubstituteModelFilter.cpp" />
+    <ClCompile Include="TessellateOperator.cpp" />
+    <ClCompile Include="TextSymbolizer.cpp" />
+    <ClCompile Include="TransformFilter.cpp" />
+    <ClCompile Include="VirtualFeatureSource.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

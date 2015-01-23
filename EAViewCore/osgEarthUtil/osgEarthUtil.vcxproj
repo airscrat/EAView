@@ -255,160 +255,6 @@
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="..\..\..\OSGEarth\src\osgEarthUtil\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule E:/code/OSGEarth/src/osgEarthUtil/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
-"D:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HE:/code/OSGEarth -BE:/code/OSGEarth_VS --check-stamp-file E:\code\OSGEarth_VS\src\osgEarthUtil\CMakeFiles\generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:/code/OSGEarth/src/osgEarthUtil/CMakeLists.txt;E:\code\OSGEarth\src\osgEarthUtil\CMakeLists.txt;E:\code\OSGEarth\CMakeModules\ModuleInstall.cmake;E:\code\OSGEarth\src\osgEarthUtil\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:\code\OSGEarth_VS\src\osgEarthUtil\CMakeFiles\generate.stamp</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule E:/code/OSGEarth/src/osgEarthUtil/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
-"D:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HE:/code/OSGEarth -BE:/code/OSGEarth_VS --check-stamp-file E:\code\OSGEarth_VS\src\osgEarthUtil\CMakeFiles\generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:/code/OSGEarth/src/osgEarthUtil/CMakeLists.txt;E:\code\OSGEarth\src\osgEarthUtil\CMakeLists.txt;E:\code\OSGEarth\CMakeModules\ModuleInstall.cmake;E:\code\OSGEarth\src\osgEarthUtil\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:\code\OSGEarth_VS\src\osgEarthUtil\CMakeFiles\generate.stamp</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule E:/code/OSGEarth/src/osgEarthUtil/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
-"D:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HE:/code/OSGEarth -BE:/code/OSGEarth_VS --check-stamp-file E:\code\OSGEarth_VS\src\osgEarthUtil\CMakeFiles\generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:/code/OSGEarth/src/osgEarthUtil/CMakeLists.txt;E:\code\OSGEarth\src\osgEarthUtil\CMakeLists.txt;E:\code\OSGEarth\CMakeModules\ModuleInstall.cmake;E:\code\OSGEarth\src\osgEarthUtil\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:\code\OSGEarth_VS\src\osgEarthUtil\CMakeFiles\generate.stamp</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule E:/code/OSGEarth/src/osgEarthUtil/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
-"D:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HE:/code/OSGEarth -BE:/code/OSGEarth_VS --check-stamp-file E:\code\OSGEarth_VS\src\osgEarthUtil\CMakeFiles\generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:/code/OSGEarth/src/osgEarthUtil/CMakeLists.txt;E:\code\OSGEarth\src\osgEarthUtil\CMakeLists.txt;E:\code\OSGEarth\CMakeModules\ModuleInstall.cmake;E:\code\OSGEarth\src\osgEarthUtil\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:\code\OSGEarth_VS\src\osgEarthUtil\CMakeFiles\generate.stamp</Outputs>
-    </CustomBuild>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\AnnotationEvents.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\ArcGIS.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\AutoClipPlaneHandler.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\ClampCallback.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\Controls.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\ContourMap.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\DataScanner.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\DetailTexture.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\EarthManipulator.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\ExampleResources.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\FeatureManipTool.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\FeatureQueryTool.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\GeodeticGraticule.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\HTM.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\LatLongFormatter.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\LinearLineOfSight.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\LODBlending.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\MeasureTool.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\MGRSFormatter.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\MGRSGraticule.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\MouseCoordsTool.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\NormalMap.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\ObjectLocator.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\PolyhedralLineOfSight.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\RadialLineOfSight.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\SpatialData.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\SkyNode.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\TerrainProfile.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\TileIndex.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\TileIndexBuilder.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\TFS.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\TFSPackager.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\TMS.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\TMSBackFiller.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\TMSPackager.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\UTMGraticule.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\VerticalScale.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\WFS.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\WMS.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\ShadowUtils.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\BrightnessContrastColorFilter.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\CMYKColorFilter.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\GammaColorFilter.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\GLSLColorFilter.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\HSLColorFilter.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\RGBColorFilter.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\ChromaKeyColorFilter.cpp" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\AnnotationEvents" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\AutoClipPlaneHandler" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\ArcGIS" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\Common" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\Controls" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\ContourMap" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\ClampCallback" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\DataScanner" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\DateTime" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\DetailTexture" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\EarthManipulator" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\ExampleResources" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\Export" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\FeatureManipTool" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\FeatureQueryTool" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\Formatter" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\GeodeticGraticule" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\HTM" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\LatLongFormatter" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\LineOfSight" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\LinearLineOfSight" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\LODBlending" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\MeasureTool" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\MGRSFormatter" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\MGRSGraticule" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\MouseCoordsTool" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\NormalMap" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\ObjectLocator" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\PolyhedralLineOfSight" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\RadialLineOfSight" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\SkyNode" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\SpatialData" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\StarData" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\TerrainProfile" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\TileIndex" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\TileIndexBuilder" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\TFS" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\TFSPackager" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\TMS" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\TMSBackFiller" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\TMSPackager" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\UTMGraticule" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\VerticalScale" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\WFS" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\WMS" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\ShadowUtils" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\BrightnessContrastColorFilter" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\CMYKColorFilter" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\GammaColorFilter" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\GLSLColorFilter" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\HSLColorFilter" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\RGBColorFilter" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\ChromaKeyColorFilter" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\osgEarthAnnotation\osgEarthAnnotation.vcxproj">
       <Project>{2ae01687-ab19-4683-b01b-f4558a2fdbca}</Project>
       <Private>true</Private>
@@ -444,6 +290,111 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ProjectReference Include="E:/code/OSGEarth_VS/ZERO_CHECK.vcxproj">
       <Project>10DD88F8-D5D0-413D-AAC1-C1028916DB14</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AnnotationEvents" />
+    <None Include="ArcGIS" />
+    <None Include="AutoClipPlaneHandler" />
+    <None Include="BrightnessContrastColorFilter" />
+    <None Include="ChromaKeyColorFilter" />
+    <None Include="ClampCallback" />
+    <None Include="CMYKColorFilter" />
+    <None Include="Common" />
+    <None Include="ContourMap" />
+    <None Include="Controls" />
+    <None Include="DataScanner" />
+    <None Include="DateTime" />
+    <None Include="DetailTexture" />
+    <None Include="EarthManipulator" />
+    <None Include="ExampleResources" />
+    <None Include="Export" />
+    <None Include="FeatureManipTool" />
+    <None Include="FeatureQueryTool" />
+    <None Include="Formatter" />
+    <None Include="GammaColorFilter" />
+    <None Include="GeodeticGraticule" />
+    <None Include="GLSLColorFilter" />
+    <None Include="HSLColorFilter" />
+    <None Include="HTM" />
+    <None Include="LatLongFormatter" />
+    <None Include="LinearLineOfSight" />
+    <None Include="LineOfSight" />
+    <None Include="LODBlending" />
+    <None Include="MeasureTool" />
+    <None Include="MGRSFormatter" />
+    <None Include="MGRSGraticule" />
+    <None Include="MouseCoordsTool" />
+    <None Include="NearFarGroup" />
+    <None Include="NormalMap" />
+    <None Include="ObjectLocator" />
+    <None Include="PolyhedralLineOfSight" />
+    <None Include="RadialLineOfSight" />
+    <None Include="RGBColorFilter" />
+    <None Include="ShadowUtils" />
+    <None Include="SkyNode" />
+    <None Include="SpatialData" />
+    <None Include="StarData" />
+    <None Include="TerrainProfile" />
+    <None Include="TFS" />
+    <None Include="TFSPackager" />
+    <None Include="TileIndex" />
+    <None Include="TileIndexBuilder" />
+    <None Include="TMS" />
+    <None Include="TMSBackFiller" />
+    <None Include="TMSPackager" />
+    <None Include="UTMGraticule" />
+    <None Include="VerticalScale" />
+    <None Include="WFS" />
+    <None Include="WMS" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AnnotationEvents.cpp" />
+    <ClCompile Include="ArcGIS.cpp" />
+    <ClCompile Include="AutoClipPlaneHandler.cpp" />
+    <ClCompile Include="BrightnessContrastColorFilter.cpp" />
+    <ClCompile Include="ChromaKeyColorFilter.cpp" />
+    <ClCompile Include="ClampCallback.cpp" />
+    <ClCompile Include="CMYKColorFilter.cpp" />
+    <ClCompile Include="ContourMap.cpp" />
+    <ClCompile Include="Controls.cpp" />
+    <ClCompile Include="DataScanner.cpp" />
+    <ClCompile Include="DetailTexture.cpp" />
+    <ClCompile Include="EarthManipulator.cpp" />
+    <ClCompile Include="ExampleResources.cpp" />
+    <ClCompile Include="FeatureManipTool.cpp" />
+    <ClCompile Include="FeatureQueryTool.cpp" />
+    <ClCompile Include="GammaColorFilter.cpp" />
+    <ClCompile Include="GeodeticGraticule.cpp" />
+    <ClCompile Include="GLSLColorFilter.cpp" />
+    <ClCompile Include="HSLColorFilter.cpp" />
+    <ClCompile Include="HTM.cpp" />
+    <ClCompile Include="LatLongFormatter.cpp" />
+    <ClCompile Include="LinearLineOfSight.cpp" />
+    <ClCompile Include="LODBlending.cpp" />
+    <ClCompile Include="MeasureTool.cpp" />
+    <ClCompile Include="MGRSFormatter.cpp" />
+    <ClCompile Include="MGRSGraticule.cpp" />
+    <ClCompile Include="MouseCoordsTool.cpp" />
+    <ClCompile Include="NormalMap.cpp" />
+    <ClCompile Include="ObjectLocator.cpp" />
+    <ClCompile Include="PolyhedralLineOfSight.cpp" />
+    <ClCompile Include="RadialLineOfSight.cpp" />
+    <ClCompile Include="RGBColorFilter.cpp" />
+    <ClCompile Include="ShadowUtils.cpp" />
+    <ClCompile Include="SkyNode.cpp" />
+    <ClCompile Include="SpatialData.cpp" />
+    <ClCompile Include="TerrainProfile.cpp" />
+    <ClCompile Include="TFS.cpp" />
+    <ClCompile Include="TFSPackager.cpp" />
+    <ClCompile Include="TileIndex.cpp" />
+    <ClCompile Include="TileIndexBuilder.cpp" />
+    <ClCompile Include="TMS.cpp" />
+    <ClCompile Include="TMSBackFiller.cpp" />
+    <ClCompile Include="TMSPackager.cpp" />
+    <ClCompile Include="UTMGraticule.cpp" />
+    <ClCompile Include="VerticalScale.cpp" />
+    <ClCompile Include="WFS.cpp" />
+    <ClCompile Include="WMS.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

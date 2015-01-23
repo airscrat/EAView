@@ -255,135 +255,6 @@
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="..\..\..\OSGEarth\src\osgEarthSymbology\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule E:/code/OSGEarth/src/osgEarthSymbology/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
-"D:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HE:/code/OSGEarth -BE:/code/OSGEarth_VS --check-stamp-file E:\code\OSGEarth_VS\src\osgEarthSymbology\CMakeFiles\generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:/code/OSGEarth/src/osgEarthSymbology/CMakeLists.txt;E:\code\OSGEarth\src\osgEarthSymbology\CMakeLists.txt;E:\code\OSGEarth\CMakeModules\ModuleInstall.cmake;E:\code\OSGEarth\src\osgEarthSymbology\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:\code\OSGEarth_VS\src\osgEarthSymbology\CMakeFiles\generate.stamp</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule E:/code/OSGEarth/src/osgEarthSymbology/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
-"D:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HE:/code/OSGEarth -BE:/code/OSGEarth_VS --check-stamp-file E:\code\OSGEarth_VS\src\osgEarthSymbology\CMakeFiles\generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:/code/OSGEarth/src/osgEarthSymbology/CMakeLists.txt;E:\code\OSGEarth\src\osgEarthSymbology\CMakeLists.txt;E:\code\OSGEarth\CMakeModules\ModuleInstall.cmake;E:\code\OSGEarth\src\osgEarthSymbology\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:\code\OSGEarth_VS\src\osgEarthSymbology\CMakeFiles\generate.stamp</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule E:/code/OSGEarth/src/osgEarthSymbology/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
-"D:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HE:/code/OSGEarth -BE:/code/OSGEarth_VS --check-stamp-file E:\code\OSGEarth_VS\src\osgEarthSymbology\CMakeFiles\generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:/code/OSGEarth/src/osgEarthSymbology/CMakeLists.txt;E:\code\OSGEarth\src\osgEarthSymbology\CMakeLists.txt;E:\code\OSGEarth\CMakeModules\ModuleInstall.cmake;E:\code\OSGEarth\src\osgEarthSymbology\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:\code\OSGEarth_VS\src\osgEarthSymbology\CMakeFiles\generate.stamp</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule E:/code/OSGEarth/src/osgEarthSymbology/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
-"D:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HE:/code/OSGEarth -BE:/code/OSGEarth_VS --check-stamp-file E:\code\OSGEarth_VS\src\osgEarthSymbology\CMakeFiles\generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:/code/OSGEarth/src/osgEarthSymbology/CMakeLists.txt;E:\code\OSGEarth\src\osgEarthSymbology\CMakeLists.txt;E:\code\OSGEarth\CMakeModules\ModuleInstall.cmake;E:\code\OSGEarth\src\osgEarthSymbology\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:\code\OSGEarth_VS\src\osgEarthSymbology\CMakeFiles\generate.stamp</Outputs>
-    </CustomBuild>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\..\OSGEarth\src\osgEarthSymbology\AGG.h" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\AltitudeSymbol.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\Color.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\CssUtils.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\Expression.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\ExtrusionSymbol.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\Fill.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\Geometry.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\GeometryFactory.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\GEOS.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\GeometryRasterizer.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\IconResource.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\IconSymbol.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\InstanceResource.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\InstanceSymbol.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\LineSymbol.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\MarkerResource.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\MarkerSymbol.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\MeshConsolidator.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\MeshSubdivider.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\ModelResource.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\ModelSymbol.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\PointSymbol.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\PolygonSymbol.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\Query.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\RenderSymbol.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\Resource.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\ResourceCache.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\ResourceLibrary.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\Skins.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\StencilVolumeNode.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\Stroke.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\Style.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\StyleSelector.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\StyleSheet.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\Symbol.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthSymbology\TextSymbol.cpp" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\AltitudeSymbol" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\Common" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\Color" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\CssUtils" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\Expression" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\ExtrusionSymbol" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\Fill" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\Geometry" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\GeometryFactory" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\GEOS" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\GeometryRasterizer" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\IconResource" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\IconSymbol" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\InstanceResource" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\InstanceSymbol" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\LineSymbol" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\MarkerResource" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\MarkerSymbol" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\MeshConsolidator" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\MeshSubdivider" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\ModelResource" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\ModelSymbol" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\PointSymbol" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\PolygonSymbol" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\Query" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\RenderSymbol" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\Resource" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\ResourceCache" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\ResourceLibrary" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\Skins" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\StencilVolumeNode" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\Stroke" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\Style" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\StyleSelector" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\StyleSheet" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\Symbol" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\Tags" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthSymbology\TextSymbol" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\osgEarth\osgEarth.vcxproj">
       <Project>{59196a46-6b3d-40a9-879d-b35e00081388}</Project>
       <Private>true</Private>
@@ -395,6 +266,90 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ProjectReference Include="E:/code/OSGEarth_VS/ZERO_CHECK.vcxproj">
       <Project>10DD88F8-D5D0-413D-AAC1-C1028916DB14</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AGG.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AltitudeSymbol" />
+    <None Include="Color" />
+    <None Include="Common" />
+    <None Include="CssUtils" />
+    <None Include="Expression" />
+    <None Include="ExtrusionSymbol" />
+    <None Include="Fill" />
+    <None Include="Geometry" />
+    <None Include="GeometryFactory" />
+    <None Include="GeometryRasterizer" />
+    <None Include="GEOS" />
+    <None Include="IconResource" />
+    <None Include="IconSymbol" />
+    <None Include="InstanceResource" />
+    <None Include="InstanceSymbol" />
+    <None Include="LineSymbol" />
+    <None Include="MarkerResource" />
+    <None Include="MarkerSymbol" />
+    <None Include="MeshConsolidator" />
+    <None Include="MeshSubdivider" />
+    <None Include="ModelResource" />
+    <None Include="ModelSymbol" />
+    <None Include="PointSymbol" />
+    <None Include="PolygonSymbol" />
+    <None Include="Query" />
+    <None Include="Registry" />
+    <None Include="RenderSymbol" />
+    <None Include="Resource" />
+    <None Include="ResourceCache" />
+    <None Include="ResourceLibrary" />
+    <None Include="Skins" />
+    <None Include="StencilVolumeNode" />
+    <None Include="Stroke" />
+    <None Include="Style" />
+    <None Include="StyleSelector" />
+    <None Include="StyleSheet" />
+    <None Include="Symbol" />
+    <None Include="SymbolDisplayFunctor" />
+    <None Include="Tags" />
+    <None Include="TextSymbol" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AltitudeSymbol.cpp" />
+    <ClCompile Include="Color.cpp" />
+    <ClCompile Include="CssUtils.cpp" />
+    <ClCompile Include="Expression.cpp" />
+    <ClCompile Include="ExtrusionSymbol.cpp" />
+    <ClCompile Include="Fill.cpp" />
+    <ClCompile Include="Geometry.cpp" />
+    <ClCompile Include="GeometryFactory.cpp" />
+    <ClCompile Include="GeometryRasterizer.cpp" />
+    <ClCompile Include="GEOS.cpp" />
+    <ClCompile Include="IconResource.cpp" />
+    <ClCompile Include="IconSymbol.cpp" />
+    <ClCompile Include="InstanceResource.cpp" />
+    <ClCompile Include="InstanceSymbol.cpp" />
+    <ClCompile Include="LineSymbol.cpp" />
+    <ClCompile Include="MarkerResource.cpp" />
+    <ClCompile Include="MarkerSymbol.cpp" />
+    <ClCompile Include="MeshConsolidator.cpp" />
+    <ClCompile Include="MeshSubdivider.cpp" />
+    <ClCompile Include="ModelResource.cpp" />
+    <ClCompile Include="ModelSymbol.cpp" />
+    <ClCompile Include="PointSymbol.cpp" />
+    <ClCompile Include="PolygonSymbol.cpp" />
+    <ClCompile Include="Query.cpp" />
+    <ClCompile Include="Registry.cpp" />
+    <ClCompile Include="RenderSymbol.cpp" />
+    <ClCompile Include="Resource.cpp" />
+    <ClCompile Include="ResourceCache.cpp" />
+    <ClCompile Include="ResourceLibrary.cpp" />
+    <ClCompile Include="Skins.cpp" />
+    <ClCompile Include="StencilVolumeNode.cpp" />
+    <ClCompile Include="Stroke.cpp" />
+    <ClCompile Include="Style.cpp" />
+    <ClCompile Include="StyleSelector.cpp" />
+    <ClCompile Include="StyleSheet.cpp" />
+    <ClCompile Include="Symbol.cpp" />
+    <ClCompile Include="TextSymbol.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

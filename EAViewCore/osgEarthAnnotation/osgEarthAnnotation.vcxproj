@@ -255,107 +255,6 @@
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="..\..\..\OSGEarth\src\osgEarthAnnotation\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule E:/code/OSGEarth/src/osgEarthAnnotation/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
-"D:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HE:/code/OSGEarth -BE:/code/OSGEarth_VS --check-stamp-file E:\code\OSGEarth_VS\src\osgEarthAnnotation\CMakeFiles\generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:/code/OSGEarth/src/osgEarthAnnotation/CMakeLists.txt;E:\code\OSGEarth\src\osgEarthAnnotation\CMakeLists.txt;E:\code\OSGEarth\CMakeModules\ModuleInstall.cmake;E:\code\OSGEarth\src\osgEarthAnnotation\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:\code\OSGEarth_VS\src\osgEarthAnnotation\CMakeFiles\generate.stamp</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule E:/code/OSGEarth/src/osgEarthAnnotation/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
-"D:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HE:/code/OSGEarth -BE:/code/OSGEarth_VS --check-stamp-file E:\code\OSGEarth_VS\src\osgEarthAnnotation\CMakeFiles\generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:/code/OSGEarth/src/osgEarthAnnotation/CMakeLists.txt;E:\code\OSGEarth\src\osgEarthAnnotation\CMakeLists.txt;E:\code\OSGEarth\CMakeModules\ModuleInstall.cmake;E:\code\OSGEarth\src\osgEarthAnnotation\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:\code\OSGEarth_VS\src\osgEarthAnnotation\CMakeFiles\generate.stamp</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule E:/code/OSGEarth/src/osgEarthAnnotation/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
-"D:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HE:/code/OSGEarth -BE:/code/OSGEarth_VS --check-stamp-file E:\code\OSGEarth_VS\src\osgEarthAnnotation\CMakeFiles\generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:/code/OSGEarth/src/osgEarthAnnotation/CMakeLists.txt;E:\code\OSGEarth\src\osgEarthAnnotation\CMakeLists.txt;E:\code\OSGEarth\CMakeModules\ModuleInstall.cmake;E:\code\OSGEarth\src\osgEarthAnnotation\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:\code\OSGEarth_VS\src\osgEarthAnnotation\CMakeFiles\generate.stamp</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule E:/code/OSGEarth/src/osgEarthAnnotation/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
-"D:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HE:/code/OSGEarth -BE:/code/OSGEarth_VS --check-stamp-file E:\code\OSGEarth_VS\src\osgEarthAnnotation\CMakeFiles\generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:/code/OSGEarth/src/osgEarthAnnotation/CMakeLists.txt;E:\code\OSGEarth\src\osgEarthAnnotation\CMakeLists.txt;E:\code\OSGEarth\CMakeModules\ModuleInstall.cmake;E:\code\OSGEarth\src\osgEarthAnnotation\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:\code\OSGEarth_VS\src\osgEarthAnnotation\CMakeFiles\generate.stamp</Outputs>
-    </CustomBuild>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthAnnotation\AnnotationEditing.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthAnnotation\AnnotationSettings.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthAnnotation\AnnotationData.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthAnnotation\AnnotationNode.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthAnnotation\AnnotationRegistry.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthAnnotation\AnnotationUtils.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthAnnotation\CircleNode.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthAnnotation\Decoration.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthAnnotation\EllipseNode.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthAnnotation\FeatureNode.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthAnnotation\LocalGeometryNode.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthAnnotation\HighlightDecoration.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthAnnotation\ImageOverlay.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthAnnotation\ImageOverlayEditor.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthAnnotation\LabelNode.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthAnnotation\LocalizedNode.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthAnnotation\RectangleNode.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthAnnotation\ModelNode.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthAnnotation\OrthoNode.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthAnnotation\PlaceNode.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthAnnotation\TrackNode.cpp" />
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthAnnotation\FeatureEditing.cpp" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthAnnotation\AnnotationSettings" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthAnnotation\AnnotationEditing" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthAnnotation\AnnotationData" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthAnnotation\AnnotationNode" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthAnnotation\AnnotationRegistry" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthAnnotation\AnnotationUtils" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthAnnotation\CircleNode" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthAnnotation\Common" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthAnnotation\Decoration" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthAnnotation\EllipseNode" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthAnnotation\Export" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthAnnotation\FeatureNode" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthAnnotation\LocalGeometryNode" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthAnnotation\HighlightDecoration" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthAnnotation\ImageOverlay" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthAnnotation\ImageOverlayEditor" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthAnnotation\LabelNode" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthAnnotation\LocalizedNode" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthAnnotation\ModelNode" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthAnnotation\OrthoNode" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthAnnotation\PlaceNode" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthAnnotation\RectangleNode" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthAnnotation\ScaleDecoration" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthAnnotation\TrackNode" />
-    <None Include="..\..\..\OSGEarth\src\osgEarthAnnotation\FeatureEditing" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\osgEarthFeatures\osgEarthFeatures.vcxproj">
       <Project>{077be9f7-88bf-4c25-8061-81b337bcb277}</Project>
       <Private>true</Private>
@@ -383,6 +282,57 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ProjectReference Include="E:/code/OSGEarth_VS/ZERO_CHECK.vcxproj">
       <Project>10DD88F8-D5D0-413D-AAC1-C1028916DB14</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AnnotationData" />
+    <None Include="AnnotationEditing" />
+    <None Include="AnnotationNode" />
+    <None Include="AnnotationRegistry" />
+    <None Include="AnnotationSettings" />
+    <None Include="AnnotationUtils" />
+    <None Include="CircleNode" />
+    <None Include="Common" />
+    <None Include="Decoration" />
+    <None Include="EllipseNode" />
+    <None Include="Export" />
+    <None Include="FeatureEditing" />
+    <None Include="FeatureNode" />
+    <None Include="HighlightDecoration" />
+    <None Include="ImageOverlay" />
+    <None Include="ImageOverlayEditor" />
+    <None Include="LabelNode" />
+    <None Include="LocalGeometryNode" />
+    <None Include="LocalizedNode" />
+    <None Include="ModelNode" />
+    <None Include="OrthoNode" />
+    <None Include="PlaceNode" />
+    <None Include="RectangleNode" />
+    <None Include="ScaleDecoration" />
+    <None Include="TrackNode" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AnnotationData.cpp" />
+    <ClCompile Include="AnnotationEditing.cpp" />
+    <ClCompile Include="AnnotationNode.cpp" />
+    <ClCompile Include="AnnotationRegistry.cpp" />
+    <ClCompile Include="AnnotationSettings.cpp" />
+    <ClCompile Include="AnnotationUtils.cpp" />
+    <ClCompile Include="CircleNode.cpp" />
+    <ClCompile Include="Decoration.cpp" />
+    <ClCompile Include="EllipseNode.cpp" />
+    <ClCompile Include="FeatureEditing.cpp" />
+    <ClCompile Include="FeatureNode.cpp" />
+    <ClCompile Include="HighlightDecoration.cpp" />
+    <ClCompile Include="ImageOverlay.cpp" />
+    <ClCompile Include="ImageOverlayEditor.cpp" />
+    <ClCompile Include="LabelNode.cpp" />
+    <ClCompile Include="LocalGeometryNode.cpp" />
+    <ClCompile Include="LocalizedNode.cpp" />
+    <ClCompile Include="ModelNode.cpp" />
+    <ClCompile Include="OrthoNode.cpp" />
+    <ClCompile Include="PlaceNode.cpp" />
+    <ClCompile Include="RectangleNode.cpp" />
+    <ClCompile Include="TrackNode.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

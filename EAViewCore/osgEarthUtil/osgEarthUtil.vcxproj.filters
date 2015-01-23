@@ -1,313 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\AnnotationEvents.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\ArcGIS.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\AutoClipPlaneHandler.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\ClampCallback.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\Controls.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\ContourMap.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\DataScanner.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\DetailTexture.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\EarthManipulator.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\ExampleResources.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\FeatureManipTool.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\FeatureQueryTool.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\GeodeticGraticule.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\HTM.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\LatLongFormatter.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\LinearLineOfSight.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\LODBlending.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\MeasureTool.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\MGRSFormatter.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\MGRSGraticule.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\MouseCoordsTool.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\NormalMap.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\ObjectLocator.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\PolyhedralLineOfSight.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\RadialLineOfSight.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\SpatialData.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\SkyNode.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\TerrainProfile.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\TileIndex.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\TileIndexBuilder.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\TFS.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\TFSPackager.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\TMS.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\TMSBackFiller.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\TMSPackager.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\UTMGraticule.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\VerticalScale.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\WFS.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\WMS.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\ShadowUtils.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\BrightnessContrastColorFilter.cpp">
-      <Filter>Sources\ColorFilters</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\CMYKColorFilter.cpp">
-      <Filter>Sources\ColorFilters</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\GammaColorFilter.cpp">
-      <Filter>Sources\ColorFilters</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\GLSLColorFilter.cpp">
-      <Filter>Sources\ColorFilters</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\HSLColorFilter.cpp">
-      <Filter>Sources\ColorFilters</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\RGBColorFilter.cpp">
-      <Filter>Sources\ColorFilters</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\OSGEarth\src\osgEarthUtil\ChromaKeyColorFilter.cpp">
-      <Filter>Sources\ColorFilters</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <CustomBuild Include="..\..\..\OSGEarth\src\osgEarthUtil\CMakeLists.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\AnnotationEvents">
-      <Filter>Headers</Filter>
-    </None>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\AutoClipPlaneHandler">
-      <Filter>Headers</Filter>
-    </None>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\ArcGIS">
-      <Filter>Headers</Filter>
-    </None>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\Common">
-      <Filter>Headers</Filter>
-    </None>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\Controls">
-      <Filter>Headers</Filter>
-    </None>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\ContourMap">
-      <Filter>Headers</Filter>
-    </None>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\ClampCallback">
-      <Filter>Headers</Filter>
-    </None>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\DataScanner">
-      <Filter>Headers</Filter>
-    </None>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\DateTime">
-      <Filter>Headers</Filter>
-    </None>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\DetailTexture">
-      <Filter>Headers</Filter>
-    </None>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\EarthManipulator">
-      <Filter>Headers</Filter>
-    </None>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\ExampleResources">
-      <Filter>Headers</Filter>
-    </None>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\Export">
-      <Filter>Headers</Filter>
-    </None>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\FeatureManipTool">
-      <Filter>Headers</Filter>
-    </None>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\FeatureQueryTool">
-      <Filter>Headers</Filter>
-    </None>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\Formatter">
-      <Filter>Headers</Filter>
-    </None>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\GeodeticGraticule">
-      <Filter>Headers</Filter>
-    </None>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\HTM">
-      <Filter>Headers</Filter>
-    </None>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\LatLongFormatter">
-      <Filter>Headers</Filter>
-    </None>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\LineOfSight">
-      <Filter>Headers</Filter>
-    </None>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\LinearLineOfSight">
-      <Filter>Headers</Filter>
-    </None>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\LODBlending">
-      <Filter>Headers</Filter>
-    </None>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\MeasureTool">
-      <Filter>Headers</Filter>
-    </None>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\MGRSFormatter">
-      <Filter>Headers</Filter>
-    </None>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\MGRSGraticule">
-      <Filter>Headers</Filter>
-    </None>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\MouseCoordsTool">
-      <Filter>Headers</Filter>
-    </None>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\NormalMap">
-      <Filter>Headers</Filter>
-    </None>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\ObjectLocator">
-      <Filter>Headers</Filter>
-    </None>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\PolyhedralLineOfSight">
-      <Filter>Headers</Filter>
-    </None>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\RadialLineOfSight">
-      <Filter>Headers</Filter>
-    </None>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\SkyNode">
-      <Filter>Headers</Filter>
-    </None>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\SpatialData">
-      <Filter>Headers</Filter>
-    </None>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\StarData">
-      <Filter>Headers</Filter>
-    </None>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\TerrainProfile">
-      <Filter>Headers</Filter>
-    </None>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\TileIndex">
-      <Filter>Headers</Filter>
-    </None>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\TileIndexBuilder">
-      <Filter>Headers</Filter>
-    </None>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\TFS">
-      <Filter>Headers</Filter>
-    </None>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\TFSPackager">
-      <Filter>Headers</Filter>
-    </None>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\TMS">
-      <Filter>Headers</Filter>
-    </None>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\TMSBackFiller">
-      <Filter>Headers</Filter>
-    </None>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\TMSPackager">
-      <Filter>Headers</Filter>
-    </None>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\UTMGraticule">
-      <Filter>Headers</Filter>
-    </None>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\VerticalScale">
-      <Filter>Headers</Filter>
-    </None>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\WFS">
-      <Filter>Headers</Filter>
-    </None>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\WMS">
-      <Filter>Headers</Filter>
-    </None>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\ShadowUtils">
-      <Filter>Headers</Filter>
-    </None>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\BrightnessContrastColorFilter">
-      <Filter>Headers\ColorFilters</Filter>
-    </None>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\CMYKColorFilter">
-      <Filter>Headers\ColorFilters</Filter>
-    </None>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\GammaColorFilter">
-      <Filter>Headers\ColorFilters</Filter>
-    </None>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\GLSLColorFilter">
-      <Filter>Headers\ColorFilters</Filter>
-    </None>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\HSLColorFilter">
-      <Filter>Headers\ColorFilters</Filter>
-    </None>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\RGBColorFilter">
-      <Filter>Headers\ColorFilters</Filter>
-    </None>
-    <None Include="..\..\..\OSGEarth\src\osgEarthUtil\ChromaKeyColorFilter">
-      <Filter>Headers\ColorFilters</Filter>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <Filter Include="Sources\ColorFilters">
       <UniqueIdentifier>{B596DE06-5B01-40A6-9087-9E0B845C1B1B}</UniqueIdentifier>
     </Filter>
@@ -320,5 +13,312 @@
     <Filter Include="Sources">
       <UniqueIdentifier>{E64EC0BB-9AAD-4C83-84CD-FD324A49406A}</UniqueIdentifier>
     </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RGBColorFilter">
+      <Filter>Headers\ColorFilters</Filter>
+    </None>
+    <None Include="HSLColorFilter">
+      <Filter>Headers\ColorFilters</Filter>
+    </None>
+    <None Include="GammaColorFilter">
+      <Filter>Headers\ColorFilters</Filter>
+    </None>
+    <None Include="GLSLColorFilter">
+      <Filter>Headers\ColorFilters</Filter>
+    </None>
+    <None Include="ChromaKeyColorFilter">
+      <Filter>Headers\ColorFilters</Filter>
+    </None>
+    <None Include="CMYKColorFilter">
+      <Filter>Headers\ColorFilters</Filter>
+    </None>
+    <None Include="BrightnessContrastColorFilter">
+      <Filter>Headers\ColorFilters</Filter>
+    </None>
+    <None Include="WMS">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="WFS">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="VerticalScale">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="UTMGraticule">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="TMSPackager">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="TMSBackFiller">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="TMS">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="TileIndexBuilder">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="TileIndex">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="TFSPackager">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="TFS">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="TerrainProfile">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="StarData">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="SpatialData">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="SkyNode">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="ShadowUtils">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="RadialLineOfSight">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="PolyhedralLineOfSight">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="ObjectLocator">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="NormalMap">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="NearFarGroup">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="MouseCoordsTool">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="MGRSGraticule">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="MGRSFormatter">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="MeasureTool">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="LODBlending">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="LineOfSight">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="LinearLineOfSight">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="LatLongFormatter">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="HTM">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="GeodeticGraticule">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="Formatter">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="FeatureQueryTool">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="FeatureManipTool">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="Export">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="ExampleResources">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="EarthManipulator">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="DetailTexture">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="DateTime">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="DataScanner">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="Controls">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="ContourMap">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="Common">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="ClampCallback">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="AutoClipPlaneHandler">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="ArcGIS">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="AnnotationEvents">
+      <Filter>Headers</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="RGBColorFilter.cpp">
+      <Filter>Sources\ColorFilters</Filter>
+    </ClCompile>
+    <ClCompile Include="HSLColorFilter.cpp">
+      <Filter>Sources\ColorFilters</Filter>
+    </ClCompile>
+    <ClCompile Include="GammaColorFilter.cpp">
+      <Filter>Sources\ColorFilters</Filter>
+    </ClCompile>
+    <ClCompile Include="GLSLColorFilter.cpp">
+      <Filter>Sources\ColorFilters</Filter>
+    </ClCompile>
+    <ClCompile Include="ChromaKeyColorFilter.cpp">
+      <Filter>Sources\ColorFilters</Filter>
+    </ClCompile>
+    <ClCompile Include="CMYKColorFilter.cpp">
+      <Filter>Sources\ColorFilters</Filter>
+    </ClCompile>
+    <ClCompile Include="BrightnessContrastColorFilter.cpp">
+      <Filter>Sources\ColorFilters</Filter>
+    </ClCompile>
+    <ClCompile Include="WMS.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="WFS.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="VerticalScale.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="UTMGraticule.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="TMSPackager.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="TMSBackFiller.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="TMS.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="TileIndexBuilder.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="TileIndex.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="TFSPackager.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="TFS.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="TerrainProfile.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="SpatialData.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="SkyNode.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="ShadowUtils.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="RadialLineOfSight.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="PolyhedralLineOfSight.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectLocator.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="NormalMap.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="MouseCoordsTool.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="MGRSGraticule.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="MGRSFormatter.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="MeasureTool.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="LODBlending.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="LinearLineOfSight.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="LatLongFormatter.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="HTM.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="GeodeticGraticule.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="FeatureQueryTool.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="FeatureManipTool.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="ExampleResources.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="EarthManipulator.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="DetailTexture.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="DataScanner.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Controls.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="ContourMap.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="ClampCallback.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="AutoClipPlaneHandler.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="ArcGIS.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="AnnotationEvents.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
