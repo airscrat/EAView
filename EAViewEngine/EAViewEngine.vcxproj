@@ -92,13 +92,13 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <AdditionalUsingDirectories>
       </AdditionalUsingDirectories>
-      <AdditionalIncludeDirectories>$(OSGDIR)\include;$(VLDDIR)\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OSGDIR)\include;$(SolutionDir)\EAViewCore;$(VLDDIR)\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>OpenThreadsd.lib;osgd.lib;osgDBd.lib;osgUtild.lib;osgGAd.lib;osgViewerd.lib;osgTextd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>OpenThreadsd.lib;osgd.lib;osgDBd.lib;osgUtild.lib;osgGAd.lib;osgViewerd.lib;osgTextd.lib;osgEarthd.lib;osgEarthFeaturesd.lib;osgEarthAnnotationd.lib;osgEarthSymbologyd.lib;osgEarthUtild.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <EmbedManagedResourceFile>Resource\EAViewGlobeControl.png;%(EmbedManagedResourceFile)</EmbedManagedResourceFile>
-      <AdditionalLibraryDirectories>$(OSGDIR)\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(OSGDIR)\lib;$(SolutionDir)\lib\$(Configuration)\</AdditionalLibraryDirectories>
     </Link>
     <ResourceCompile>
       <AdditionalIncludeDirectories>
@@ -212,6 +212,48 @@
     <EmbeddedResource Include="EAViewGlobeControl.resX">
       <DependentUpon>EAViewGlobeControl.h</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EAViewCore\osgEarthAnnotation\osgEarthAnnotation.vcxproj">
+      <Project>{2ae01687-ab19-4683-b01b-f4558a2fdbca}</Project>
+      <Private>true</Private>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\EAViewCore\osgEarthFeatures\osgEarthFeatures.vcxproj">
+      <Project>{077be9f7-88bf-4c25-8061-81b337bcb277}</Project>
+      <Private>true</Private>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\EAViewCore\osgEarthSymbology\osgEarthSymbology.vcxproj">
+      <Project>{d221619e-6ba8-4c7c-bf46-781f17ce7a7f}</Project>
+      <Private>true</Private>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\EAViewCore\osgEarthUtil\osgEarthUtil.vcxproj">
+      <Project>{b5338409-74a1-4f71-955c-2c27e0d5ca1c}</Project>
+      <Private>true</Private>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\EAViewCore\osgEarth\osgEarth.vcxproj">
+      <Project>{59196a46-6b3d-40a9-879d-b35e00081388}</Project>
+      <Private>true</Private>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -82,10 +82,10 @@ namespace EAViewEngine
 
 	int Instance::EAViewGlobeRun()
 	{
-		if (!_eaview->getCameraManipulator() && _eaview->getCamera()->getAllowEventFocus())
+		/*if (!_eaview->getCameraManipulator() && _eaview->getCamera()->getAllowEventFocus())
 		{
 			_eaview->setCameraManipulator(new osgGA::TrackballManipulator());
-		}
+		}*/
 		_eaview->setReleaseContextAtEndOfFrameHint(false);
 
 		const char* run_frame_count_str = getenv("OSG_RUN_FRAME_COUNT");
@@ -94,7 +94,7 @@ namespace EAViewEngine
 		//while(!_eaview->done() )//&& (_eaview->getViewerFrameStamp()->getFrameNumber()<runTillFrameNumber))
 		//while(!_eaview->done() && (run_frame_count_str==0 || _eaview->getViewerFrameStamp()->getFrameNumber()<1))//runTillFrameNumber))
 		
-		
+		//_eaview->setRunFrameScheme(osgViewer::ViewerBase::FrameScheme::ON_DEMAND);
 		
 		while(_eaview.valid()&&!_eaview->done())
 		{					 

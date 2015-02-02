@@ -54,7 +54,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)bin\$(Configuration)\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">osgEarthUtil.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">osgEarthUtild</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.dll</TargetExt>
@@ -110,11 +110,11 @@
     </Midl>
     <Link>
       <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;osgd.lib;osgUtild.lib;osgSimd.lib;osgTerraind.lib;osgDBd.lib;osgFXd.lib;osgManipulatord.lib;osgViewerd.lib;osgTextd.lib;osgGAd.lib;osgShadowd.lib;OpenThreadsd.lib;glu32.lib;opengl32.lib;ws2_32.lib;winmm.lib;wldap32.lib;osgWidgetd.lib;gdal_i.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(OSGDIR)\3third-party\GDAL-1.10\lib;$(OSGDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;osgd.lib;osgUtild.lib;osgSimd.lib;osgTerraind.lib;osgDBd.lib;osgFXd.lib;osgManipulatord.lib;osgViewerd.lib;osgTextd.lib;osgGAd.lib;osgShadowd.lib;OpenThreadsd.lib;glu32.lib;opengl32.lib;ws2_32.lib;winmm.lib;wldap32.lib;osgWidgetd.lib;gdal_i.lib;osgEarthd.lib;osgEarthAnnotationd.lib;osgEarthFeaturesd.lib;osgEarthSymbologyd.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OSGDIR)\3third-party\GDAL-1.10\lib;$(OSGDIR)\lib;$(SolutionDir)\lib\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ImportLibrary>E:/code/OSGEarth_VS/lib/Debug/osgEarthUtild.lib</ImportLibrary>
-      <ProgramDataBaseFile>E:/code/OSGEarth_VS/lib/Debug/osgEarthUtild.pdb</ProgramDataBaseFile>
+      <ImportLibrary>$(SolutionDir)lib\$(Configuration)\osgEarthUtild.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(SolutionDir)lib\$(Configuration)\osgEarthUtild.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
       <Version>
       </Version>

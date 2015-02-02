@@ -19,10 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGUID>{A9DDB811-0018-4F17-BFFD-A86313B2E475}</ProjectGUID>
+    <ProjectGUID>{9767FFC5-FD39-44A6-9C82-DD479B95FD11}</ProjectGUID>
     <Keyword>Win32Proj</Keyword>
     <Platform>Win32</Platform>
-    <ProjectName>Plugin osgearth_cache_filesystem</ProjectName>
+    <ProjectName>Plugin osgearth_tms</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -55,26 +55,26 @@
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)\bin\$(Configuration)\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">osgdb_osgearth_cache_filesystem.dir\Debug\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">osgdb_osgearth_cache_filesystemd</TargetName>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">osgdb_osgearth_tms.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">osgdb_osgearth_tmsd</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.dll</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)\$(Configuration)\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">osgdb_osgearth_cache_filesystem.dir\Release\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">osgdb_osgearth_cache_filesystem</TargetName>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:\code\OSGEarth_VS\lib\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">osgdb_osgearth_tms.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">osgdb_osgearth_tms</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.dll</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:\code\OSGEarth_VS\lib\MinSizeRel\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">osgdb_osgearth_cache_filesystem.dir\MinSizeRel\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">osgdb_osgearth_cache_filesystems</TargetName>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">osgdb_osgearth_tms.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">osgdb_osgearth_tmss</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.dll</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:\code\OSGEarth_VS\lib\RelWithDebInfo\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">osgdb_osgearth_cache_filesystem.dir\RelWithDebInfo\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">osgdb_osgearth_cache_filesystemrd</TargetName>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">osgdb_osgearth_tms.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">osgdb_osgearth_tmsrd</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.dll</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
@@ -93,11 +93,11 @@
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;OSGEARTH_HAVE_ZLIB;CMAKE_INTDIR="Debug";osgdb_osgearth_cache_filesystem_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;CMAKE_INTDIR="Debug";osgdb_osgearth_tms_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;OSGEARTH_HAVE_ZLIB;CMAKE_INTDIR=\"Debug\";osgdb_osgearth_cache_filesystem_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;CMAKE_INTDIR=\"Debug\";osgdb_osgearth_tms_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>E:/code/OSGEarth/src;D:/Program Files/OpenSceneGraph/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
@@ -110,11 +110,11 @@
     </Midl>
     <Link>
       <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;ws2_32.lib;winmm.lib;wldap32.lib;osgd.lib;osgUtild.lib;osgSimd.lib;osgTerraind.lib;osgDBd.lib;osgFXd.lib;osgViewerd.lib;osgTextd.lib;osgGAd.lib;osgShadowd.lib;OpenThreadsd.lib;osgManipulatord.lib;glu32.lib;opengl32.lib</AdditionalDependencies>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;ws2_32.lib;winmm.lib;wldap32.lib;osgShadowd.lib;osgManipulatord.lib;osgd.lib;osgWidgetd.lib;osgUtild.lib;osgSimd.lib;osgTerraind.lib;osgDBd.lib;osgFXd.lib;osgViewerd.lib;osgTextd.lib;osgGAd.lib;OpenThreadsd.lib;glu32.lib;opengl32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(OSGDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ImportLibrary>E:/code/OSGEarth_VS/lib/Debug/osgdb_osgearth_cache_filesystemd.lib</ImportLibrary>
-      <ProgramDataBaseFile>E:/code/OSGEarth_VS/lib/Debug/osgdb_osgearth_cache_filesystemd.pdb</ProgramDataBaseFile>
+      <ImportLibrary>E:/code/OSGEarth_VS/lib/Debug/osgdb_osgearth_tmsd.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/code/OSGEarth_VS/lib/Debug/osgdb_osgearth_tmsd.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
       <Version>
       </Version>
@@ -137,11 +137,11 @@
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>
       </DebugInformationFormat>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;OSGEARTH_HAVE_ZLIB;CMAKE_INTDIR="Release";osgdb_osgearth_cache_filesystem_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;CMAKE_INTDIR="Release";osgdb_osgearth_tms_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;OSGEARTH_HAVE_ZLIB;CMAKE_INTDIR=\"Release\";osgdb_osgearth_cache_filesystem_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;CMAKE_INTDIR=\"Release\";osgdb_osgearth_tms_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>E:/code/OSGEarth/src;D:/Program Files/OpenSceneGraph/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
@@ -154,11 +154,11 @@
     </Midl>
     <Link>
       <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\..\lib\Release\osgEarth.lib;ws2_32.lib;winmm.lib;wldap32.lib;D:\Program Files\OpenSceneGraph\lib\osg.lib;D:\Program Files\OpenSceneGraph\lib\osgUtil.lib;D:\Program Files\OpenSceneGraph\lib\osgSim.lib;D:\Program Files\OpenSceneGraph\lib\osgTerrain.lib;D:\Program Files\OpenSceneGraph\lib\osgDB.lib;D:\Program Files\OpenSceneGraph\lib\osgFX.lib;D:\Program Files\OpenSceneGraph\lib\osgViewer.lib;D:\Program Files\OpenSceneGraph\lib\osgText.lib;D:\Program Files\OpenSceneGraph\lib\osgGA.lib;D:\Program Files\OpenSceneGraph\lib\osgShadow.lib;D:\Program Files\OpenSceneGraph\lib\OpenThreads.lib;D:\Program Files\OpenSceneGraph\lib\osgManipulator.lib;glu32.lib;opengl32.lib;D:\Program Files\OpenSceneGraph\lib\OpenThreads.lib;D:\Program Files\OpenSceneGraph\lib\osgManipulator.lib;glu32.lib;opengl32.lib</AdditionalDependencies>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\..\lib\Release\osgEarth.lib;..\..\..\lib\Release\osgEarthUtil.lib;..\..\..\lib\Release\osgEarthAnnotation.lib;..\..\..\lib\Release\osgEarthFeatures.lib;..\..\..\lib\Release\osgEarthSymbology.lib;..\..\..\lib\Release\osgEarth.lib;ws2_32.lib;winmm.lib;wldap32.lib;D:\Program Files\OpenSceneGraph\lib\osgShadow.lib;D:\Program Files\OpenSceneGraph\lib\osgManipulator.lib;D:\Program Files\OpenSceneGraph\lib\osg.lib;D:\Program Files\OpenSceneGraph\lib\osgWidget.lib;D:\Program Files\OpenSceneGraph\lib\osgUtil.lib;D:\Program Files\OpenSceneGraph\lib\osgSim.lib;D:\Program Files\OpenSceneGraph\lib\osgTerrain.lib;D:\Program Files\OpenSceneGraph\lib\osgDB.lib;D:\Program Files\OpenSceneGraph\lib\osgFX.lib;D:\Program Files\OpenSceneGraph\lib\osgViewer.lib;D:\Program Files\OpenSceneGraph\lib\osgText.lib;D:\Program Files\OpenSceneGraph\lib\osgGA.lib;D:\Program Files\OpenSceneGraph\lib\OpenThreads.lib;glu32.lib;opengl32.lib;D:\Program Files\OpenSceneGraph\lib\OpenThreads.lib;glu32.lib;opengl32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>E:/code/OSGEarth_VS/lib;E:/code/OSGEarth_VS/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>false</GenerateDebugInformation>
-      <ImportLibrary>E:/code/OSGEarth_VS/lib/Release/osgdb_osgearth_cache_filesystem.lib</ImportLibrary>
-      <ProgramDataBaseFile>E:/code/OSGEarth_VS/lib/Release/osgdb_osgearth_cache_filesystem.pdb</ProgramDataBaseFile>
+      <ImportLibrary>E:/code/OSGEarth_VS/lib/Release/osgdb_osgearth_tms.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/code/OSGEarth_VS/lib/Release/osgdb_osgearth_tms.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
       <Version>
       </Version>
@@ -181,11 +181,11 @@
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>
       </DebugInformationFormat>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;OSGEARTH_HAVE_ZLIB;CMAKE_INTDIR="MinSizeRel";osgdb_osgearth_cache_filesystem_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;CMAKE_INTDIR="MinSizeRel";osgdb_osgearth_tms_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;OSGEARTH_HAVE_ZLIB;CMAKE_INTDIR=\"MinSizeRel\";osgdb_osgearth_cache_filesystem_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;CMAKE_INTDIR=\"MinSizeRel\";osgdb_osgearth_tms_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>E:/code/OSGEarth/src;D:/Program Files/OpenSceneGraph/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
@@ -198,11 +198,11 @@
     </Midl>
     <Link>
       <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\..\lib\MinSizeRel\osgEarths.lib;ws2_32.lib;winmm.lib;wldap32.lib;D:\Program Files\OpenSceneGraph\lib\osg.lib;D:\Program Files\OpenSceneGraph\lib\osgUtil.lib;D:\Program Files\OpenSceneGraph\lib\osgSim.lib;D:\Program Files\OpenSceneGraph\lib\osgTerrain.lib;D:\Program Files\OpenSceneGraph\lib\osgDB.lib;D:\Program Files\OpenSceneGraph\lib\osgFX.lib;D:\Program Files\OpenSceneGraph\lib\osgViewer.lib;D:\Program Files\OpenSceneGraph\lib\osgText.lib;D:\Program Files\OpenSceneGraph\lib\osgGA.lib;D:\Program Files\OpenSceneGraph\lib\osgShadow.lib;D:\Program Files\OpenSceneGraph\lib\OpenThreads.lib;D:\Program Files\OpenSceneGraph\lib\osgManipulator.lib;glu32.lib;opengl32.lib;D:\Program Files\OpenSceneGraph\lib\OpenThreads.lib;D:\Program Files\OpenSceneGraph\lib\osgManipulator.lib;glu32.lib;opengl32.lib</AdditionalDependencies>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\..\lib\MinSizeRel\osgEarths.lib;..\..\..\lib\MinSizeRel\osgEarthUtils.lib;..\..\..\lib\MinSizeRel\osgEarthAnnotations.lib;..\..\..\lib\MinSizeRel\osgEarthFeaturess.lib;..\..\..\lib\MinSizeRel\osgEarthSymbologys.lib;..\..\..\lib\MinSizeRel\osgEarths.lib;ws2_32.lib;winmm.lib;wldap32.lib;D:\Program Files\OpenSceneGraph\lib\osgShadow.lib;D:\Program Files\OpenSceneGraph\lib\osgManipulator.lib;D:\Program Files\OpenSceneGraph\lib\osg.lib;D:\Program Files\OpenSceneGraph\lib\osgWidget.lib;D:\Program Files\OpenSceneGraph\lib\osgUtil.lib;D:\Program Files\OpenSceneGraph\lib\osgSim.lib;D:\Program Files\OpenSceneGraph\lib\osgTerrain.lib;D:\Program Files\OpenSceneGraph\lib\osgDB.lib;D:\Program Files\OpenSceneGraph\lib\osgFX.lib;D:\Program Files\OpenSceneGraph\lib\osgViewer.lib;D:\Program Files\OpenSceneGraph\lib\osgText.lib;D:\Program Files\OpenSceneGraph\lib\osgGA.lib;D:\Program Files\OpenSceneGraph\lib\OpenThreads.lib;glu32.lib;opengl32.lib;D:\Program Files\OpenSceneGraph\lib\OpenThreads.lib;glu32.lib;opengl32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>E:/code/OSGEarth_VS/lib;E:/code/OSGEarth_VS/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>false</GenerateDebugInformation>
-      <ImportLibrary>E:/code/OSGEarth_VS/lib/MinSizeRel/osgdb_osgearth_cache_filesystems.lib</ImportLibrary>
-      <ProgramDataBaseFile>E:/code/OSGEarth_VS/lib/MinSizeRel/osgdb_osgearth_cache_filesystems.pdb</ProgramDataBaseFile>
+      <ImportLibrary>E:/code/OSGEarth_VS/lib/MinSizeRel/osgdb_osgearth_tmss.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/code/OSGEarth_VS/lib/MinSizeRel/osgdb_osgearth_tmss.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
       <Version>
       </Version>
@@ -224,11 +224,11 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;OSGEARTH_HAVE_ZLIB;CMAKE_INTDIR="RelWithDebInfo";osgdb_osgearth_cache_filesystem_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;CMAKE_INTDIR="RelWithDebInfo";osgdb_osgearth_tms_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;OSGEARTH_HAVE_ZLIB;CMAKE_INTDIR=\"RelWithDebInfo\";osgdb_osgearth_cache_filesystem_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;CMAKE_INTDIR=\"RelWithDebInfo\";osgdb_osgearth_tms_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>E:/code/OSGEarth/src;D:/Program Files/OpenSceneGraph/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
@@ -241,11 +241,11 @@
     </Midl>
     <Link>
       <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\..\lib\RelWithDebInfo\osgEarthrd.lib;ws2_32.lib;winmm.lib;wldap32.lib;D:\Program Files\OpenSceneGraph\lib\osg.lib;D:\Program Files\OpenSceneGraph\lib\osgUtil.lib;D:\Program Files\OpenSceneGraph\lib\osgSim.lib;D:\Program Files\OpenSceneGraph\lib\osgTerrain.lib;D:\Program Files\OpenSceneGraph\lib\osgDB.lib;D:\Program Files\OpenSceneGraph\lib\osgFX.lib;D:\Program Files\OpenSceneGraph\lib\osgViewer.lib;D:\Program Files\OpenSceneGraph\lib\osgText.lib;D:\Program Files\OpenSceneGraph\lib\osgGA.lib;D:\Program Files\OpenSceneGraph\lib\osgShadow.lib;D:\Program Files\OpenSceneGraph\lib\OpenThreads.lib;D:\Program Files\OpenSceneGraph\lib\osgManipulator.lib;glu32.lib;opengl32.lib;D:\Program Files\OpenSceneGraph\lib\OpenThreads.lib;D:\Program Files\OpenSceneGraph\lib\osgManipulator.lib;glu32.lib;opengl32.lib</AdditionalDependencies>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\..\lib\RelWithDebInfo\osgEarthrd.lib;..\..\..\lib\RelWithDebInfo\osgEarthUtilrd.lib;..\..\..\lib\RelWithDebInfo\osgEarthAnnotationrd.lib;..\..\..\lib\RelWithDebInfo\osgEarthFeaturesrd.lib;..\..\..\lib\RelWithDebInfo\osgEarthSymbologyrd.lib;..\..\..\lib\RelWithDebInfo\osgEarthrd.lib;ws2_32.lib;winmm.lib;wldap32.lib;D:\Program Files\OpenSceneGraph\lib\osgShadow.lib;D:\Program Files\OpenSceneGraph\lib\osgManipulator.lib;D:\Program Files\OpenSceneGraph\lib\osg.lib;D:\Program Files\OpenSceneGraph\lib\osgWidget.lib;D:\Program Files\OpenSceneGraph\lib\osgUtil.lib;D:\Program Files\OpenSceneGraph\lib\osgSim.lib;D:\Program Files\OpenSceneGraph\lib\osgTerrain.lib;D:\Program Files\OpenSceneGraph\lib\osgDB.lib;D:\Program Files\OpenSceneGraph\lib\osgFX.lib;D:\Program Files\OpenSceneGraph\lib\osgViewer.lib;D:\Program Files\OpenSceneGraph\lib\osgText.lib;D:\Program Files\OpenSceneGraph\lib\osgGA.lib;D:\Program Files\OpenSceneGraph\lib\OpenThreads.lib;glu32.lib;opengl32.lib;D:\Program Files\OpenSceneGraph\lib\OpenThreads.lib;glu32.lib;opengl32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>E:/code/OSGEarth_VS/lib;E:/code/OSGEarth_VS/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ImportLibrary>E:/code/OSGEarth_VS/lib/RelWithDebInfo/osgdb_osgearth_cache_filesystemrd.lib</ImportLibrary>
-      <ProgramDataBaseFile>E:/code/OSGEarth_VS/lib/RelWithDebInfo/osgdb_osgearth_cache_filesystemrd.pdb</ProgramDataBaseFile>
+      <ImportLibrary>E:/code/OSGEarth_VS/lib/RelWithDebInfo/osgdb_osgearth_tmsrd.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/code/OSGEarth_VS/lib/RelWithDebInfo/osgdb_osgearth_tmsrd.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
       <Version>
       </Version>
@@ -255,23 +255,55 @@
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\osgEarthAnnotation\osgEarthAnnotation.vcxproj">
+      <Project>{2ae01687-ab19-4683-b01b-f4558a2fdbca}</Project>
+      <Private>true</Private>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\..\osgEarthFeatures\osgEarthFeatures.vcxproj">
+      <Project>{077be9f7-88bf-4c25-8061-81b337bcb277}</Project>
+      <Private>true</Private>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\..\osgEarthSymbology\osgEarthSymbology.vcxproj">
+      <Project>{d221619e-6ba8-4c7c-bf46-781f17ce7a7f}</Project>
+      <Private>true</Private>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\..\osgEarthUtil\osgEarthUtil.vcxproj">
+      <Project>{b5338409-74a1-4f71-955c-2c27e0d5ca1c}</Project>
+      <Private>true</Private>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
     <ProjectReference Include="..\..\osgEarth\osgEarth.vcxproj">
       <Project>{59196a46-6b3d-40a9-879d-b35e00081388}</Project>
       <Private>true</Private>
       <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
       <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
       <LinkLibraryDependencies>true</LinkLibraryDependencies>
-      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
     </ProjectReference>
     <ProjectReference Include="E:/code/OSGEarth_VS/ZERO_CHECK.vcxproj">
       <Project>10DD88F8-D5D0-413D-AAC1-C1028916DB14</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="FileSystemCache" />
+    <ClCompile Include="ReaderWriterTMS.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="FileSystemCache.cpp" />
+    <None Include="TMSOptions" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

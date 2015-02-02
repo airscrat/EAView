@@ -54,7 +54,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)\bin\$(Configuration)\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">osgEarthAnnotation.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">osgEarthAnnotationd</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.dll</TargetExt>
@@ -110,11 +110,11 @@
     </Midl>
     <Link>
       <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;osgd.lib;osgUtild.lib;osgSimd.lib;osgTerraind.lib;osgDBd.lib;osgFXd.lib;osgManipulatord.lib;osgViewerd.lib;osgTextd.lib;osgGAd.lib;OpenThreadsd.lib;glu32.lib;opengl32.lib;ws2_32.lib;winmm.lib;wldap32.lib;osgShadowd.lib;osgWidgetd.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(OSGDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;osgd.lib;osgUtild.lib;osgSimd.lib;osgTerraind.lib;osgDBd.lib;osgFXd.lib;osgManipulatord.lib;osgViewerd.lib;osgTextd.lib;osgGAd.lib;OpenThreadsd.lib;glu32.lib;opengl32.lib;ws2_32.lib;winmm.lib;wldap32.lib;osgShadowd.lib;osgWidgetd.lib;osgEarthd.lib;osgEarthFeaturesd.lib;osgEarthSymbologyd.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OSGDIR)\lib;$(SolutionDir)\lib\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ImportLibrary>E:/code/OSGEarth_VS/lib/Debug/osgEarthAnnotationd.lib</ImportLibrary>
-      <ProgramDataBaseFile>E:/code/OSGEarth_VS/lib/Debug/osgEarthAnnotationd.pdb</ProgramDataBaseFile>
+      <ImportLibrary>$(SolutionDir)lib\$(Configuration)\osgEarthAnnotationd.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(SolutionDir)lib\$(Configuration)\osgEarthAnnotationd.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
       <Version>
       </Version>
@@ -260,24 +260,24 @@
       <Private>true</Private>
       <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
       <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
-      <LinkLibraryDependencies>true</LinkLibraryDependencies>
-      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
     </ProjectReference>
     <ProjectReference Include="..\osgEarthSymbology\osgEarthSymbology.vcxproj">
       <Project>{d221619e-6ba8-4c7c-bf46-781f17ce7a7f}</Project>
       <Private>true</Private>
       <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
       <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
-      <LinkLibraryDependencies>true</LinkLibraryDependencies>
-      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
     </ProjectReference>
     <ProjectReference Include="..\osgEarth\osgEarth.vcxproj">
       <Project>{59196a46-6b3d-40a9-879d-b35e00081388}</Project>
       <Private>true</Private>
       <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
       <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
-      <LinkLibraryDependencies>true</LinkLibraryDependencies>
-      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
     </ProjectReference>
     <ProjectReference Include="E:/code/OSGEarth_VS/ZERO_CHECK.vcxproj">
       <Project>10DD88F8-D5D0-413D-AAC1-C1028916DB14</Project>

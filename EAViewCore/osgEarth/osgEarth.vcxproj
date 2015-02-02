@@ -54,7 +54,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)\bin\$(Configuration)\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">osgEarth.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">osgEarthd</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.dll</TargetExt>
@@ -114,8 +114,8 @@
       <AdditionalLibraryDirectories>$(OSGDIR)\3third-party\GDAL-1.10\lib;$(OSGDIR)\lib;$(OSGDIR)\3third-party\Geos3.3.4\lib\debug;$(OSGDIR)\3third-party\Curl_Zlib\debug\lib;E:/code/OSGEarth_VS/lib;E:/code/OSGEarth_VS/lib/$(Configuration);D:\Applications\Qt\5.1.1\msvc2010_opengl\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>MSVCRT</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>E:/code/OSGEarth_VS/lib/Debug/osgEarthd.lib</ImportLibrary>
-      <ProgramDataBaseFile>E:/code/OSGEarth_VS/lib/Debug/osgEarthd.pdb</ProgramDataBaseFile>
+      <ImportLibrary>$(SolutionDir)lib\$(Configuration)\osgEarthd.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(SolutionDir)lib\$(Configuration)\osgEarthd.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
       <Version>
       </Version>

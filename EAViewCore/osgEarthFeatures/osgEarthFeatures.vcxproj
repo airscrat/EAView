@@ -54,7 +54,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)\bin\$(Configuration)\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">osgEarthFeatures.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">osgEarthFeaturesd</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.dll</TargetExt>
@@ -110,11 +110,11 @@
     </Midl>
     <Link>
       <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;osgd.lib;osgUtild.lib;osgSimd.lib;osgTerraind.lib;osgDBd.lib;osgFXd.lib;osgViewerd.lib;osgTextd.lib;osgGAd.lib;OpenThreadsd.lib;glu32.lib;opengl32.lib;ws2_32.lib;winmm.lib;wldap32.lib;osgShadowd.lib;osgManipulatord.lib;osgWidgetd.lib;gdal_i.lib;libgeosd.lib;geos.lib;geos_c.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(OSGDIR)\lib;$(OSGDIR)\3third-party\GDAL-1.10\lib;$(OSGDIR)\3third-party\Geos3.3.4\lib\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;osgd.lib;osgUtild.lib;osgSimd.lib;osgTerraind.lib;osgDBd.lib;osgFXd.lib;osgViewerd.lib;osgTextd.lib;osgGAd.lib;OpenThreadsd.lib;glu32.lib;opengl32.lib;ws2_32.lib;winmm.lib;wldap32.lib;osgShadowd.lib;osgManipulatord.lib;osgWidgetd.lib;gdal_i.lib;libgeosd.lib;geos.lib;geos_c.lib;osgEarthd.lib;osgEarthSymbologyd.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OSGDIR)\lib;$(OSGDIR)\3third-party\GDAL-1.10\lib;$(OSGDIR)\3third-party\Geos3.3.4\lib\Debug;$(SolutionDir)\lib\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ImportLibrary>E:/code/OSGEarth_VS/lib/Debug/osgEarthFeaturesd.lib</ImportLibrary>
-      <ProgramDataBaseFile>E:/code/OSGEarth_VS/lib/Debug/osgEarthFeaturesd.pdb</ProgramDataBaseFile>
+      <ImportLibrary>$(SolutionDir)lib\$(Configuration)\osgEarthFeaturesd.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(SolutionDir)lib\$(Configuration)\osgEarthFeaturesd.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
       <Version>
       </Version>

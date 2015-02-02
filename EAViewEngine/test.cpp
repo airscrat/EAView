@@ -464,7 +464,7 @@ namespace EAViewEngine
 			return false;
 		}
 	};
-/*
+	/*
 	class PickModelHandler:public osgGA::GUIEventHandler
 	{
 	public:
@@ -492,6 +492,7 @@ namespace EAViewEngine
 		}		
 	};
 	*/
+
 	test::test(void)
 	{
 		/*_viewer=Instance::GetEAViewer();
@@ -654,6 +655,40 @@ namespace EAViewEngine
 		group->addChild(modeljz1);*/
 		/*group->addChild(modeljz2);*/
 		//group->addChild(modelop);
+
+		//_viewer->getDatabasePager()->setUnrefImageDataAfterApplyPolicy( false, false );
+
+		// install our default manipulator (do this before calling load)
+		osg::ref_ptr<osgEarth::Util::EarthManipulator> maniptr = new osgEarth::Util::EarthManipulator();
+		_viewer->setCameraManipulator(maniptr.get());
+
+		// load an earth file, and support all or our example command-line options
+		// and earth file <external> tags    
+		/*osg::Node* nodec = 0L;
+		osgEarth::ReadResult r = osgEarth::URI(std::string("D:\\Program Files\\OpenSceneGraph\\tests\\boston.earth")).readNode();
+		if ( r.succeeded() )
+		{
+			nodec = r.release<MapNode>();
+			Instance::EAViewGlobeSetPause(true);
+			_viewer->setSceneData(nodec);
+			Instance::EAViewGlobeSetPause(false);
+		}*/
+
+		osgEarth::Map* map = new osgEarth::Map();
+
+		// add a TMS imagery layer:
+		osgEarth::Drivers::TMSOptions imagery;
+		imagery.url() = "http://readymap.org/readymap/tiles/1.0.0/22/";
+		map->addImageLayer( new ImageLayer("ReadyMap imagery", imagery) );
+		
+		osg::Group* root = new osg::Group();
+		osgEarth::MapNode* mapNode = new osgEarth::MapNode( map );
+		root->addChild( mapNode );
+		maniptr.get()->setViewpoint( osgEarth::Viewpoint(-71.0763, 42.34425, 0, 24.261, -21.6, 3450.0), 5.0 );
+		_viewer->getCamera()->addCullCallback( new AutoClipPlaneCullCallback(mapNode));
+		_viewer->setSceneData( root );
+
+		
 	}
 
 

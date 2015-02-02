@@ -27,12 +27,21 @@
 #include <osgManipulator/CommandManager>
 #include <osgManipulator/TranslateAxisDragger>
 #include "ViewStatsHandler.h"
+#include <osgEarth/Map>
+#include <osgEarthUtil/EarthManipulator>
+//#include <osgEarthUtil/ExampleResources>
+#include <osgEarthAnnotation/ModelNode>
+#include <osgEarthDrivers/tms/TMSOptions>
+#include <osgEarthUtil/AutoClipPlaneHandler>
 
 #pragma once
 #define OSGFilePath "D:/Program Files/OpenSceneGraph/OpenSceneGraph-Data-3.0.0"
 
 namespace EAViewEngine
-{
+{	
+	using namespace osgEarth;
+	using namespace osgEarth::Util;
+	using namespace osgEarth::Annotation;
 	class test
 	{
 	public:
